@@ -1,0 +1,162 @@
+@use '../base/variables' as *;
+
+// About Hero
+.about-hero {
+  padding-top: calc(70px + 4rem);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: $spacing-2xl;
+    align-items: center;
+  }
+
+  &__label {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text-muted;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__title {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+    line-height: 1.1;
+
+    @media (max-width: 768px) {
+      font-size: $font-size-3xl;
+    }
+  }
+
+  &__desc {
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+    line-height: 1.8;
+    max-width: 600px;
+
+    &+& {
+      margin-top: $spacing-sm;
+    }
+  }
+
+  &__avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $color-bg-secondary;
+    border: 1px solid $color-border;
+  }
+
+  @media (max-width: 768px) {
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      order: -1;
+    }
+
+    &__avatar {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+// 工作經驗
+.about-experience {
+  border-top: 1px solid $color-border;
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-xl;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: $spacing-lg;
+    padding-bottom: $spacing-xl;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: $spacing-xs;
+    }
+  }
+
+  &__period {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    padding-top: 4px;
+  }
+
+  &__role {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    margin-bottom: $spacing-xs;
+  }
+
+  &__company {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__desc {
+    font-size: $font-size-base;
+    color: $color-text-secondary;
+    line-height: 1.8;
+  }
+}
+
+// 成為設計師的故事
+.about-story {
+  background-color: $color-bg-secondary;
+
+  &__label {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    color: $color-text-muted;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-lg;
+    line-height: 1.3;
+    max-width: 600px;
+  }
+
+  &__desc {
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+    line-height: 1.8;
+    max-width: 600px;
+
+    &+& {
+      margin-top: $spacing-sm;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use 'variables' as *;
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&display=swap');
+
+// 全域
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+// 全域按鈕樣式
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-xs $spacing-md;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  transition: all $transition-base;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $color-text-primary;
+    color: $color-white;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &--secondary {
+    border: 1px solid $color-border;
+    color: $color-text-secondary;
+
+    &:hover {
+      border-color: $color-text-primary;
+      color: $color-text-primary;
+    }
+  }
+}
+
+// Back To Top
+.back-to-top {
+  position: fixed;
+  bottom: $spacing-lg;
+  right: $spacing-lg;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $color-text-primary;
+  color: $color-white;
+  font-size: $font-size-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all $transition-base;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

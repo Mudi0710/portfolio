@@ -1,0 +1,59 @@
+// 顏色
+$color-bg: #faf9f7;
+$color-bg-secondary: #f0ede8;
+$color-text-primary: #1a1a1a;
+$color-text-secondary: #555555;
+$color-text-muted: #888888;
+$color-accent: #1a1a1a;
+$color-border: #e0dbd4;
+$color-white: #ffffff;
+$color-tag-bg: #eeebe6;
+$color-tag-text: #333333;
+
+// 字體
+$font-primary: 'Inter', 'Noto Sans TC', sans-serif;
+
+// 字體大小
+$font-size-xs: 0.75rem;     // 12px
+$font-size-sm: 0.875rem;    // 14px
+$font-size-base: 1rem;      // 16px
+$font-size-md: 1.125rem;    // 18px
+$font-size-lg: 1.25rem;     // 20px
+$font-size-xl: 1.5rem;      // 24px
+$font-size-2xl: 2rem;       // 32px
+$font-size-3xl: 2.5rem;     // 40px
+$font-size-4xl: 3.5rem;     // 56px
+
+// 字重
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// 間距
+$spacing-xs: 0.5rem;    // 8px
+$spacing-sm: 1rem;      // 16px
+$spacing-md: 1.5rem;    // 24px
+$spacing-lg: 2rem;      // 32px
+$spacing-xl: 3rem;      // 48px
+$spacing-2xl: 5rem;     // 80px
+$spacing-3xl: 7.5rem;   // 120px
+
+// 圓角
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-full: 9999px;
+
+// 容器寬度
+$container-max-width: 1200px;
+$container-padding: 1.5rem;
+
+// 斷點
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// 動畫
+$transition-base: 0.3s ease;

@@ -1,0 +1,35 @@
+@use '../base/variables' as *;
+
+.footer {
+  border-top: 1px solid $color-border;
+  padding: $spacing-lg 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copy {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+  }
+
+  &__email {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-text-primary;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__inner {
+      flex-direction: column;
+      gap: $spacing-xs;
+      text-align: center;
+    }
+  }
+}

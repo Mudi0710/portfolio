@@ -7,7 +7,7 @@
           <h1 class="hero__title">嗨，我是 Nomis！</h1>
           <p class="hero__subtitle">UIUX 設計師・前端工程師・設計主管</p>
           <p class="hero__desc">
-            擅長以數據驅動設計決策，打造以使用者為中心的產品體驗。
+            擅長以數據驅動設計決策，打造以使用者為中心的產品體驗。<br/>
             跨文化協作與跨部門溝通是我的強項。
           </p>
           <div class="hero__cta">

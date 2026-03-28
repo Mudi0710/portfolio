@@ -52,7 +52,7 @@ export const projects = [
   <!-- 挑戰 -->
   <h2>挑戰</h2>
   <p>目前訂閱轉換率不到 1%，遠低於市場平均水準，導致營收表現不佳。</p>
-  <img src="/images/projects/uiux-project-1/challenge.jpg" alt="挑戰：低轉換率現況分析" />
+  <img src="/portfolio/images/projects/uiux-project-1/challenge.jpg" alt="挑戰：低轉換率現況分析" />
 
   <div class="pd-callout">
     <div class="pd-callout__item">
@@ -84,31 +84,31 @@ export const projects = [
     </div>
   </div>
 
-  <img src="/images/projects/uiux-project-1/mvp.jpg" alt="MVP 測試版本設計稿" />
+  <img src="/portfolio/images/projects/uiux-project-1/mvp.jpg" alt="MVP 測試版本設計稿" />
 
   <p>MVP 驗證了策略方向正確，轉換率直接翻倍。接下來將基於兩個不同的入口持續測試與優化。</p>
 
   <!-- A/B 測試 -->
   <h2>A/B 測試：超過 50 組變數</h2>
   <p>以極快的速度進行迭代，每天至少同時測試三組變數。成功的變數成為下一輪的對照組，持續優化。</p>
-  <img src="/images/projects/uiux-project-1/ab-test-overview.jpg" alt="A/B 測試框架總覽" />
+  <img src="/portfolio/images/projects/uiux-project-1/ab-test-overview.jpg" alt="A/B 測試框架總覽" />
 
   <h3>洞察一：使用使用者熟悉的語言與圖像</h3>
   <p>相較於廣泛的「AI」一詞，熱門關鍵字「ChatGPT」更容易讓使用者產生連結，建立有效的第一印象。</p>
-  <img src="/images/projects/uiux-project-1/insight-1.jpg" alt="洞察一：語言與圖像測試對比" />
+  <img src="/portfolio/images/projects/uiux-project-1/insight-1.jpg" alt="洞察一：語言與圖像測試對比" />
 
   <h3>洞察二：減少雜訊，提升決策效率</h3>
   <p>與其用大量資訊轟炸使用者，精簡且結構清晰的內容更能提升決策效率。觀察使用者行為後發現，使用者習慣用大拇指點擊而非上下滑動，將關鍵資訊集中在單一畫面效果更好。</p>
-  <img src="/images/projects/uiux-project-1/insight-2.jpg" alt="洞察二：資訊精簡對比" />
+  <img src="/portfolio/images/projects/uiux-project-1/insight-2.jpg" alt="洞察二：資訊精簡對比" />
 
   <h3>洞察三：視覺一致性強化轉換流程</h3>
   <p>保持 Onboarding 體驗與付費牆的視覺一致性，可以顯著提升使用者流暢度，減少轉換摩擦。</p>
-  <img src="/images/projects/uiux-project-1/insight-3.jpg" alt="洞察三：視覺一致性測試對比" />
+  <img src="/portfolio/images/projects/uiux-project-1/insight-3.jpg" alt="洞察三：視覺一致性測試對比" />
 
   <!-- 最終設計 -->
   <h2>最終設計</h2>
   <p>整合所有測試洞察，設計出轉換率最佳的版本。</p>
-  <img src="/images/projects/uiux-project-1/final-design.jpg" alt="最終設計稿" />
+  <img src="/portfolio/images/projects/uiux-project-1/final-design.jpg" alt="最終設計稿" />
 
   <!-- 成果 -->
   <h2>最終成果</h2>

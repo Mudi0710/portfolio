@@ -16,7 +16,7 @@
 
     <div class="project-detail-cover">
       <div class="container">
-        <img :src="project.cover" :alt="project.title" class="project-detail-cover__img" />
+        <img :src="getImageUrl(project.cover)" :alt="project.title" class="project-detail-cover__img" />
       </div>
     </div>
 
@@ -71,6 +71,7 @@
 import { computed, ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { projects } from '@/data/projects.js'
+import { getImageUrl } from '@/utils/image.js'
 
 const route = useRoute()
 const project = computed(() => projects.find((p) => p.id === route.params.id))

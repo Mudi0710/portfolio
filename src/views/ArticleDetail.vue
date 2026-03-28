@@ -20,7 +20,7 @@
     <!-- 封面圖 -->
     <div class="article-detail-cover">
       <div class="container">
-        <img :src="article.cover" :alt="article.title" class="article-detail-cover__img" />
+        <img :src="getImageUrl(article.cover)" :alt="article.title" class="article-detail-cover__img" />
       </div>
     </div>
 
@@ -54,6 +54,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { articles } from '@/data/articles.js'
+import { getImageUrl } from '@/utils/image.js'
 
 const route = useRoute()
 const article = computed(() => articles.find((a) => a.id === route.params.id))

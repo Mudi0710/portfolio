@@ -1,7 +1,7 @@
 <template>
   <RouterLink :to="`/projects/${project.id}`" class="project-card">
     <div class="project-card__cover">
-      <img :src="project.cover" :alt="project.title" />
+      <img :src="getImageUrl(project.cover)" :alt="project.title" />
     </div>
     <div class="project-card__body">
       <div class="project-card__hashtags">
@@ -24,6 +24,8 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '@/utils/image.js'
+
 defineProps({
   project: {
     type: Object,

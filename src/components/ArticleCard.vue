@@ -1,7 +1,7 @@
 <template>
   <RouterLink :to="`/leadership/${article.id}`" class="article-card">
     <div class="article-card__cover">
-      <img :src="article.cover" :alt="article.title" />
+      <img :src="getImageUrl(article.cover)" :alt="article.title" />
     </div>
     <div class="article-card__body">
       <div class="article-card__hashtags">
@@ -20,6 +20,8 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '@/utils/image.js'
+
 defineProps({
   article: {
     type: Object,

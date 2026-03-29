@@ -7,15 +7,14 @@
   position: relative;
   overflow: hidden;
 
-  // Mesh Gradient 氛圍光
+  // Mesh Gradient 底色（Canvas 會蓋上去）
   &::before {
     content: '';
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 70% 60% at 15% 50%, rgba(79, 142, 247, 0.35) 0%, transparent 70%),
-      radial-gradient(ellipse 55% 50% at 85% 20%, rgba(124, 95, 247, 0.25) 0%, transparent 65%),
-      radial-gradient(ellipse 40% 35% at 60% 80%, rgba(79, 142, 247, 0.15) 0%, transparent 60%);
+      radial-gradient(ellipse 70% 60% at 15% 50%, rgba(79, 142, 247, 0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 50% at 85% 20%, rgba(124, 95, 247, 0.1) 0%, transparent 65%);
     pointer-events: none;
   }
 
@@ -108,7 +107,11 @@
     }
 
     &__photo {
-      display: none;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+      order: -1;
     }
 
     &__title {
@@ -251,6 +254,17 @@
     font-weight: $font-weight-semibold;
     color: $color-text-primary;
     line-height: 1.4;
+  }
+
+  &__article-cta {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    margin-top: $spacing-xs;
+    transition: color $transition-base;
+  }
+
+  &__article:hover &__article-cta {
+    color: $color-accent;
   }
 
   @media (max-width: 768px) {
@@ -432,7 +446,7 @@
   }
 
   &__card {
-    background-color: $color-bg-card;
+    background-color: $color-bg-card-raised;
     border-radius: $radius-lg;
     padding: $spacing-lg;
     border: 1px solid $color-border-card;
@@ -460,7 +474,7 @@
     align-items: center;
     gap: $spacing-sm;
     padding-top: $spacing-sm;
-    border-top: 1px solid $color-border;
+    border-top: 1px solid $color-border-card;
   }
 
   &__card-avatar {

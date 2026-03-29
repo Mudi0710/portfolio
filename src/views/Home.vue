@@ -2,6 +2,7 @@
   <div class="home">
     <!-- Hero -->
     <section class="hero section">
+      <HeroCanvas />
       <div class="container hero__inner">
         <div class="hero__content">
           <h1 class="hero__title">嗨，我是 Nomis！</h1>
@@ -72,18 +73,21 @@
           </RouterLink>
         </div>
         <div class="leadership-preview__articles">
-          <div class="leadership-preview__article">
+          <RouterLink to="/leadership/psychological-safety" class="leadership-preview__article">
             <p class="leadership-preview__article-tag">帶團隊的方法論</p>
             <h4 class="leadership-preview__article-title">如何在設計評審中建立心理安全感</h4>
-          </div>
-          <div class="leadership-preview__article">
+            <p class="leadership-preview__article-cta">閱讀文章 →</p>
+          </RouterLink>
+          <RouterLink to="/leadership/design-vs-business" class="leadership-preview__article">
             <p class="leadership-preview__article-tag">專案決策過程</p>
             <h4 class="leadership-preview__article-title">當設計目標與商業目標衝突時，我怎麼做決定</h4>
-          </div>
-          <div class="leadership-preview__article">
+            <p class="leadership-preview__article-cta">閱讀文章 →</p>
+          </RouterLink>
+          <RouterLink to="/leadership/designer-to-lead" class="leadership-preview__article">
             <p class="leadership-preview__article-tag">個人成長反思</p>
             <h4 class="leadership-preview__article-title">從設計師到設計主管：角色轉換的第一年</h4>
-          </div>
+            <p class="leadership-preview__article-cta">閱讀文章 →</p>
+          </RouterLink>
         </div>
       </div>
     </section>
@@ -157,6 +161,7 @@
 <script setup>
 import ProjectCard from '@/components/ProjectCard.vue'
 import { projects } from '@/data/projects.js'
+import HeroCanvas from '@/components/HeroCanvas.vue'
 
 const skills = [
   {

@@ -15,7 +15,7 @@
           </p>
         </div>
         <div class="about-hero__image">
-          <img src="/images/general/avatar.jpg" alt="Nomis" class="about-hero__avatar" />
+          <img :src="getImageUrl('/images/general/avatar.jpg')" alt="Nomis" class="about-hero__avatar" />
         </div>
       </div>
     </section>
@@ -41,6 +41,7 @@
 
     <!-- 成為設計師的故事 -->
     <section class="about-story section">
+      <StoryCanvas />
       <div class="container">
         <p class="about-story__label">My Story</p>
         <h2 class="about-story__title">我如何成為 UIUX 設計師暨設計主管</h2>
@@ -71,6 +72,7 @@
 
 <script setup>
 import { getImageUrl } from '@/utils/image.js'
+import StoryCanvas from '@/components/StoryCanvas.vue'
 
 const experiences = [
   {

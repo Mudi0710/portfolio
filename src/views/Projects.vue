@@ -2,6 +2,7 @@
   <div class="projects-page">
     <section class="projects-hero section">
       <div class="container">
+        <p class="projects-hero__label">My Work</p>
         <h1 class="projects-hero__title">Projects</h1>
         <p class="projects-hero__desc">
           橫跨 UIUX 設計、前端切版與 AI 產品設計的實戰專案，每個專案都有可量化的成效與完整的設計思考過程。

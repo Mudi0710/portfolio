@@ -1,6 +1,26 @@
 @use '../base/variables' as *;
 
+.project-detail {
+  position: relative;
+  overflow: clip;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 55% 35% at 95% 10%, rgba(124, 95, 247, 0.15) 0%, transparent 65%),
+      radial-gradient(ellipse 45% 35% at 5% 50%, rgba(79, 142, 247, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 80% 85%, rgba(79, 142, 247, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+
 .project-detail-hero {
+  position: relative;
+  z-index: 1;
   padding-top: calc(70px + 4rem);
   padding-bottom: $spacing-xl;
 
@@ -244,6 +264,8 @@
 
 // 內容 + 目錄 layout
 .project-detail-content {
+  position: relative;
+  z-index: 1;
   padding-top: 0;
 
   &__layout {

@@ -2,6 +2,7 @@
   <div class="leadership-page">
     <section class="leadership-hero section">
       <div class="container">
+        <p class="leadership-hero__label">My Thoughts</p>
         <h1 class="leadership-hero__title">Leadership</h1>
         <p class="leadership-hero__desc">
           記錄我在設計管理路上的觀察與學習，包含團隊管理心得、專案決策過程、帶人的方法論，以及個人成長反思。

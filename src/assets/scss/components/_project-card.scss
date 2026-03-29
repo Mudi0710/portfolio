@@ -8,17 +8,17 @@
   overflow: hidden;
   transition: all $transition-base;
   cursor: pointer;
-  background-color: $color-white;
+  background-color: $color-bg-card;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-    border-color: transparent;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border-color: $color-accent;
   }
 
   &__cover {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 7;
     overflow: hidden;
     background-color: $color-bg-secondary;
 
@@ -93,6 +93,6 @@
   }
 
   &:hover &__cta {
-    color: $color-text-primary;
+    color: $color-accent;
   }
 }

@@ -16,7 +16,7 @@
     transition: color $transition-base;
 
     &:hover {
-      color: $color-text-primary;
+      color: $color-accent;
     }
   }
 
@@ -29,7 +29,7 @@
 
   &__hashtag {
     font-size: $font-size-sm;
-    color: $color-text-muted;
+    color: $color-accent;
     font-weight: $font-weight-medium;
   }
 
@@ -38,6 +38,7 @@
     font-weight: $font-weight-bold;
     line-height: 1.2;
     margin-bottom: $spacing-md;
+    color: $color-text-primary;
 
     @media (max-width: 768px) {
       font-size: $font-size-3xl;
@@ -82,6 +83,11 @@
     font-size: $font-size-md;
     color: $color-text-secondary;
     line-height: 1.9;
+
+    h2,
+    h3 {
+      scroll-margin-top: 90px;
+    }
 
     h2 {
       font-size: $font-size-2xl;
@@ -130,7 +136,7 @@
     }
 
     blockquote {
-      border-left: 3px solid $color-text-primary;
+      border-left: 3px solid $color-accent;
       padding-left: $spacing-md;
       margin: $spacing-lg 0;
       color: $color-text-muted;
@@ -151,10 +157,11 @@
 
   h1 {
     margin-bottom: $spacing-lg;
+    color: $color-text-primary;
   }
 }
 
-// ArticleDetail 內頁專用元件樣式
+// ArticleDetail 內頁專用元件
 .ad-callout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -165,14 +172,14 @@
     padding: $spacing-md;
     background-color: $color-bg-secondary;
     border-radius: $radius-md;
-    border-left: 3px solid $color-text-primary;
+    border-left: 3px solid $color-accent;
   }
 
   &__title {
     display: block;
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
-    color: $color-text-primary;
+    color: $color-accent;
     margin-bottom: $spacing-xs;
   }
 }

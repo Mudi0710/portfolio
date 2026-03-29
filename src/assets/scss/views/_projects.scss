@@ -8,6 +8,7 @@
     font-size: $font-size-4xl;
     font-weight: $font-weight-bold;
     margin-bottom: $spacing-md;
+    color: $color-text-primary;
 
     @media (max-width: 768px) {
       font-size: $font-size-3xl;
@@ -41,13 +42,13 @@
     transition: all $transition-base;
 
     &:hover:not(&--active) {
-      border-color: $color-text-primary;
-      color: $color-text-primary;
+      border-color: $color-accent;
+      color: $color-accent;
     }
 
     &--active {
-      background-color: $color-text-primary;
-      border-color: $color-text-primary;
+      background-color: $color-accent;
+      border-color: $color-accent;
       color: $color-white;
       cursor: default;
     }

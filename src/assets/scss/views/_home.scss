@@ -4,6 +4,68 @@
 .hero {
   padding-top: calc(70px + 6rem);
   padding-bottom: $spacing-3xl;
+  position: relative;
+  overflow: hidden;
+
+  // 點陣背景
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(79, 142, 247, 0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+
+  // 漸層遮罩，讓點陣自然消失
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 20%, $color-bg 80%);
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: $spacing-2xl;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 600px;
+  }
+
+  &__photo {
+    width: 280px;
+    height: 360px;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    border: 1px solid $color-border;
+    flex-shrink: 0;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    // 底部漸層讓照片自然融入
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(to top, $color-bg, transparent);
+    }
+  }
 
   &__title {
     font-size: $font-size-4xl;
@@ -15,7 +77,7 @@
 
   &__subtitle {
     font-size: $font-size-xl;
-    color: $color-text-secondary;
+    color: $color-accent;
     font-weight: $font-weight-medium;
     margin-bottom: $spacing-md;
   }
@@ -34,8 +96,16 @@
   }
 
   @media (max-width: 768px) {
-    padding-top: calc(70px + #{$spacing-xl});
+    padding-top: calc(70px + 3rem);
     padding-bottom: $spacing-xl;
+
+    &__inner {
+      grid-template-columns: 1fr;
+    }
+
+    &__photo {
+      display: none;
+    }
 
     &__title {
       font-size: $font-size-3xl;
@@ -50,6 +120,8 @@
 // 三個核心能力
 .features {
   border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+  background-color: $color-bg-secondary;
 
   &__grid {
     display: grid;
@@ -60,7 +132,7 @@
   &__title {
     font-size: $font-size-md;
     font-weight: $font-weight-semibold;
-    color: $color-text-primary;
+    color: $color-accent;
     margin-bottom: $spacing-sm;
   }
 
@@ -93,7 +165,7 @@
   }
 }
 
-// Leadership 摘要區塊
+// Leadership 摘要
 .leadership-preview {
   background-color: $color-bg-secondary;
 
@@ -107,7 +179,7 @@
   &__label {
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
-    color: $color-text-muted;
+    color: $color-accent;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: $spacing-sm;
@@ -136,20 +208,20 @@
 
   &__article {
     padding: $spacing-md;
-    background-color: $color-white;
+    background-color: $color-bg-card;
     border-radius: $radius-md;
     border: 1px solid $color-border;
     transition: all $transition-base;
 
     &:hover {
       transform: translateX(4px);
-      border-color: $color-text-primary;
+      border-color: $color-accent;
     }
   }
 
   &__article-tag {
     font-size: $font-size-xs;
-    color: $color-text-muted;
+    color: $color-accent;
     font-weight: $font-weight-medium;
     margin-bottom: $spacing-xs;
   }
@@ -169,12 +241,12 @@
   }
 }
 
-// 專業技能貢獻區塊
+// 專業技能貢獻
 .skills {
   &__label {
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
-    color: $color-text-muted;
+    color: $color-accent;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: $spacing-sm;
@@ -198,14 +270,14 @@
     padding: $spacing-md;
     border: 1px solid $color-border;
     border-radius: $radius-md;
-    background-color: $color-white;
+    background-color: $color-bg-card;
     display: flex;
     flex-direction: column;
     gap: $spacing-sm;
     transition: all $transition-base;
 
     &:hover {
-      border-color: $color-text-primary;
+      border-color: $color-accent;
       transform: translateY(-2px);
     }
   }
@@ -229,7 +301,7 @@
       &::before {
         content: '·';
         margin-right: 6px;
-        color: $color-text-muted;
+        color: $color-accent;
       }
     }
   }
@@ -243,7 +315,7 @@
 
   &__card-tag {
     font-size: $font-size-xs;
-    color: $color-text-primary;
+    color: $color-tag-text;
     background-color: $color-tag-bg;
     padding: 3px $spacing-xs;
     border-radius: $radius-full;
@@ -252,8 +324,9 @@
     border: 1px solid transparent;
 
     &:hover {
-      background-color: $color-text-primary;
+      background-color: $color-accent;
       color: $color-white;
+      border-color: $color-accent;
     }
   }
 
@@ -270,14 +343,14 @@
   }
 }
 
-// 推薦信區塊
+// 推薦信
 .testimonials {
   background-color: $color-bg-secondary;
 
   &__label {
     font-size: $font-size-sm;
     font-weight: $font-weight-semibold;
-    color: $color-text-muted;
+    color: $color-accent;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: $spacing-sm;
@@ -298,7 +371,7 @@
   }
 
   &__card {
-    background-color: $color-white;
+    background-color: $color-bg-card;
     border-radius: $radius-lg;
     padding: $spacing-lg;
     border: 1px solid $color-border;

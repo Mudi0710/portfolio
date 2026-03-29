@@ -1,15 +1,16 @@
 // 顏色
 $color-bg: #0f1117;
-$color-bg-secondary: #161b27;
-$color-bg-card: #1a2035;
+$color-bg-secondary: #1c2d4a;
+$color-bg-card: #1e2d4a;
 $color-text-primary: #f0f2f5;
 $color-text-secondary: #8b97aa;
 $color-text-muted: #4a5568;
 $color-accent: #4f8ef7;
-$color-border: #1e2535;
+$color-border: #2a3a5c; // 一般用途（淺色背景上的邊框）
+$color-border-card: #3d5580; // 卡片專用（深藍背景上，對比夠、不刺眼）
 $color-white: #f0f2f5;
-$color-tag-bg: #1e2d4a;
-$color-tag-text: #7eb3ff;
+$color-tag-bg: #263d63;
+$color-tag-text: #93c4ff;
 
 // 字體
 $font-primary: 'Inter', 'Noto Sans TC', sans-serif;

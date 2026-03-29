@@ -7,7 +7,11 @@ import BackToTop from '@/components/BackToTop.vue'
 <template>
   <Header />
   <main>
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <Transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
   </main>
   <Footer />
   <BackToTop />
@@ -16,5 +20,15 @@ import BackToTop from '@/components/BackToTop.vue'
 <style scoped>
 main {
   min-height: 100vh;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

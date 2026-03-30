@@ -31,8 +31,9 @@
           <div class="toc-float__panel">
             <p class="toc-float__title">目錄</p>
             <ul class="toc-float__list">
+              <!-- 手機版浮動目錄 -->
               <li v-for="item in toc" :key="item.id">
-                <a :href="'#' + item.id" @click="tocOpen = false">{{ item.text }}</a>
+                <a @click.prevent="scrollTo(item.id); tocOpen = false" href="#">{{ item.text }}</a>
               </li>
             </ul>
           </div>
@@ -42,8 +43,9 @@
         <aside class="toc-sidebar">
           <p class="toc-sidebar__title">目錄</p>
           <ul class="toc-sidebar__list">
+            <!-- 側邊目錄 -->
             <li v-for="item in toc" :key="item.id" class="toc-sidebar__item">
-              <a :href="'#' + item.id" class="toc-sidebar__link" :class="{ 'toc-sidebar__link--active': activeId === item.id }">{{ item.text }}</a>
+              <a @click.prevent="scrollTo(item.id)" href="#" class="toc-sidebar__link" :class="{ 'toc-sidebar__link--active': activeId === item.id }">{{ item.text }}</a>
             </li>
           </ul>
         </aside>
@@ -102,6 +104,12 @@ const onScroll = () => {
     }
   })
   activeId.value = current
+}
+
+const scrollTo = (id) => {
+  const el = document.getElementById(id)
+  if (!el) return
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 onMounted(() => {

@@ -38,7 +38,8 @@ import { ref, computed } from 'vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import { projects } from '@/data/projects.js'
 
-const filters = ['All', 'UIUX', 'Frontend', 'AI']
+const filters = ['All', ...new Set(projects.flatMap((p) => p.tags))]
+// const filters = ['All', 'UIUX', 'Frontend', 'AI', 'Cross-functional', 'Information Architecture']
 const activeFilter = ref('All')
 
 const filteredProjects = computed(() => {

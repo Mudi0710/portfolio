@@ -182,8 +182,8 @@
 }
 
 .pd-callout {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: $spacing-md;
   margin: $spacing-lg 0;
 
@@ -192,11 +192,19 @@
     background-color: $color-bg-secondary;
     border-radius: $radius-md;
     border-left: 3px solid $color-accent;
+
+    p {
+      font-size: $font-size-base;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
     display: block;
-    font-size: $font-size-sm;
+    font-size: $font-size-base;
     font-weight: $font-weight-semibold;
     color: $color-accent;
     margin-bottom: $spacing-xs;
@@ -245,7 +253,7 @@
 
       li {
         list-style: disc;
-        font-size: $font-size-sm;
+        font-size: $font-size-base;
         color: $color-text-secondary;
         line-height: 1.8;
         margin-bottom: 4px;
@@ -255,7 +263,7 @@
 
   &__level {
     display: block;
-    font-size: $font-size-sm;
+    font-size: $font-size-base;
     font-weight: $font-weight-semibold;
     color: $color-accent;
     margin-bottom: $spacing-xs;
@@ -317,7 +325,6 @@
     ul,
     ol {
       padding-left: $spacing-lg;
-      margin-bottom: $spacing-md;
 
       li {
         margin-bottom: $spacing-xs;

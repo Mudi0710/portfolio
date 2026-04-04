@@ -1,162 +1,322 @@
 export const projects = [
+  //   {
+  //     id: 'uiux-project-1',
+  //     title: '32%+ 年增長：透過訂閱頁面 A/B 測試優化轉換率',
+  //     description:
+  //       '主導訂閱頁面的 A/B 測試，測試超過 50 個變數，並在成長停滯時主動進行競品研究，找出突破性的設計方向。',
+  //     cover: '/images/projects/project-1.jpg',
+  //     hashtags: ['數據驅動', '設計策略', '領導力'],
+  //     tags: ['UIUX', 'A/B Testing', 'Growth Design'],
+  //     category: ['uiux'],
+  //     content: `
+  //   <!-- 專案成效 -->
+  //   <div class="pd-metrics">
+  //     <div class="pd-metric">
+  //       <span class="pd-metric__number">32%+</span>
+  //       <span class="pd-metric__label">年營收成長（YoY）</span>
+  //     </div>
+  //     <div class="pd-metric">
+  //       <span class="pd-metric__number">44%+</span>
+  //       <span class="pd-metric__label">月營收成長（MoM）</span>
+  //     </div>
+  //     <div class="pd-metric">
+  //       <span class="pd-metric__number">9x</span>
+  //       <span class="pd-metric__label">訂閱轉換率提升</span>
+  //     </div>
+  //   </div>
+
+  //   <!-- 角色資訊 -->
+  //   <div class="pd-info">
+  //     <div class="pd-info__item">
+  //       <span class="pd-info__label">角色</span>
+  //       <span class="pd-info__value">UIUX 設計師</span>
+  //     </div>
+  //     <div class="pd-info__item">
+  //       <span class="pd-info__label">時間</span>
+  //       <span class="pd-info__value">2024/01 - 2024/04</span>
+  //     </div>
+  //     <div class="pd-info__item">
+  //       <span class="pd-info__label">公司</span>
+  //       <span class="pd-info__value">MixerBox</span>
+  //     </div>
+  //   </div>
+
+  //   <!-- 主要貢獻 -->
+  //   <h2>主要貢獻</h2>
+  //   <ul>
+  //     <li><strong>數據洞察：</strong>設計並主導超過 50 組變數的 A/B 測試，從數據中萃取設計洞察。</li>
+  //     <li><strong>設計策略：</strong>在成長停滯時主動進行競品研究，找出突破性的設計方向。</li>
+  //     <li><strong>跨團隊影響力：</strong>建立可複製的成功模板，並將數據驅動的洞察分享給各團隊，為公司帶來長期價值。</li>
+  //   </ul>
+
+  //   <!-- 挑戰 -->
+  //   <h2>挑戰</h2>
+  //   <p>目前訂閱轉換率不到 1%，遠低於市場平均水準，導致營收表現不佳。</p>
+  //   <img src="/portfolio/images/projects/uiux-project-1/challenge.jpg" alt="挑戰：低轉換率現況分析" />
+
+  //   <div class="pd-callout">
+  //     <div class="pd-callout__item">
+  //       <span class="pd-callout__title">商業面</span>
+  //       <p>轉換率不到 1%，遠低於市場平均，過去最高也不超過 3%。</p>
+  //     </div>
+  //     <div class="pd-callout__item">
+  //       <span class="pd-callout__title">利害關係人</span>
+  //       <p>此流程的營收與公司整體營收高度相關，C-level 主管高度關注，亟需改善。</p>
+  //     </div>
+  //   </div>
+
+  //   <!-- MVP 驗證 -->
+  //   <h2>MVP 驗證</h2>
+  //   <p>快速 MVP 驗證立即讓轉換率翻倍。</p>
+
+  //   <div class="pd-process">
+  //     <div class="pd-process__step">
+  //       <span class="pd-process__label">假設</span>
+  //       <p>在 App 流程中更早提示使用者，可以提高訂閱意願。</p>
+  //     </div>
+  //     <div class="pd-process__step">
+  //       <span class="pd-process__label">MVP</span>
+  //       <p>在現有 Onboarding 流程中，針對新使用者加入付費牆進行測試。</p>
+  //     </div>
+  //     <div class="pd-process__step">
+  //       <span class="pd-process__label">測試策略</span>
+  //       <p>從最精簡的版本開始測試，快速驗證方向是否正確。</p>
+  //     </div>
+  //   </div>
+
+  //   <img src="/portfolio/images/projects/uiux-project-1/mvp.jpg" alt="MVP 測試版本設計稿" />
+
+  //   <p>MVP 驗證了策略方向正確，轉換率直接翻倍。接下來將基於兩個不同的入口持續測試與優化。</p>
+
+  //   <!-- A/B 測試 -->
+  //   <h2>A/B 測試：超過 50 組變數</h2>
+  //   <p>以極快的速度進行迭代，每天至少同時測試三組變數。成功的變數成為下一輪的對照組，持續優化。</p>
+  //   <img src="/portfolio/images/projects/uiux-project-1/ab-test-overview.jpg" alt="A/B 測試框架總覽" />
+
+  //   <h3>洞察一：使用使用者熟悉的語言與圖像</h3>
+  //   <p>相較於廣泛的「AI」一詞，熱門關鍵字「ChatGPT」更容易讓使用者產生連結，建立有效的第一印象。</p>
+  //   <img src="/portfolio/images/projects/uiux-project-1/insight-1.jpg" alt="洞察一：語言與圖像測試對比" />
+
+  //   <h3>洞察二：減少雜訊，提升決策效率</h3>
+  //   <p>與其用大量資訊轟炸使用者，精簡且結構清晰的內容更能提升決策效率。觀察使用者行為後發現，使用者習慣用大拇指點擊而非上下滑動，將關鍵資訊集中在單一畫面效果更好。</p>
+  //   <img src="/portfolio/images/projects/uiux-project-1/insight-2.jpg" alt="洞察二：資訊精簡對比" />
+
+  //   <h3>洞察三：視覺一致性強化轉換流程</h3>
+  //   <p>保持 Onboarding 體驗與付費牆的視覺一致性，可以顯著提升使用者流暢度，減少轉換摩擦。</p>
+  //   <img src="/portfolio/images/projects/uiux-project-1/insight-3.jpg" alt="洞察三：視覺一致性測試對比" />
+
+  //   <!-- 最終設計 -->
+  //   <h2>最終設計</h2>
+  //   <p>整合所有測試洞察，設計出轉換率最佳的版本。</p>
+  //   <img src="/portfolio/images/projects/uiux-project-1/final-design.jpg" alt="最終設計稿" />
+
+  //   <!-- 成果 -->
+  //   <h2>最終成果</h2>
+  //   <div class="pd-metrics">
+  //     <div class="pd-metric">
+  //       <span class="pd-metric__number">9%</span>
+  //       <span class="pd-metric__label">最終轉換率（從 &lt;1% 提升）</span>
+  //     </div>
+  //     <div class="pd-metric">
+  //       <span class="pd-metric__number">x18</span>
+  //       <span class="pd-metric__label">平均日營收成長</span>
+  //     </div>
+  //     <div class="pd-metric">
+  //       <span class="pd-metric__number">32%</span>
+  //       <span class="pd-metric__label">年營收成長（YoY）</span>
+  //     </div>
+  //     <div class="pd-metric">
+  //       <span class="pd-metric__number">44%</span>
+  //       <span class="pd-metric__label">月營收成長（MoM）</span>
+  //     </div>
+  //   </div>
+
+  //   <!-- 影響力 -->
+  //   <h2>影響力</h2>
+  //   <div class="pd-impact">
+  //     <div class="pd-impact__item">
+  //       <span class="pd-impact__level">公司層面</span>
+  //       <ul>
+  //         <li>訂閱轉換率從 &lt;1% 提升至 9%，帶來 32% YoY 與 44% MoM 的營收成長</li>
+  //         <li>建立可複製的設計原則與測試框架，持續擴大成功模式</li>
+  //       </ul>
+  //     </div>
+  //     <div class="pd-impact__item">
+  //       <span class="pd-impact__level">團隊層面</span>
+  //       <ul>
+  //         <li>建立數據驅動的設計決策文化，減少主觀爭論</li>
+  //         <li>將競品分析轉化為清晰的行動方案，提升團隊士氣</li>
+  //       </ul>
+  //     </div>
+  //     <div class="pd-impact__item">
+  //       <span class="pd-impact__level">個人層面</span>
+  //       <ul>
+  //         <li>建立系統化的實驗框架，透過數據引導設計決策</li>
+  //         <li>培養在資源有限下快速迭代、持續優化的設計能力</li>
+  //       </ul>
+  //     </div>
+  //   </div>
+  // `,
+  //   },
   {
-    id: 'uiux-project-1',
-    title: '32%+ 年增長：透過訂閱頁面 A/B 測試優化轉換率',
+    id: 'ai-smartbag-learning-report',
+    title: '從數據羅列到數據洞察：重新設計 K12 家長的三維度學習報告',
     description:
-      '主導訂閱頁面的 A/B 測試，測試超過 50 個變數，並在成長停滯時主動進行競品研究，找出突破性的設計方向。',
+      '前一版學習報告被大主管打槍，原因是日、週、月三份報告只差在時間範圍，本質上只是數據的重複堆疊。我接手後，借鑑數據分析師的思維切入，系統性梳理所有可用數據素材，設計出三種截然不同的敘事邏輯——讓日報告說執行細節、週報告說行為洞察、月報告說成長故事。最終成為 AI 智能書包主打亮點功能，有效解決家長痛點，成為業務銷售的關鍵說服工具。',
+    // cover: '/images/projects/project-learning-report.jpg',
     cover: '/images/projects/project-1.jpg',
-    hashtags: ['數據驅動', '設計策略', '領導力'],
-    tags: ['UIUX', 'A/B Testing', 'Growth Design'],
+    hashtags: ['數據洞察設計', '資訊架構', '跨角色協作'],
+    tags: ['UIUX', 'Cross-functional', 'Information Architecture'],
     category: ['uiux'],
     content: `
-  <!-- 專案成效 -->
-  <div class="pd-metrics">
-    <div class="pd-metric">
-      <span class="pd-metric__number">32%+</span>
-      <span class="pd-metric__label">年營收成長（YoY）</span>
+    <!-- 角色資訊 -->
+    <div class="pd-info">
+      <div class="pd-info__item">
+        <span class="pd-info__label">公司</span>
+        <span class="pd-info__value">三貝德數位文創股份有限公司</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">產品</span>
+        <span class="pd-info__value">AI 智能書包 — 學習報告（官網功能）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">職稱</span>
+        <span class="pd-info__value">UIUX Designer（跨 PM 協助）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">時間</span>
+        <span class="pd-info__value">2023.11 – 2024.01（約 15 個工作天）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">負責範圍</span>
+        <span class="pd-info__value">資訊架構梳理、UX 規劃、Wireframe、規格邏輯撰寫、文案撰寫</span>
+      </div>
     </div>
-    <div class="pd-metric">
-      <span class="pd-metric__number">44%+</span>
-      <span class="pd-metric__label">月營收成長（MoM）</span>
-    </div>
-    <div class="pd-metric">
-      <span class="pd-metric__number">9x</span>
-      <span class="pd-metric__label">訂閱轉換率提升</span>
-    </div>
-  </div>
 
-  <!-- 角色資訊 -->
-  <div class="pd-info">
-    <div class="pd-info__item">
-      <span class="pd-info__label">角色</span>
-      <span class="pd-info__value">UIUX 設計師</span>
-    </div>
-    <div class="pd-info__item">
-      <span class="pd-info__label">時間</span>
-      <span class="pd-info__value">2024/01 - 2024/04</span>
-    </div>
-    <div class="pd-info__item">
-      <span class="pd-info__label">公司</span>
-      <span class="pd-info__value">MixerBox</span>
-    </div>
-  </div>
+    <!-- 背景與挑戰 -->
+    <h2>背景與挑戰</h2>
 
-  <!-- 主要貢獻 -->
-  <h2>主要貢獻</h2>
-  <ul>
-    <li><strong>數據洞察：</strong>設計並主導超過 50 組變數的 A/B 測試，從數據中萃取設計洞察。</li>
-    <li><strong>設計策略：</strong>在成長停滯時主動進行競品研究，找出突破性的設計方向。</li>
-    <li><strong>跨團隊影響力：</strong>建立可複製的成功模板，並將數據驅動的洞察分享給各團隊，為公司帶來長期價值。</li>
-  </ul>
+    <p>「學習報告」是 AI 智能書包針對家長設計的核心功能，以獨立官網的形式呈現，並整合 LINE OA 推播通知，讓家長隨時掌握孩子的學習狀況。商業目標明確：「讓家長覺得錢花得值得，即便人在外工作，也能即時了解孩子今天學了什麼、學得怎麼樣」。</p>
 
-  <!-- 挑戰 -->
-  <h2>挑戰</h2>
-  <p>目前訂閱轉換率不到 1%，遠低於市場平均水準，導致營收表現不佳。</p>
-  <img src="/portfolio/images/projects/uiux-project-1/challenge.jpg" alt="挑戰：低轉換率現況分析" />
+    <p>然而，這個功能在我接手之前，已經由 PM 與設計主管共同規劃出第一版，並被大主管否定。被打槍的原因一針見血：<strong>「日、週、月三份報告，本質上只是同一套數據在不同時間維度的重複呈現」</strong>，看起來像三份一樣的報告換了個日期範圍，既不能體現 AI 的差異化價值，也無法真正幫助家長理解孩子的學習狀況。</p>
 
-  <div class="pd-callout">
-    <div class="pd-callout__item">
-      <span class="pd-callout__title">商業面</span>
-      <p>轉換率不到 1%，遠低於市場平均，過去最高也不超過 3%。</p>
+    <p>由於我在前一個專案「學習目標」中的表現受到肯定，PM 與設計主管將這個棘手的案子交給我重新接手。</p>
+
+    <img src="/portfolio/images/projects/ai-smartbag-learning-report/old-version.jpg" alt="前一版學習報告 UI，三個維度呈現相似的數據結構" />
+
+    <!-- 設計過程 -->
+    <h2>設計過程</h2>
+
+    <h3>洞察一：借鑑數據分析師思維，找到問題的根</h3>
+
+    <p>我先與 PM 和設計主管進行專案交接訪談，了解前一版被否定的來龍去脈與會議討論紀錄。這次我沒有另外訪談業務，因為需求來源相當直接：大主管本身就是家長身份，他對功能的期待，就是最真實的使用者需求。</p>
+
+    <p>破題的靈感，來自我在社群上偶然看到的一個數據分析師案例。他在研究一組客訴數據時發現：「80% 的客訴，其實來自同一位客人」。這個故事讓我理解，<strong>數據真正的價值不在於「呈現」，而在於「洞察」</strong>——從數字背後找到真正重要的訊息。我把這個思維直接套用到學習報告的設計上，立刻看見了舊版的問題所在：「它缺少的不是數據，而是數據被詮釋之後的意義」。</p>
+
+    <h3>洞察二：系統性盤點素材，在限制中找到可能性</h3>
+
+    <p>有了方向之後，我在 FigJam 展開了一張大型梳理表格，將所有可能的數據面向逐一列出，包含：孩子資料切換、計劃進度與執行率、今日／本週／本月動態、學習趨勢、對孩子的觀察與建議、個人特質觀察……等超過十個面向，並用表格標記每個數據在「日、週、月」三個維度中是否適合呈現。</p>
+
+    <p>與此同時，我主動與研發工程師逐一確認現有 API 能提供哪些數據，以及哪些交叉運算在技術上可行。由於我有前端開發的學習背景，我能夠理解數據結構與 API 的運作邏輯，讓我在設計早期就清楚知道「哪些想法做得到、哪些需要協調」，而不是設計出無法實作的方案。</p>
+
+    <img src="/portfolio/images/projects/ai-smartbag-learning-report/figjam-mapping.jpg" alt="FigJam 數據面向梳理表格，橫軸為日週月維度，縱軸為各數據類型" />
+
+    <h3>關鍵框架：三種維度，三種敘事邏輯</h3>
+
+    <p>梳理完所有素材後，我確立了整份學習報告的核心設計框架：<strong>三個時間維度，各自承載不同的故事任務。</strong></p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">日報告：執行細節</span>
+        <p>「今天孩子具體做了什麼？」以最細粒度呈現每日學習行為，包含計劃達成率、每個知識點影片的觀看時長、隨堂練習與考卷測驗的詳細數據，讓家長看見孩子今天真實的學習過程。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">週報告：行為洞察</span>
+        <p>「這一週孩子的學習狀態如何？」從行為模式切入，呈現孩子的學習節奏、計劃達成率，並與全國同年級學生比較，讓家長理解孩子在這個時間尺度下的學習動能與相對位置。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">月報告：成長觀察</span>
+        <p>「這一個月孩子有沒有真正進步？」拉長視角，以科目雷達圖、PR 值、知識點掌握數等維度，呈現孩子的學習成長趨勢，並提供具有溫度的觀察與建議，協助家長用更全局的眼光看待孩子的學習歷程。</p>
+      </div>
     </div>
-    <div class="pd-callout__item">
-      <span class="pd-callout__title">利害關係人</span>
-      <p>此流程的營收與公司整體營收高度相關，C-level 主管高度關注，亟需改善。</p>
-    </div>
-  </div>
 
-  <!-- MVP 驗證 -->
-  <h2>MVP 驗證</h2>
-  <p>快速 MVP 驗證立即讓轉換率翻倍。</p>
+    <!-- 最終設計 -->
+    <h2>最終設計</h2>
 
-  <div class="pd-process">
-    <div class="pd-process__step">
-      <span class="pd-process__label">假設</span>
-      <p>在 App 流程中更早提示使用者，可以提高訂閱意願。</p>
-    </div>
-    <div class="pd-process__step">
-      <span class="pd-process__label">MVP</span>
-      <p>在現有 Onboarding 流程中，針對新使用者加入付費牆進行測試。</p>
-    </div>
-    <div class="pd-process__step">
-      <span class="pd-process__label">測試策略</span>
-      <p>從最精簡的版本開始測試，快速驗證方向是否正確。</p>
-    </div>
-  </div>
+    <h3>日報告：從兩區塊合一，解決資訊重複問題</h3>
 
-  <img src="/portfolio/images/projects/uiux-project-1/mvp.jpg" alt="MVP 測試版本設計稿" />
+    <p>初版 wireframe 將「課程觀看」與「答題數據（隨堂練習 + 考卷測驗）」分成兩個獨立區塊。但我意識到，在「學習目標」的計劃邏輯中，每一個學習單元本來就包含知識點影片、隨堂練習與考卷測驗，它們對應的是同一個學習範圍。若分開呈現，家長會看到同樣的課程名稱出現兩次，反而造成困惑。因此我在 Final 版中將其合而為一，以學習單元為主軸，整合所有對應數據。</p>
 
-  <p>MVP 驗證了策略方向正確，轉換率直接翻倍。接下來將基於兩個不同的入口持續測試與優化。</p>
+    <p>日報告同時引入四種學習標籤：延遲學習、當日學習、提前學習、額外學習，讓家長一眼就能理解孩子的學習行為是否符合計劃節奏。</p>
 
-  <!-- A/B 測試 -->
-  <h2>A/B 測試：超過 50 組變數</h2>
-  <p>以極快的速度進行迭代，每天至少同時測試三組變數。成功的變數成為下一輪的對照組，持續優化。</p>
-  <img src="/portfolio/images/projects/uiux-project-1/ab-test-overview.jpg" alt="A/B 測試框架總覽" />
+    <img src="/portfolio/images/projects/ai-smartbag-learning-report/day-report.jpg" alt="日報告最終 Wireframe，學習單元整合觀看數據與測驗數據，並標示四種學習標籤" />
 
-  <h3>洞察一：使用使用者熟悉的語言與圖像</h3>
-  <p>相較於廣泛的「AI」一詞，熱門關鍵字「ChatGPT」更容易讓使用者產生連結，建立有效的第一印象。</p>
-  <img src="/portfolio/images/projects/uiux-project-1/insight-1.jpg" alt="洞察一：語言與圖像測試對比" />
+    <h3>週報告：以角色屬性為洞察增添溫度</h3>
 
-  <h3>洞察二：減少雜訊，提升決策效率</h3>
-  <p>與其用大量資訊轟炸使用者，精簡且結構清晰的內容更能提升決策效率。觀察使用者行為後發現，使用者習慣用大拇指點擊而非上下滑動，將關鍵資訊集中在單一畫面效果更好。</p>
-  <img src="/portfolio/images/projects/uiux-project-1/insight-2.jpg" alt="洞察二：資訊精簡對比" />
+    <p>原本規劃的「黃金學習時間」圖表（折線圖 + 瀑布圖），在與研發團隊協調後因開發複雜度過高而暫緩。為了不讓週報告的洞察深度因此打折，我引入了「學習目標」功能中已有的角色屬性系統——佛系學生、勤奮學子、資優菁英、天才學霸——依據孩子本週的學習投入程度自動對應，為冰冷的時數數據加入一層有趣的人格標籤，讓家長在看數字的同時，也能感受到孩子學習狀態的整體氛圍。</p>
 
-  <h3>洞察三：視覺一致性強化轉換流程</h3>
-  <p>保持 Onboarding 體驗與付費牆的視覺一致性，可以顯著提升使用者流暢度，減少轉換摩擦。</p>
-  <img src="/portfolio/images/projects/uiux-project-1/insight-3.jpg" alt="洞察三：視覺一致性測試對比" />
+    <img src="/portfolio/images/projects/ai-smartbag-learning-report/week-report.jpg" alt="週報告最終 Wireframe，包含學習計劃達成率、全國比較圖、學習內容細項與角色屬性標籤" />
 
-  <!-- 最終設計 -->
-  <h2>最終設計</h2>
-  <p>整合所有測試洞察，設計出轉換率最佳的版本。</p>
-  <img src="/portfolio/images/projects/uiux-project-1/final-design.jpg" alt="最終設計稿" />
+    <h3>月報告：多維圖表呈現成長軌跡</h3>
 
-  <!-- 成果 -->
-  <h2>最終成果</h2>
-  <div class="pd-metrics">
-    <div class="pd-metric">
-      <span class="pd-metric__number">9%</span>
-      <span class="pd-metric__label">最終轉換率（從 &lt;1% 提升）</span>
+    <p>月報告以「孩子這個月有沒有真正成長」為敘事核心，整合了環形圖、雷達圖、圓餅圖與堆疊長條圖等多種視覺化形式，讓各面向的數據以最直觀的方式被理解。每個圖表背後都有對應的洞察文字，說明數據代表的意義，而非讓家長自己解讀數字。</p>
+
+    <img src="/portfolio/images/projects/ai-smartbag-learning-report/month-report.jpg" alt="月報告最終 Wireframe，包含學習目標達成率、PR 值、科目雷達圖、知識點圓餅圖與考卷成長分析" />
+
+    <h3>帶有溫度的建議文案</h3>
+
+    <p>報告中所有的「觀察與建議」文字，全部由我自行定義。我先梳理出各種數據條件的組合情境——例如計劃達成率偏低、成績出現退步、強弱科差距擴大——再為每種情境撰寫對應的洞察語句，並制定文案口吻規則，交由工程師實作為條件判斷邏輯，讓系統在不同數據狀態下自動帶入對應的建議文字。</p>
+
+    <p>這套規則的撰寫，借助了我過去人資工作的背景——我熟悉如何將評估結果轉化為帶有正向、鼓勵語氣的溝通語言，確保家長在任何情境下收到的都是有溫度的洞察，而不是制式化的數字堆疊。</p>
+
+    <!-- 最終成果 -->
+    <h2>最終成果</h2>
+
+    <p>「學習報告」成功從「被打槍的初稿」翻身為 AI 智能書包上線後的主打亮點功能之一。雖然此功能屬於從 0 到 1 的全新開發，尚無可對比的量化指標，但從內部與市場反應可以看見明確的影響：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">成為產品主打亮點</span>
+        <p>「學習報告」在產品上線後被列為主要行銷功能，展示了 AI 智能書包相較於傳統補教平台的差異化價值。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">有效解決家長痛點</span>
+        <p>根據業務回饋，「學習報告」直接回應了家長最核心的不安：「我付了錢，但我不知道孩子到底有沒有在學、學得怎樣。」這份可視化的報告，讓家長在外工作時也能即時掌握孩子的學習狀況。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">成為業務銷售的關鍵說服工具</span>
+        <p>業務在向家長推廣時，「學習報告」成為打動家長購買意願的重要亮點，協助業務更有說服力地傳遞產品價值。</p>
+      </div>
     </div>
-    <div class="pd-metric">
-      <span class="pd-metric__number">x18</span>
-      <span class="pd-metric__label">平均日營收成長</span>
-    </div>
-    <div class="pd-metric">
-      <span class="pd-metric__number">32%</span>
-      <span class="pd-metric__label">年營收成長（YoY）</span>
-    </div>
-    <div class="pd-metric">
-      <span class="pd-metric__number">44%</span>
-      <span class="pd-metric__label">月營收成長（MoM）</span>
-    </div>
-  </div>
 
-  <!-- 影響力 -->
-  <h2>影響力</h2>
-  <div class="pd-impact">
-    <div class="pd-impact__item">
-      <span class="pd-impact__level">公司層面</span>
-      <ul>
-        <li>訂閱轉換率從 &lt;1% 提升至 9%，帶來 32% YoY 與 44% MoM 的營收成長</li>
-        <li>建立可複製的設計原則與測試框架，持續擴大成功模式</li>
-      </ul>
+    <!-- 影響力 -->
+    <h2>影響力</h2>
+
+    <div class="pd-impact">
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">公司層面</span>
+        <ul>
+          <li>「學習報告」從一個被否定的草稿，成為 AI 智能書包對外主打的差異化功能，直接強化了產品在市場上的說服力與競爭定位。</li>
+          <li>透過 LINE OA 推播整合，讓家長在不需主動開啟 App 的情況下也能接收學習通知，擴大了產品觸及家長的頻率與深度。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">團隊層面</span>
+        <ul>
+          <li>這個專案進一步確立了設計師在跨功能專案中的主導角色：不只是視覺執行，而是能夠從資訊架構、數據邏輯、文案撰寫到功能規劃一手包辦。</li>
+          <li>「日報告說什麼、週報告說什麼、月報告說什麼」的框架思維，被內部團隊採納為往後設計多維度報告功能的參考基準。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">個人層面</span>
+        <ul>
+          <li>這是我第一次系統性地將「數據分析師思維」應用在 UX 設計中——從盤點數據素材、確認技術可行性，到設計出有意義的洞察呈現，完整走過一次數據導向的設計流程。</li>
+          <li>透過研究大量圖表類型與適用情境，我建立了自己對資料視覺化設計的判斷力，也更清楚如何在複雜的資訊中找到真正對使用者有價值的那條線。</li>
+          <li>這個專案也讓我更確信：設計師若能跨越視覺邊界，理解數據、技術與商業，才能在資源與時程的限制下，做出真正有影響力的設計決策。</li>
+        </ul>
+      </div>
     </div>
-    <div class="pd-impact__item">
-      <span class="pd-impact__level">團隊層面</span>
-      <ul>
-        <li>建立數據驅動的設計決策文化，減少主觀爭論</li>
-        <li>將競品分析轉化為清晰的行動方案，提升團隊士氣</li>
-      </ul>
-    </div>
-    <div class="pd-impact__item">
-      <span class="pd-impact__level">個人層面</span>
-      <ul>
-        <li>建立系統化的實驗框架，透過數據引導設計決策</li>
-        <li>培養在資源有限下快速迭代、持續優化的設計能力</li>
-      </ul>
-    </div>
-  </div>
-`,
+  `,
   },
   {
     // id: 'uiux-project-2',
@@ -171,6 +331,7 @@ export const projects = [
     title: '客服需求降低 80%：從數據出發，重新定義 K12 學生的 AI 學習目標設定體驗',
     description:
       '舊版學習計劃操作繁瑣、精準度不足，且高度依賴客服人工協助。我透過業務訪談與後台數據分析，挖掘出「學生每日平均觀看影片僅 22 分鐘」的關鍵洞察，設計出以目標為導向的三步驟 AI 快速建立路徑，讓 90% 的學生選擇使用，並大幅釋放客服人力。',
+    // cover: '/images/projects/ai-smartbag-learning-goal.jpg',
     cover: '/images/projects/project-2.jpg',
     hashtags: ['數據驅動設計', '產品思維', '系統複雜度化簡'],
     tags: ['UIUX', 'AI', 'Cross-functional', 'Information Architecture'],

@@ -21,6 +21,11 @@
   }
 }
 
+strong {
+  color: $color-highlight;
+  font-weight: $font-weight-semibold;
+}
+
 // 全域按鈕樣式
 .btn {
   display: inline-flex;

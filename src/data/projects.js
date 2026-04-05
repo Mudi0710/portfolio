@@ -1,4 +1,5 @@
 export const projects = [
+  // 學習報告
   {
     id: 'ai-smartbag-learning-report',
     title: '從數據羅列到數據洞察：重新設計 K12 家長的三維度學習報告',
@@ -159,6 +160,7 @@ export const projects = [
     </div>
   `,
   },
+  // 學習目標
   {
     id: 'ai-smartbag-learning-goal',
     title: '客服需求降低 80%：從數據出發，重新定義 K12 學生的 AI 學習目標設定體驗',
@@ -345,6 +347,7 @@ export const projects = [
     </div>
   `,
   },
+  // 教育心理測驗
   {
     id: 'ai-smartbag-edu-psych-quiz',
     title: '用研究方法做設計：從 30+ 篇文獻到 64 種結果的 K12 教育心理測驗',
@@ -540,6 +543,7 @@ export const projects = [
     </div>
   `,
   },
+  // EPUB
   {
     id: 'ai-smartbag-epub-production',
     title: '1,780 份 EPUB：用設計系統與 Excel 工具，讓不可能的量產任務成真',
@@ -705,6 +709,203 @@ export const projects = [
           <li>這是我第一次深刻體會到設計系統的真正價值——它不只是讓視覺一致，更是讓不同人在不同時間點，都能依循同一套標準做出品質穩定的成果。</li>
           <li>這個專案也讓我意識到，跨職涯的技術積累——從人資磨練出的 Excel 函式能力，到設計工作培養的前端直覺——在面對複雜挑戰時，往往能產生意想不到的組合力量。</li>
           <li>更重要的是，我第一次清楚地看見自己的行動力對團隊的直接影響：一個主動提出並獨立完成的工具，改變了整個團隊的工作模式，也讓一個幾乎要被放棄的任務重新看見了完成的可能。</li>
+        </ul>
+      </div>
+    </div>
+  `,
+  },
+  // Demo Report
+  {
+    id: 'bd-portal-demo-report',
+    title: '顛覆 Form 表單的邊界：獨立主導業務銷售工具 Demo Report 的從 0 到 1 設計',
+    description:
+      '業務團隊用 Xmind 整理客戶學習資訊，但輸出只是一張圖，資料無法被系統收回再利用。我在 PM 資源幾乎缺席的情況下，獨立完成 UX 研究、UI 設計、Prototype 與切版，並透過業務銷售流程的深度研究，將原始需求從「心智圖系統」重新定位為陪伴業務完整銷售旅程的數位報告工具，更首創將 Form 表單與心智圖操作邏輯融合的後台設計，讓大主管直呼「從來沒想過 Form 表單可以做成這樣」。',
+    cover: '/images/projects/project-2.jpg',
+    hashtags: ['研究驅動設計', '產品重新定位', '創新互動設計'],
+    tags: ['UIUX', 'Research', 'Frontend', 'Cross-functional'],
+    category: ['uiux', 'frontend'],
+    content: `
+    <!-- 角色資訊 -->
+    <div class="pd-info">
+      <div class="pd-info__item">
+        <span class="pd-info__label">公司</span>
+        <span class="pd-info__value">三貝德數位文創股份有限公司</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">產品</span>
+        <span class="pd-info__value">BD Portal — Demo Report 學習適性報告</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">職稱</span>
+        <span class="pd-info__value">UIUX Designer（獨立主導，跨 PM 職責）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">時間</span>
+        <span class="pd-info__value">2023.08 – 2023.10（約 29 個工作天）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">負責範圍</span>
+        <span class="pd-info__value">UX 研究、資訊架構、UI 設計、Prototype、前端切版（前台報告頁 + 後台 BD Portal 表單）</span>
+      </div>
+    </div>
+
+    <!-- Prototype 連結 -->
+    <p>你可以直接體驗互動原型：</p>
+    <a
+      href="https://www.figma.com/proto/0cmPO9ihERV9mXgZwB3TWV/Prototype---SCRM---Demo-Report-%E5%AD%B8%E7%BF%92%E9%81%A9%E6%80%A7%E5%A0%B1%E5%91%8A?node-id=1-4599&viewport=691%2C619%2C0.17&t=SPhAoeow8hCBJt7o-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A4599&page-id=1%3A4598"
+      target="_blank"
+      style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #4f8ef7, #7c5ff7); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+      → 查看 Figma Prototype
+    </a>
+
+    <!-- 背景與挑戰 -->
+    <h2>背景與挑戰</h2>
+
+    <p>這個專案的起點，來自業務單位大主管向研發部提出的一個需求：「能不能在內部系統 BD Portal 裡，做一套心智圖系統，讓業務可以直接在系統中操作，把客戶的訪談資料保存下來？」</p>
+
+    <p>業務團隊長期使用 Xmind 整理學生的學習狀況——強弱科分佈、學習斷點、補強建議——但這套做法有幾個根本限制：「每位業務的整理方式與視覺品質參差不齊，對家長呈現的專業感缺乏一致性；Xmind 輸出的只是一張圖，資料無法被系統收回再利用；資訊整理完後，也難以直接銜接到 BD Portal 的後續流程。」</p>
+
+    <p>原始需求同時包含一個面向客戶的前台頁面——業務填入訪談內容後，系統自動產出一份學習適性報告，以連結形式傳送給家長。</p>
+
+    <p>當時 PM（大主管）與代理 PM（設計主管）工作量均已滿載，專案的前期工作幾乎完全由我一人承擔。我從接到任務的第一刻就清楚：這是一個單人專案，從理解需求、研究使用者、規劃設計，到 UI 繪製與切版，必須全部自己扛。</p>
+
+    <!-- 設計過程 -->
+    <h2>設計過程</h2>
+
+    <h3>洞察一：先用 5W1H 快速建立 Domain Know-How</h3>
+
+    <p>接到專案時，我手上的資訊極為有限——只知道「要把 Xmind 放進 BD Portal」。面對資訊真空，我用 5W1H 框架快速梳理專案輪廓：使用者是誰（業務、家長、學生）、為什麼啟動這個專案（對內整合流程、對外提升品牌專業感）、在哪些時機點會使用（電訪、Demo、試讀）、產品出現在什麼載具上（Web + 手機，需考量 RWD）。這個過程讓我在沒有 PM 主動梳理需求的情況下，迅速建立起對這個專案的基本認識。</p>
+
+    <h3>洞察二：訪談業務，發現心智圖有「生命週期」</h3>
+
+    <p>為了更深入理解業務的實際工作方式，我主動邀請業務團隊核心成員進行訪談。這次訪談讓我發現了一個關鍵洞察：<strong>心智圖並不是一次性的產物，它跟著整個銷售流程在演化。</strong></p>
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/sales-lifecycle.jpg" alt="業務銷售三階段示意圖：第一次接觸（電訪）、第二次接觸（Demo）、第三次接觸（試讀七天），心智圖在每個階段扮演不同角色" />
+
+    <p>我將訪談結果整理成一張研究彙整表，橫跨三個銷售階段分析業務行為、接觸目標、聯繫時間與心智圖生命週期：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">Stage 1 - 電訪：初次見面</span>
+        <p>業務介紹產品、了解客戶狀況與需求，時間細碎且可能中斷，心智圖在此階段是「初次見面」的輔助工具。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">Stage 2 - Demo：共同完成，深度解析</span>
+        <p>業務展示產品、展現專業感，有完整時間深入交流，業務與客戶共同完成心智圖的填寫，是整個銷售流程中信任建立的關鍵時刻。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">Stage 3 - 試讀：評估工具，業務角色的延伸</span>
+        <p>進入七天試讀期，業務以人與系統持續關懷客戶，心智圖此時成為家長評估是否購買的重要依據，也是業務角色在不在場時的延伸。</p>
+      </div>
+    </div>
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/research-matrix.jpg" alt="研究彙整表，從業務行為、接觸目標、聯繫時間、心智圖生命週期四個維度分析三個銷售階段，並標注四個關鍵設計洞察（紅字）" />
+
+    <h3>關鍵轉折：從「心智圖系統」到「陪伴整個銷售旅程的數位報告」</h3>
+
+    <p>這個生命週期的發現，讓我意識到 Demo Report 不應該只是把 Xmind 搬進系統——它應該在不同銷售階段，都能回應業務當下的需求，產生對應的商業價值。我從研究彙整表中提煉出四個直接影響後續設計的關鍵洞察：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">「輔助業務介紹產品」→ 加入試讀帳號資訊、官方資源連結、顧問師的一段話</span>
+        <p>在試讀階段，報告本身可以成為業務的替身。我在「體驗資訊」頁面加入試讀帳號、密碼與平台連結，讓家長能直接開始體驗產品；在「關於我們」頁面放上產品官網、社群媒體、客服電話等官方連結，讓家長在有疑問時能自行找到解答，不必每次都等業務回覆——降低業務的溝通負荷，同時提升家長的自助體驗。加上顧問師親筆的一段信，讓業務不在場時，這份報告仍能持續與客戶產生連結。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">「編排清晰、專業簡潔」＋「專屬感，可重複檢視」→ Landing Page 改為 Dashboard</span>
+        <p>這個決定有一部分來自現實的推力：因為我視覺設計能力有限，初版 Landing Page 大量的空白填補不起來，整體視覺表現偏弱。而 Dashboard 的分頁結構，讓每個畫面聚焦單一主題，空白反而成為呼吸空間，視覺上自然合理；Tab 切換增加了互動與停留時間；對家長而言，這份可隨時回來查閱的專屬報告，也因此更有儀式感與可重複查閱的價值。<strong>這是一次把視覺設計的限制，轉化為對使用者更有價值的設計決策。</strong></p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">「允許空白欄位，取消必填」→ 後台表單全面取消必填限制</span>
+        <p>業務在不同階段與客戶接觸的深度不同，並不是每次都能收集到完整資訊。強制必填反而會打斷業務的作業節奏。取消必填限制，讓業務在任何階段都能彈性填入當下掌握的資訊，隨著銷售推進再逐步補齊。</p>
+      </div>
+    </div>
+
+    <h3>突破：顛覆 Form 表單的邊界</h3>
+
+    <p>在後台 BD Portal 的設計上，我面臨了一個技術層面的根本限制：<strong>市面上的心智圖套件，無法將使用者填入的文字資料寫回系統</strong>——輸出的都是純圖片，資料無法被後端收回再利用，這讓「把心智圖放進系統」的原始需求在技術上根本無法實現。</p>
+
+    <p>大主管看過初版表單後，認為欄位過多、介面太冗長，希望我縮減。他們預期的解法，大概是把一排 2 個 input 改成 4 個——更緊湊，但本質不變。</p>
+
+    <p>我給出的答案，是完全不同的方向：<strong>把 Form 表單的編輯模式，做成心智圖的操作邏輯。</strong></p>
+
+    <p>透過 Vue.js 的動態控制，我實現了點擊「+」可以新增子節點欄位、點擊「-」可以刪除的互動方式，讓整張表單的操作體驗貼近業務原本熟悉的 Xmind——但填入的每一筆資料，都能被系統結構化地收回儲存。這個設計同時解決了技術限制與操作體驗兩個問題，也讓設計主管與大主管都說出：「從來沒想過 Form 表單可以做成這樣！」</p>
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/bdp-form.jpg" alt="BD Portal 後台表單，以心智圖節點結構呈現，每個層級可透過 +/- 按鈕動態新增或刪除欄位" />
+
+    <h3>突發狀況：螢幕分享下的資訊安全問題</h3>
+
+    <p>訪談中我發現，業務在進行 Demo 時，會將螢幕畫面即時分享給客戶同步觀看。這意味著，如果業務直接在 BD Portal 中填寫資料，客戶有可能看見內部系統的機密畫面。</p>
+
+    <p>解法簡單而精準：將後台填寫頁面設定為以 <code>target="_blank"</code> 開啟新分頁，徹底將填寫介面與 BD Portal 主系統的畫面隔離。業務在分享螢幕時，只需確保前台報告頁在主視窗即可，內部系統資訊完全不會暴露。</p>
+
+    <!-- 最終設計 -->
+    <h2>最終設計</h2>
+
+    <h3>前台：學習適性報告 Dashboard</h3>
+
+    <p>最終的前台報告以 Dashboard 形式呈現，左側固定導覽列，右側主內容區依分頁切換，右欄常駐學生個人資訊與學習指標雷達圖，讓家長在任何頁面都能看到孩子的基本輪廓。</p>
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/ui-v1-landing.jpg" alt="初版 Landing Page UI，一頁式設計，視覺留白過多，為後續改版提供對比" />
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/ui-final-mindmap.jpg" alt="最終版 Dashboard — 心智圖表頁，主內容區呈現可縮放的互動式心智圖，右側常駐個人資訊與雷達圖" />
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/ui-final-analysis.jpg" alt="最終版 Dashboard — 適性分析頁，呈現顧問師的發現與建議，分個人特質、時間運用、學習方式等維度" />
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/ui-final-trial.jpg" alt="最終版 Dashboard — 體驗資訊頁，呈現試讀期間、試讀帳號、試讀密碼與立即體驗 CTA 按鈕" />
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/ui-final-about.jpg" alt="最終版 Dashboard — 關於我們頁，呈現顧問師親筆信與產品官方連結、客服資訊" />
+
+    <h3>後台：BD Portal 心智圖式表單</h3>
+
+    <p>後台表單以心智圖節點結構組織所有填寫欄位，業務可依照銷售進度彈性填入，所有欄位均取消必填限制。點擊「+」新增子節點、點擊「-」刪除，操作邏輯與 Xmind 一脈相承，但每一筆填入的資料都能被系統結構化地收回儲存。</p>
+
+    <img src="/portfolio/images/projects/bd-portal-demo-report/bdp-form-full.jpg" alt="BD Portal 後台心智圖式表單完整畫面，以節點展開結構呈現所有填寫欄位" />
+
+    <!-- 最終成果 -->
+    <h2>最終成果</h2>
+
+    <p>Demo Report 成功落地上線，並在業務單位與副董層級獲得高度評價——設計主管在上線後主動回饋：「Demo Report 在業務單位和副董那邊的評價都很好。」這份肯定來自於它不只是一個更好看的心智圖，而是一套真正理解業務銷售流程後，重新定義的數位報告體驗。</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">超出原始需求的產品定位</span>
+        <p>從「把心智圖放進系統」出發，最終交付的是一套能陪伴業務走完整個銷售旅程的數位工具——從電訪、Demo，到試讀期間的持續關懷，每個階段都有對應的設計支撐。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">首創心智圖式 Form 表單</span>
+        <p>突破市面上心智圖套件無法將資料寫回系統的技術限制，以 Vue.js 動態控制實現節點式表單操作，讓資料結構化儲存與心智圖操作體驗同時成立。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">獲得高階主管的高度肯定</span>
+        <p>設計主管直接回饋業務單位與副董的正面評價；大主管與設計主管在看到後台表單設計時，均表示「從來沒想過 Form 表單可以做成這樣」。</p>
+      </div>
+    </div>
+
+    <p>值得誠實說明的是，Demo Report 雖然成功落地，但最終並未被業務團隊實際採用。推測原因有二：其一，新工具需要業務大主管主導推動才能改變既有習慣，而這件事並未發生；其二，當時公司內部歷經數波業務人力異動，團隊重心放在人員穩定與業績，內部流程規範的推動因此擱置。這個結果提醒了我：一個設計的落地，不只取決於設計本身的品質，也取決於組織推動的意志與時機。</p>
+
+    <!-- 影響力 -->
+    <h2>影響力</h2>
+
+    <div class="pd-impact">
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">公司層面</span>
+        <ul>
+          <li>Demo Report 在業務單位與副董層級均獲得高度評價，證明設計部有能力獨立主導從研究到交付的完整產品設計流程，無需仰賴 PM 全程帶領。</li>
+          <li>首創的心智圖式 Form 表單設計，為後續 BD Portal 的功能迭代提供了一種新的互動設計思路。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">團隊層面</span>
+        <ul>
+          <li>專案結束後，我在設計雙週會中主動整理這次專案的完整歷程並進行分享，主題聚焦在「UX 研究如何影響 UI 設計決策」，獲得主管與同事的正面回饋。這次分享也促成了設計部內部更多平行經驗交流的可能性。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">個人層面</span>
+        <ul>
+          <li>這是我在這間公司第一個真正意義上獨立主導的專案——從理解模糊需求、主動發起使用者研究、重新定義產品定位，到 UI 設計與切版，完整走過一次從 0 到 1 的產品設計流程。</li>
+          <li>這個專案讓我第一次深刻感受到：設計師可以不只是需求的執行者，而是透過研究與洞察，主動賦予產品更大價值的人。當我把「把心智圖放進系統」的需求，轉化為「陪伴業務走完整個銷售旅程的數位報告」時，我意識到這才是設計師真正能創造的影響力。</li>
+          <li>我也學到了視覺設計限制不一定是障礙——當初版 Landing Page 的大量空白讓我陷入困境時，是使用者研究給了我改版的方向與底氣，讓我能把視覺上的缺點，轉化為對使用者更有價值的設計決策。</li>
         </ul>
       </div>
     </div>

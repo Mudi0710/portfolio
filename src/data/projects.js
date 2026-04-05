@@ -1,163 +1,4 @@
 export const projects = [
-  //   {
-  //     id: 'uiux-project-1',
-  //     title: '32%+ 年增長：透過訂閱頁面 A/B 測試優化轉換率',
-  //     description:
-  //       '主導訂閱頁面的 A/B 測試，測試超過 50 個變數，並在成長停滯時主動進行競品研究，找出突破性的設計方向。',
-  //     cover: '/images/projects/project-1.jpg',
-  //     hashtags: ['數據驅動', '設計策略', '領導力'],
-  //     tags: ['UIUX', 'A/B Testing', 'Growth Design'],
-  //     category: ['uiux'],
-  //     content: `
-  //   <!-- 專案成效 -->
-  //   <div class="pd-metrics">
-  //     <div class="pd-metric">
-  //       <span class="pd-metric__number">32%+</span>
-  //       <span class="pd-metric__label">年營收成長（YoY）</span>
-  //     </div>
-  //     <div class="pd-metric">
-  //       <span class="pd-metric__number">44%+</span>
-  //       <span class="pd-metric__label">月營收成長（MoM）</span>
-  //     </div>
-  //     <div class="pd-metric">
-  //       <span class="pd-metric__number">9x</span>
-  //       <span class="pd-metric__label">訂閱轉換率提升</span>
-  //     </div>
-  //   </div>
-
-  //   <!-- 角色資訊 -->
-  //   <div class="pd-info">
-  //     <div class="pd-info__item">
-  //       <span class="pd-info__label">角色</span>
-  //       <span class="pd-info__value">UIUX 設計師</span>
-  //     </div>
-  //     <div class="pd-info__item">
-  //       <span class="pd-info__label">時間</span>
-  //       <span class="pd-info__value">2024/01 - 2024/04</span>
-  //     </div>
-  //     <div class="pd-info__item">
-  //       <span class="pd-info__label">公司</span>
-  //       <span class="pd-info__value">MixerBox</span>
-  //     </div>
-  //   </div>
-
-  //   <!-- 主要貢獻 -->
-  //   <h2>主要貢獻</h2>
-  //   <ul>
-  //     <li><strong>數據洞察：</strong>設計並主導超過 50 組變數的 A/B 測試，從數據中萃取設計洞察。</li>
-  //     <li><strong>設計策略：</strong>在成長停滯時主動進行競品研究，找出突破性的設計方向。</li>
-  //     <li><strong>跨團隊影響力：</strong>建立可複製的成功模板，並將數據驅動的洞察分享給各團隊，為公司帶來長期價值。</li>
-  //   </ul>
-
-  //   <!-- 挑戰 -->
-  //   <h2>挑戰</h2>
-  //   <p>目前訂閱轉換率不到 1%，遠低於市場平均水準，導致營收表現不佳。</p>
-  //   <img src="/portfolio/images/projects/uiux-project-1/challenge.jpg" alt="挑戰：低轉換率現況分析" />
-
-  //   <div class="pd-callout">
-  //     <div class="pd-callout__item">
-  //       <span class="pd-callout__title">商業面</span>
-  //       <p>轉換率不到 1%，遠低於市場平均，過去最高也不超過 3%。</p>
-  //     </div>
-  //     <div class="pd-callout__item">
-  //       <span class="pd-callout__title">利害關係人</span>
-  //       <p>此流程的營收與公司整體營收高度相關，C-level 主管高度關注，亟需改善。</p>
-  //     </div>
-  //   </div>
-
-  //   <!-- MVP 驗證 -->
-  //   <h2>MVP 驗證</h2>
-  //   <p>快速 MVP 驗證立即讓轉換率翻倍。</p>
-
-  //   <div class="pd-process">
-  //     <div class="pd-process__step">
-  //       <span class="pd-process__label">假設</span>
-  //       <p>在 App 流程中更早提示使用者，可以提高訂閱意願。</p>
-  //     </div>
-  //     <div class="pd-process__step">
-  //       <span class="pd-process__label">MVP</span>
-  //       <p>在現有 Onboarding 流程中，針對新使用者加入付費牆進行測試。</p>
-  //     </div>
-  //     <div class="pd-process__step">
-  //       <span class="pd-process__label">測試策略</span>
-  //       <p>從最精簡的版本開始測試，快速驗證方向是否正確。</p>
-  //     </div>
-  //   </div>
-
-  //   <img src="/portfolio/images/projects/uiux-project-1/mvp.jpg" alt="MVP 測試版本設計稿" />
-
-  //   <p>MVP 驗證了策略方向正確，轉換率直接翻倍。接下來將基於兩個不同的入口持續測試與優化。</p>
-
-  //   <!-- A/B 測試 -->
-  //   <h2>A/B 測試：超過 50 組變數</h2>
-  //   <p>以極快的速度進行迭代，每天至少同時測試三組變數。成功的變數成為下一輪的對照組，持續優化。</p>
-  //   <img src="/portfolio/images/projects/uiux-project-1/ab-test-overview.jpg" alt="A/B 測試框架總覽" />
-
-  //   <h3>洞察一：使用使用者熟悉的語言與圖像</h3>
-  //   <p>相較於廣泛的「AI」一詞，熱門關鍵字「ChatGPT」更容易讓使用者產生連結，建立有效的第一印象。</p>
-  //   <img src="/portfolio/images/projects/uiux-project-1/insight-1.jpg" alt="洞察一：語言與圖像測試對比" />
-
-  //   <h3>洞察二：減少雜訊，提升決策效率</h3>
-  //   <p>與其用大量資訊轟炸使用者，精簡且結構清晰的內容更能提升決策效率。觀察使用者行為後發現，使用者習慣用大拇指點擊而非上下滑動，將關鍵資訊集中在單一畫面效果更好。</p>
-  //   <img src="/portfolio/images/projects/uiux-project-1/insight-2.jpg" alt="洞察二：資訊精簡對比" />
-
-  //   <h3>洞察三：視覺一致性強化轉換流程</h3>
-  //   <p>保持 Onboarding 體驗與付費牆的視覺一致性，可以顯著提升使用者流暢度，減少轉換摩擦。</p>
-  //   <img src="/portfolio/images/projects/uiux-project-1/insight-3.jpg" alt="洞察三：視覺一致性測試對比" />
-
-  //   <!-- 最終設計 -->
-  //   <h2>最終設計</h2>
-  //   <p>整合所有測試洞察，設計出轉換率最佳的版本。</p>
-  //   <img src="/portfolio/images/projects/uiux-project-1/final-design.jpg" alt="最終設計稿" />
-
-  //   <!-- 成果 -->
-  //   <h2>最終成果</h2>
-  //   <div class="pd-metrics">
-  //     <div class="pd-metric">
-  //       <span class="pd-metric__number">9%</span>
-  //       <span class="pd-metric__label">最終轉換率（從 &lt;1% 提升）</span>
-  //     </div>
-  //     <div class="pd-metric">
-  //       <span class="pd-metric__number">x18</span>
-  //       <span class="pd-metric__label">平均日營收成長</span>
-  //     </div>
-  //     <div class="pd-metric">
-  //       <span class="pd-metric__number">32%</span>
-  //       <span class="pd-metric__label">年營收成長（YoY）</span>
-  //     </div>
-  //     <div class="pd-metric">
-  //       <span class="pd-metric__number">44%</span>
-  //       <span class="pd-metric__label">月營收成長（MoM）</span>
-  //     </div>
-  //   </div>
-
-  //   <!-- 影響力 -->
-  //   <h2>影響力</h2>
-  //   <div class="pd-impact">
-  //     <div class="pd-impact__item">
-  //       <span class="pd-impact__level">公司層面</span>
-  //       <ul>
-  //         <li>訂閱轉換率從 &lt;1% 提升至 9%，帶來 32% YoY 與 44% MoM 的營收成長</li>
-  //         <li>建立可複製的設計原則與測試框架，持續擴大成功模式</li>
-  //       </ul>
-  //     </div>
-  //     <div class="pd-impact__item">
-  //       <span class="pd-impact__level">團隊層面</span>
-  //       <ul>
-  //         <li>建立數據驅動的設計決策文化，減少主觀爭論</li>
-  //         <li>將競品分析轉化為清晰的行動方案，提升團隊士氣</li>
-  //       </ul>
-  //     </div>
-  //     <div class="pd-impact__item">
-  //       <span class="pd-impact__level">個人層面</span>
-  //       <ul>
-  //         <li>建立系統化的實驗框架，透過數據引導設計決策</li>
-  //         <li>培養在資源有限下快速迭代、持續優化的設計能力</li>
-  //       </ul>
-  //     </div>
-  //   </div>
-  // `,
-  //   },
   {
     id: 'ai-smartbag-learning-report',
     title: '從數據羅列到數據洞察：重新設計 K12 家長的三維度學習報告',
@@ -319,14 +160,6 @@ export const projects = [
   `,
   },
   {
-    // id: 'uiux-project-2',
-    // title: '57%+ DAU 成長：AI 瀏覽器 App 設計',
-    // description:
-    //   '整合量化與質化數據找出核心痛點，運用「AI 輔助層級」框架成功引導跨部門團隊達成共識。',
-    // cover: '/images/projects/project-2.jpg',
-    // hashtags: ['+AI', 'AI 框架', '跨團隊影響力'],
-    // tags: ['UIUX', 'AI', 'Cross-functional'],
-    // category: ['uiux'],
     id: 'ai-smartbag-learning-goal',
     title: '客服需求降低 80%：從數據出發，重新定義 K12 學生的 AI 學習目標設定體驗',
     description:
@@ -361,7 +194,7 @@ export const projects = [
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">產品</span>
-        <span class="pd-info__value">AI 智能書包</span>
+        <span class="pd-info__value">AI 智能書包 — 學習目標</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">職稱</span>
@@ -512,15 +345,6 @@ export const projects = [
     </div>
   `,
   },
-  // {
-  //   id: 'frontend-project-1',
-  //   title: '升學王官網改版',
-  //   description: '負責官網前端切版，從設計稿到程式碼完整實作，確保 RWD 與跨瀏覽器相容性。',
-  //   cover: '/images/projects/project-3.jpg',
-  //   hashtags: ['前端切版', 'RWD', 'Vue.js'],
-  //   tags: ['Frontend', 'Vue.js', 'RWD'],
-  //   category: ['frontend'],
-  // },
   {
     id: 'ai-smartbag-edu-psych-quiz',
     title: '用研究方法做設計：從 30+ 篇文獻到 64 種結果的 K12 教育心理測驗',
@@ -529,7 +353,7 @@ export const projects = [
     // cover: '/images/projects/ai-smartbag-edu-psych-quiz.jpg',
     cover: '/images/projects/project-3.jpg',
     hashtags: ['研究驅動設計', '沉浸式體驗', '跨職能主導'],
-    tags: ['UIUX', 'Research', 'Cross-functional', 'Frontend'],
+    tags: ['UIUX', 'Research', 'AI', 'Cross-functional', 'Frontend'],
     category: ['uiux'],
     content: `
     <!-- 角色資訊 -->
@@ -711,6 +535,176 @@ export const projects = [
         <ul>
           <li>這是我第一次在設計專案中擔任協作指揮者的角色——負責將腦中天馬行空的世界觀梳理成清楚的設計方向，再傳遞給 Aimee，讓她能進入我的思考框架並延伸執行。這個過程讓我深刻體會到，不同設計職能之間的 1 + 1 > 2 化學反應，並非理所當然，而是需要清晰的溝通與信任才能實現。</li>
           <li>這個專案也是我第一次將教育心理學的學術背景完整應用在設計決策中——從文獻選題、理論評估、題目改編到預試驗證，走完了一套完整的研究驅動設計流程，讓我更確信：跨領域的知識積累，是設計師在複雜問題中找到突破口的核心競爭力。</li>
+        </ul>
+      </div>
+    </div>
+  `,
+  },
+  {
+    id: 'ai-smartbag-epub-production',
+    title: '1,780 份 EPUB：用設計系統與 Excel 工具，讓不可能的量產任務成真',
+    description:
+      '2,130 份紙本教材需轉型為 EPUB 流式排版，手動處理一份需耗費一至兩天，在緊湊時程下幾乎不可能完成。我主動暫停手邊工作，自主研發一套 HTML/CSS 設計系統與 Excel 半自動化轉譯工具，將工讀生的產出速度提升至每日 4～5 份，讓這個原本瀕臨廢棄的專案重新看見曙光。',
+    // cover: '/images/projects/ai-smartbag-epub-production.jpg',
+    cover: '/images/projects/project-1.jpg',
+    hashtags: ['設計系統', '流程工程化', '工具開發'],
+    tags: ['Frontend', 'Cross-functional'],
+    category: ['frontend'],
+    content: `
+    <!-- 成效數字 -->
+    <div class="pd-metrics">
+      <div class="pd-metric">
+        <span class="pd-metric__number">1,780 份</span>
+        <span class="pd-metric__label">EPUB 完成轉製<br/>（共 2,130 份）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">4～5 倍</span>
+        <span class="pd-metric__label">工讀生產出速度<br/>較手動處理提升</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">1 週</span>
+        <span class="pd-metric__label">獨立開發設計系統<br/>與半自動化工具</span>
+      </div>
+    </div>
+
+    <!-- 角色資訊 -->
+    <div class="pd-info">
+      <div class="pd-info__item">
+        <span class="pd-info__label">公司</span>
+        <span class="pd-info__value">三貝德數位文創股份有限公司</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">產品</span>
+        <span class="pd-info__value">AI 智能書包 — EPUB 數位教材製作</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">職稱</span>
+        <span class="pd-info__value">UIUX Designer（跨部門支援、工具開發）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">時間</span>
+        <span class="pd-info__value">2023.10 – 2025.12（約兩年兩個月）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">負責範圍</span>
+        <span class="pd-info__value">HTML/CSS 設計系統開發、Excel 半自動化工具開發、工讀生工作流程規劃與協作</span>
+      </div>
+    </div>
+
+    <!-- 背景與挑戰 -->
+    <h2>背景與挑戰</h2>
+
+    <p>2023 年 9 月，公司計畫將 K12 國中與高中共 2130 份紙本教材，全面轉型為流式排版的 EPUB 格式，以符合跨載體閱讀需求，並作為 AI 智能書包數位教材模組的核心內容基礎。</p>
+
+    <p>然而，這個任務面臨一個結構性困境：「公司內部唯一具備技術能力的研發部門，人力必須全數投入產品開發；編輯部門缺乏 HTML/CSS 技術背景，無法自行處理 EPUB 的程式碼結構」。於是，任務在 2023 年 10 月落到了設計部，由我與另一位設計師 Claudia 共同承接。</p>
+
+    <p>EPUB 本身是以 HTML + CSS 為底層結構的格式。理論上，由設計師來處理是可行的——但現實遠比預期複雜。編輯部提供的 InDesign 檔案，因圖層命名或其他因素，由設計師 Aimee 轉出的 EPUB 再拆解為 HTML 後，結構幾乎全部都是亂碼：「CSS 選擇器清一色是無意義的中文命名，有序清單充斥著罕見字亂碼，根本無從辨識規律」。</p>
+
+    <p>在這樣的狀況下，處理一份 EPUB 需要耗費我們 1 到 1.5 天的時間。換算下來，2,130 份教材若全靠人工逐一處理，不僅時程根本來不及，雙人作業也會因各自對排版的判斷略有差異，導致最終成果難以維持視覺一致性。</p>
+
+    <img src="/portfolio/images/projects/ai-smartbag-epub-production/chaos-html.jpg" alt="原始 EPUB 拆解後的 HTML 結構，充斥中文命名的 CSS 選擇器與亂碼" />
+
+    <!-- 設計過程 -->
+    <h2>設計過程</h2>
+
+    <h3>洞察一：受不了亂碼，決定從源頭建立秩序</h3>
+
+    <p>在與 Claudia 持續埋頭處理亂碼的過程中，我越來越清楚地意識到：「這樣下去不是辦法」。問題的根本不在於我們處理得不夠努力，而在於我們缺少一套讓所有人都能依循的規則與標準。</p>
+
+    <p>轉機來自一個上午的地毯式研究。我把各科目的紙本教材通通翻過一遍，逐一記錄編輯部美編人員在排版上的處理邏輯，試圖從中找出跨科目、跨單元的共通結構。這次研究讓我確認了一件事：「教材雖然內容各異，但排版元素其實有規律可循——段落的主次層級、圖片與文字的對應關係、有序與無序清單的呈現方式，背後都有一套可以被定義的邏輯」。</p>
+
+    <p>帶著這個洞察，我向設計主管提出了一個大膽的請求：「請給我一個禮拜的時間，讓我先停下手邊的 EPUB 製作，專注開發一套共用的 EPUB 公版設計系統。」主管對這個想法抱持著鼓勵嘗試的態度，當下便同意讓我放下既有排程，全力投入。</p>
+
+    <h3>洞察二：用前端設計系統思維，重建 EPUB 的底層結構</h3>
+
+    <p>接下來的一週，我從頭建立了一套完整的 EPUB 設計系統。</p>
+
+    <p>在 HTML 架構上，我以巢狀結構區分段落的主從層級，讓每一份教材的語意結構都能被清楚對應。在 CSS 上，我將樣式拆分為三支各司其職的檔案：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">root.css</span>
+        <p>統一定義所有文字大小、顏色、間距等設計變數，確保視覺規格全局一致，只需修改變數即可同步更新所有樣式。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">global.css</span>
+        <p>收錄彈性調整用的通用選擇器（如 w-50、w-100），提供製作者在特殊情境下的快速調整空間，而不破壞主結構。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">structure.css</span>
+        <p>定義 HTML 主結構的完整排版規則，採 BEM 命名模式撰寫語意化選擇器，並嚴格規範除我以外的成員不得任意修改，確保設計系統的穩定性。</p>
+      </div>
+    </div>
+
+    <h3>關鍵突破：Excel 半自動化轉譯工具</h3>
+
+    <p>設計系統建立後，我面對的下一個問題是：「即使有了標準的 HTML 結構，要讓沒有深度前端經驗的夥伴，或工讀生正確手寫 HTML，依然是一道不小的門檻」。</p>
+
+    <p>這時，我想到了過去在工作中練就的 Excel 函式能力。我著手開發了一套「<strong>Excel 半自動化轉譯工具</strong>」：製作者只需將純文字內容依照段落主次，依序貼入對應欄位，再透過簡單的下拉選單選擇內容類型（如標題層級、有序/無序清單、圖片標注），Excel 就會自動透過函式邏輯，在右側欄位即時組出符合設計系統規範的完整 HTML 語法。製作者只需複製輸出結果，貼入 VS Code 即可完成一份結構正確、樣式一致的 EPUB 頁面。</p>
+
+    <p>這套工具同時解決了原本讓我們最頭痛的亂碼有序清單問題——題目與選項的結構邏輯，也全部被納入工具的自動組合範疇內。</p>
+
+    <img src="/portfolio/images/projects/ai-smartbag-epub-production/excel-tool.jpg" alt="Excel 半自動化轉譯工具介面，左側為純文字輸入欄位，右側即時產出對應的 HTML 語法" />
+
+    <p>一週後，工具完成。設計主管看到成果的當下說：「天啊！我看到希望了！」</p>
+
+    <h3>流程建立：工讀生招募與協作規劃</h3>
+ 
+    <p>有了設計系統與工具，下一步是將這套流程擴充為可持續運作的產能機制。這一階段，我同時扮演了三個角色：知識整理者、流程設計者，以及招募規劃者。</p>
+ 
+    <p>首先，我在 Notion 建立了一套完整的操作規範文件，涵蓋 HTML 結構規則、CSS 命名慣例、Excel 工具使用說明，以及各科目常見排版情境的處理方式。這份文件的目標不只是讓工讀生能夠上手，更是讓這套知識技能能夠在公司內部沉澱下來、持續流傳——即便製作人員異動，整套系統依然能夠穩定運作。</p>
+ 
+    <p>在招募環節，我發揮了過去在人資工作累積的經驗，主動協助規劃工讀生的工作內容描述、技能需求條件，以及面試評估方式，確保招募到的人選具備足夠的基礎前端能力，能夠在這套工具輔助下獨立作業，而不需要耗費大量時間培訓。</p>
+ 
+    <p>最終招募到兩位工讀生，每位平均每天可完成 4 至 5 份 EPUB，相較於過去手動處理的效率提升了 4 到 5 倍以上。</p>
+
+    <img src="/portfolio/images/projects/ai-smartbag-epub-production/notion-guide.jpg" alt="Notion 操作指引文件，供工讀生參照使用 Excel 工具與 VS Code 完成 EPUB 製作" />
+
+    <!-- 最終成果 -->
+    <h2>最終成果</h2>
+
+    <p>截至 2025 年 12 月底與工讀生的合作結束為止，團隊共完成了 2130 份中的 1780 份 EPUB 轉製。受限於公司政策調整，剩餘部分目前暫緩處理，但整體專案已從「幾乎不可能在時程內完成」推進至「超過八成完成」的階段。</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">量產效率大幅提升</span>
+        <p>日均產出從原本的「不到 1 份」提升至 4～5 份，整體製作效率提升 4 到 5 倍，讓龐大的轉製工程在有限人力下得以持續推進。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">視覺一致性全面建立</span>
+        <p>透過設計系統規範，每一份 EPUB 的排版結構與視覺風格都達到高度一致，解決了雙人甚至多人作業時，因判斷差異導致的品質不穩問題。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">讓不可能變成可能</span>
+        <p>在教育出版領域，將含有大量圖片、表格與複雜段落結構的 K12 教材，全面轉型為流式排版的 EPUB，本身即是一項不小的創舉——圖片必須隨段落流動而非作為裝飾，這對排版系統的設計要求遠比文學類出版物更高。</p>
+      </div>
+    </div>
+
+    <!-- 影響力 -->
+    <h2>影響力</h2>
+
+    <div class="pd-impact">
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">公司層面</span>
+        <ul>
+          <li>將紙本教材轉為流式 EPUB 從「不可能」變為「可行」，直接支撐了 AI 智能書包數位教材模組的內容基礎，讓產品得以如期推進。</li>
+          <li>在 K12 教育出版領域，成功建立了一套可處理圖文並茂、結構複雜教材的 EPUB 量產流程，具有一定的行業創新意義。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">團隊層面</span>
+        <ul>
+          <li>設計部跨部門承接了原本編輯部無力執行的技術任務，以工具開發與流程設計取代蠻力，直接展示了設計部的技術產能與跨職能價值。</li>
+          <li>正是因為這套系統讓製作流程變得標準化、可複製，公司才真正看見將任務交由工讀生執行的可行性——也因此釋放了設計師的人力，讓設計師得以專注在更核心的產品設計工作上。</li>
+          <li>Excel 工具與 Notion 操作指引的建立，讓工讀生能夠在最短學習曲線內上手作業，形成一套可持續擴充的製作流程，不再依賴個別成員的技術判斷。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">個人層面</span>
+        <ul>
+          <li>這是我第一次深刻體會到設計系統的真正價值——它不只是讓視覺一致，更是讓不同人在不同時間點，都能依循同一套標準做出品質穩定的成果。</li>
+          <li>這個專案也讓我意識到，跨職涯的技術積累——從人資磨練出的 Excel 函式能力，到設計工作培養的前端直覺——在面對複雜挑戰時，往往能產生意想不到的組合力量。</li>
+          <li>更重要的是，我第一次清楚地看見自己的行動力對團隊的直接影響：一個主動提出並獨立完成的工具，改變了整個團隊的工作模式，也讓一個幾乎要被放棄的任務重新看見了完成的可能。</li>
         </ul>
       </div>
     </div>

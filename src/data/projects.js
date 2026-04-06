@@ -1,4 +1,236 @@
 export const projects = [
+  // 小學王五代前導 MV
+  {
+    id: 'elementary-king-ai-mv',
+    title: '成本降低 99.7%：一人 15 天用 AI 完成傳統團隊 120 萬的動畫 MV',
+    description:
+      '公司尾牙業務表揚大會需要造勢影片，我在無預算、無團隊、無動畫背景的條件下，自主規劃 12 階段 AI 製作流程，獨立完成一部含 6 個角色的 3D 動畫 MV。影片現場引爆掌聲，董事長當場轉發集團主管群，並直接促成公司全面導入 AI 工具的決策。',
+    // cover: '/images/projects/elementary-king-ai-mv.jpg',
+    cover: '/images/projects/project-3.jpg',
+    hashtags: ['AI-Native Workflow', '跨職能執行力', 'ROI 極大化'],
+    tags: ['AI', 'Cross-functional'],
+    category: ['ai'],
+    content: `
+    <!-- 成效數字 -->
+    <div class="pd-metrics">
+      <div class="pd-metric">
+        <span class="pd-metric__number">99.7%</span>
+        <span class="pd-metric__label">製作成本降低<br/>（3,000 vs 預估 120 萬）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">15 天</span>
+        <span class="pd-metric__label">實際工作天<br/>（傳統外包需 2–3 個月）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">1,000+</span>
+        <span class="pd-metric__label">張分鏡圖產出<br/>131 支影片素材</span>
+      </div>
+    </div>
+
+    <!-- 角色資訊 -->
+    <div class="pd-info">
+      <div class="pd-info__item">
+        <span class="pd-info__label">公司</span>
+        <span class="pd-info__value">三貝德數位文創股份有限公司</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">產品</span>
+        <span class="pd-info__value">小學王五代 — 前導動畫 MV</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">職稱</span>
+        <span class="pd-info__value">設計主任（自發性主導，跨職能獨立執行）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">時間</span>
+        <span class="pd-info__value">2026.01.05 – 2026.02.10（實際工作天約 15 天）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">負責範圍</span>
+        <span class="pd-info__value">故事企劃、腳本撰寫、文字分鏡、AI 視覺生成、角色設定、場景合成、影片製作、音樂生成、剪輯輸出</span>
+      </div>
+    </div>
+
+    <!-- 成品 -->
+    <h2>成品</h2>
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin: 1.5rem 0; border: 1px solid var(--color-border, #2a3a5c);">
+      <iframe
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        src="https://www.youtube.com/embed/WE0CFdOcznQ?si=vzb5cBUViLqQOk2Q"
+        title="小學王五代前導 AI 動畫 MV"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- 背景與挑戰 -->
+    <h2>背景與挑戰</h2>
+
+    <p>每年公司尾牙的下午場「業務表揚大會」，是研發與產品團隊向業務夥伴展示新年度產品藍圖的重要場合，目標是鼓舞士氣、為業務團隊注入信心。副總經理明確要求：現場氣氛必須熱鬧生動、讓業務情緒激昂，這個重責大任最終落在我身上。</p>
+
+    <p>往年的慣例是製作小短劇，將產品特點融入演出，雖然有效，但形式已漸趨老套。我不想重複這條路，一方面是認為演戲形式已讓人審美疲乏，另一方面，我判斷有機會用更有衝擊力的方式呈現「小學王五代」即將上線的產品價值。</p>
+
+    <p>然而，這個任務的執行難度遠超表面：「我同時肩負著所有尾牙輸出物的設計統籌、多位長官的簡報製作、既有數位產品開發進度的把關，以及各種突發需求的協調處理」。可用的時間極度壓縮，更沒有任何額外預算或專職人力可以動用。</p>
+
+    <p>在這樣的條件下，我決定走一條沒有人走過的路：<strong>用 AI 工具，一個人做出一部動畫 MV。</strong></p>
+
+    <!-- 設計過程 -->
+    <h2>設計過程</h2>
+
+    <h3>洞察一：策略思維先行，一魚三吃的任務設計</h3>
+
+    <p>在動手之前，我先確立了這個專案的多重價值定位——它不只是一個尾牙表演節目，而是一次可以同時達成三個目標的戰略行動：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">目標一：尾牙現場造勢</span>
+        <p>作為業務表揚大會的研發部開場前導影片，為業務夥伴建立對「小學王五代」的期待感與情感連結。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">目標二：產品行銷鋪路</span>
+        <p>為 2026 年 6 月上線的「小學王五代 Web」預先建立品牌認知，影片可直接轉作對外行銷素材使用。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">目標三：建立個人 AI 工作流</span>
+        <p>藉這個真實專案系統性地摸索 AI 影片製作的工具鏈與方法論，將學習成果沉澱為可複用的工作流程。</p>
+      </div>
+    </div>
+
+    <h3>洞察二：角色一致性是最大技術壁壘</h3>
+
+    <p>這部 MV 的故事設定極為複雜：一位真人小女孩在現實世界中睡著，「小學王」IP 角色雷德從螢幕穿越而出，從 2D 形象立體化為 3D，邀請小女孩穿越時空之門，進入「小學王五代」的世界——而小女孩進入後，自身形象也從真人轉變為 3D 動畫風格。</p>
+
+    <p>這個設定意味著，我必須在整部影片中同時控制 6 個視覺形象高度具體的角色，且涵蓋真人與動畫兩種截然不同的視覺風格。而這 5 個 IP 人物最原始的素材，僅有一張 2D 向量美術圖，沒有任何多角度設定。</p>
+
+    <p>為了從根本解決角色一致性問題，我參照傳統動畫製作中「角色設定表」的概念，系統性地建立了完整的角色視覺資料庫：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">步驟一：IP 多角度視圖生成</span>
+        <p>利用 Nano Banana Pro 將 5 位 2D IP 生成偽 3D 多角度視圖，涵蓋正面、側面、背面、45 度正側面、45 度背側面、仰角、俯角等完整角度。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">步驟二：真人小女孩形象建立</span>
+        <p>生成「視覺年齡 10 歲的台灣小女孩」形象，逐步修調細節至滿意，再將真人版本轉換為 3D 動畫風格，確保兩種形象之間的視覺連貫性。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">步驟三：豐富表情素材庫</span>
+        <p>針對所有角色生成至少 12 種表情變化，包含喜、怒、哀、樂等完整情緒光譜，建立後續影片合成所需的完整素材庫。</p>
+      </div>
+    </div>
+
+    <p>傳統做法中，設計師處理每個表情動作平均需要 1–2 天；這套流程讓我在極短時間內產出了完整的角色設定素材，這是 15 天完成專案的關鍵前提。</p>
+
+    <h3>關鍵轉折：燒掉 2 萬點數換來的方法論</h3>
+
+    <p>專案初期，我嘗試直接將 IP 形象丟入 AI 影片模型，以文字指令描述動作與場景，期望一步到位產出影片素材。結果失敗率極高——生成的影片中，角色形象嚴重失真，點數卻以每次 1,000 點的速度快速消耗。</p>
+
+    <p>公司的 Freepik 訂閱方案每年提供 21 萬 AI 生成點數，專案開始前僅剩約 15 萬。在前期實驗階段，我就燒掉了 2 萬點，系統顯示已用點數突破 8 萬的那一刻，我意識到：<strong>若不改變方法，點數燒光時影片還沒做完。</strong></p>
+
+    <p>這個資源壓力迫使我重新審視整個製作邏輯，最終找到了 Freepik 平台上唯一支援七張參考圖輸入的影片生成模型 Kling O1，並倒推出一套「前製優先」的工作流——先將所有視覺素材在靜態階段處理到位，再餵給影片模型，以最大化每次生成的成功率。</p>
+
+    <p>這個過程讓我提煉出一條核心方法論：<strong>「給 AI 的指令越單純，成功率越高。」</strong></p>
+
+    <h3>分鏡圖製作：佔用 2/3 時間的核心工程</h3>
+
+    <p>確立方法論後，整個製作流程進入最耗時也最關鍵的分鏡圖生成階段，這個環節佔據了超過三分之二的工作時間：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">場景圖優先生成</span>
+        <p>根據 Gemini 提供的文字分鏡，逐一生成場景圖，並透過 Nano Banana Pro 的水平旋轉功能與 Figma 內建 AI 處理物件位置，取得所需的多角度場景視圖。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">人物與場景分層合成</span>
+        <p>將場景圖與 IP 角色素材同時輸入 Nano Banana Pro，進行精準合成。Nano Banana Pro 與 Google Mixboard 交錯使用——前者為主要合成工具，後者在需要多張參考圖且無浮水印的情境下啟用。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">單一指令微調</span>
+        <p>合成完成後，針對細節進行單點微調，例如「將 A 角色的手放下、微笑改為大笑、其餘元素維持不動」。遵循「指令越單純、成功率越高」的原則，微調成功率維持在 90% 以上。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">Figma 製造運鏡分鏡</span>
+        <p>將同一張合成圖放入 Figma 複製並裁切，模擬推鏡、拉鏡等運鏡效果，無需重新生成即可製造視角變化。</p>
+      </div>
+    </div>
+
+    <p>這套流程最終產出了約 1,000 張精美分鏡圖，作為後續影片生成的視覺底稿。</p>
+
+    <h3>影片生成、音樂製作與最終剪輯</h3>
+
+    <p>以 Kling O1 模型將靜態分鏡圖轉換為動態影像，共生成 131 支短影片素材，篩選後保留 24 支精華片段進入最終剪輯。歌詞部分以 ChatGPT 輔助撰寫，音樂則透過 Suno 生成，並與影片進行節奏對位、轉場處理與調色，最終輸出約 2 分鐘的完整動畫 MV。</p>
+
+    <p>專案執行過程中，PM Jenny 協助處理部分分鏡的初稿與詞曲發想；設計師 Aimee 負責製作 MV 封面圖。最終影片的核心視覺內容均由我統一把關與重製，以確保整體風格與品質的一致性。</p>
+
+    <!-- 最終成果 -->
+    <h2>最終成果</h2>
+
+    <p>2026 年 2 月 11 日尾牙下午場，這部動畫 MV 在業務表揚大會現場播出，引發了超乎預期的強烈迴響：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">現場反應超出預期</span>
+        <p>影片播畢獲得全場熱烈掌聲，業務夥伴們在現場不斷表達讚賞與敬佩；副總經理在前一晚私下看到影片時，激動不已，深受感動。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">董事長即時轉發集團主管群</span>
+        <p>董事長在現場看完後，當場將影片轉發至集團其他公司的主管群組，並在尾牙隔天召集設計主任與編輯部主管開會，討論未來運用 AI 製作教學影片的可能性。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">影響力持續發酵</span>
+        <p>過年後首場公司內部主管會議，副總經理主動將影片再次播放給未出席下午場的內勤主管們觀看，影片持續作為公司 AI 能力的具體展示案例流傳。</p>
+      </div>
+    </div>
+
+    <div class="pd-metrics">
+      <div class="pd-metric">
+        <span class="pd-metric__number">$ 3,000</span>
+        <span class="pd-metric__label">實際製作成本<br/>（含 AI 軟體訂閱）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">$ 120 萬</span>
+        <span class="pd-metric__label">傳統外包預估成本<br/>（廣告業 PM 行情評估）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">400x</span>
+        <span class="pd-metric__label">製作速度提升<br/>（15 天 vs 2–3 個月）</span>
+      </div>
+    </div>
+
+    <!-- 影響力 -->
+    <h2>影響力</h2>
+
+    <div class="pd-impact">
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">公司層面</span>
+        <ul>
+          <li>這部 MV 成為公司 AI 轉型的具體觸媒，直接推動了全公司 AI 工具的大規模導入，從設計部延伸至研發部與新成立的市場部。</li>
+          <li>研發部開始以 AI 配合 MCP 預先切版，再交回設計部完善細節，大幅改變了設計與研發的協作工作流程。</li>
+          <li>市場部啟動「金牌業務」計劃，目標是以 AI 打造協助業務團隊的系列工具，公司整體的 AI 戰略因此加速落地。</li>
+          <li>影片同時作為「小學王五代 Web」的前導行銷素材，為 2026 年 6 月的產品上線預先鋪路。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">團隊層面</span>
+        <ul>
+          <li>驗證了設計部在 AI 時代的跨職能價值：不只是視覺執行，而是能夠獨立主導從企劃、製作到交付的完整創作流程。</li>
+          <li>這套 12 階段的 AI 製作工作流，成為團隊往後規劃 AI 影片專案時的參考基準。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">個人層面</span>
+        <ul>
+          <li>這個專案讓我真實驗證了「AI 可以跨越專業邊界」這件事——我完全不具備 3D 建模、IP 識別設計、詞曲創作的背景，卻能獨立產出一部包含這些元素的動畫 MV，大幅提升了我在 AI 時代的自信心與執行底氣。</li>
+          <li>從「給 AI 指令越單純成功率越高」到「前製資產越豐富生成品質越穩定」，我在這個專案中建立了一套可複用的 AI-Native 工作方法論。</li>
+          <li>我開始將 AI 視為策略夥伴而非工具——把想法丟給它激盪、讓它延伸與修正，再由人做最終的判斷與把關。面對充滿挑戰的任務，我不再畏懼，而是視之為驗證新方法的機會。</li>
+        </ul>
+      </div>
+    </div>
+  `,
+  },
   // 學習報告
   {
     id: 'ai-smartbag-learning-report',

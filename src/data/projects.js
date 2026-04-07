@@ -1143,4 +1143,173 @@ export const projects = [
     </div>
   `,
   },
+  // 橙色的科學書屋
+  {
+    id: 'osm-rwd-scss-function',
+    title: '從 60 分鐘到 5 分鐘：自研 SCSS 函式解決複雜插畫 Hero 的 RWD 定位難題',
+    description:
+      '臨危受命接手設計主管未完成的切版，同時面對 Bootstrap 5 轉 Vue.js 環境遷移、課表爆版問題與複雜浮動插畫的 RWD 定位三重挑戰。在時間壓力下自研 rwdSize SCSS @function，將單一元素的斷點定位時間從 60 分鐘壓縮至 5 分鐘內，並推廣至設計團隊，成為後續 3 個以上專案的共用切版工具。',
+    cover: '/images/projects/project-1.jpg',
+    hashtags: ['技術自驅力', 'SCSS 工具開發', 'RWD 系統化'],
+    tags: ['Frontend'],
+    category: ['frontend'],
+    content: `
+    <!-- 成效數字 -->
+    <div class="pd-metrics">
+      <div class="pd-metric">
+        <span class="pd-metric__number">92%+</span>
+        <span class="pd-metric__label">元素定位時間縮短<br/>（60 分鐘 → 5 分鐘以內）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">3 個以上</span>
+        <span class="pd-metric__label">後續專案採用<br/>rwdSize 共用工具</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">8 天</span>
+        <span class="pd-metric__label">實際工作天<br/>（含環境遷移與工具研發）</span>
+      </div>
+    </div>
+
+    <!-- Stage 連結 -->
+    <p>正式站台已下線，你可以透過 Stage 環境瀏覽網站成果：</p>
+    <a
+      href="https://stage-osm.go100.com.tw/"
+      target="_blank"
+      style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #f97316, #eab308); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+      → 瀏覽橙色的科學書屋（Stage）
+    </a>
+
+    <!-- 角色資訊 -->
+    <div class="pd-info">
+      <div class="pd-info__item">
+        <span class="pd-info__label">公司</span>
+        <span class="pd-info__value">三貝德數位文創股份有限公司</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">產品</span>
+        <span class="pd-info__value">橙色的科學書屋 — 課程官網</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">職稱</span>
+        <span class="pd-info__value">UIUX Designer（臨危受命，跨職能執行）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">時間</span>
+        <span class="pd-info__value">2023.07.25 – 2023.08.04（約 8 個工作天）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">負責範圍</span>
+        <span class="pd-info__value">Vue.js 環境切版、RWD 響應式實作、SCSS 工具研發</span>
+      </div>
+    </div>
+
+    <!-- 背景與挑戰 -->
+    <h2>背景與挑戰</h2>
+
+    <p>「橙色的科學書屋」是升學王旗下柯良澄老師的線上直播自然科課程官網，所有插畫均由設計主管親手繪製，再以 Illustrator 精修製作，視覺風格溫暖且充滿童趣。主管原本自己主導這個專案，一方面是為了訓練自己的切版能力，最初以純 HTML 語法進行開發。</p>
+
+    <p>然而身為設計主管，她的工作時間高度破碎——會議接連不斷，難以持續專注於一個專案的開發。隨著上線時限逼近，她評估自己無法在截止日前完成，因此在 2023 年 7 月 24 日緊急將專案移交給我接手。</p>
+
+    <p>接手當下，這個任務面臨的不只是「繼續完成切版」，而是三個同時爆發的挑戰：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">挑戰一：環境遷移</span>
+        <p>研發工程師要求將切版環境從純 HTML 轉換為 Vue.js，兩種環境的語法結構與切版思維完全不同，遷移本身就需要額外的時間成本。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">挑戰二：資料結構限制</span>
+        <p>接手後發現「課表、章節」的資料並非個別儲存，而是直接存成一個字串再以 CSS 斷行。這個做法在長字串情境下會出現嚴重的爆版問題，視覺上完全無法接受。向研發工程師反應後，對方以「小專案、排程趕」為由拒絕重新設計資料庫。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">挑戰三：複雜浮動插畫的 RWD 定位</span>
+        <p>Hero 區塊有大量以 <code>position: absolute;</code> 定位的手繪插畫元素散落在畫面各處——顯微鏡、恐龍、燒杯、植物、書本、星球——每個元素在不同斷點下，都需要維持與設計稿相近的相對位置與比例，傳統手動計算的方式極為耗時。</p>
+      </div>
+    </div>
+
+    <img src="/portfolio/images/projects/osm-rwd-scss-function/hero-desktop.jpg" alt="橙色的科學書屋 Hero 區塊桌面版，大量手繪插畫元素以 absolute 定位散落在主視覺各處" />
+
+    <!-- 設計過程 -->
+    <h2>設計過程</h2>
+
+    <h3>洞察一：研發拒絕配合，前端能力派上用場</h3>
+
+    <p>面對課表字串爆版的問題，我沒有因為「研發說不改」就睜一隻眼閉一隻眼。身為一個擁有前端開發背景的設計師，我相信自己有能力在不動資料庫的前提下，從前端找到出路。</p>
+
+    <p>我憑藉過去學習前端的記憶，想到可以在 Vue.js 模板中使用 JavaScript 的 <code>.split()</code> 方法，將字串切割後重組為陣列，再用 <code>&lt;ul&gt;</code> 和 <code>&lt;li&gt;</code> 跑迴圈渲染。藉助 Google 查找與 ChatGPT 輔助驗證，最終成功讓課表的排版呈現符合設計稿的樣式，在不更動資料庫結構的情況下，徹底解決了爆版問題。</p>
+
+    <img src="/portfolio/images/projects/osm-rwd-scss-function/course-table-before-after.jpg" alt="課表章節排版 Before / After 對比，左側為字串爆版狀態，右側為 .split() 重組後的正確排版" />
+
+    <h3>洞察二：在時間壓力下，逼出更聰明的解法</h3>
+
+    <p>切到 Hero 區塊時，我意識到麻煩來了。那些飄浮在畫面各處的手繪插畫元素，每一個都需要在六個以上的斷點分別設定 <code>top</code>、<code>left</code>、<code>width</code> 的數值——傳統做法是逐一手動計算，調整、預覽、再微調，光是一個元素就要花上將近一個小時，而 Hero 區塊的浮動元素多達十幾個。</p>
+
+    <p>時程已經非常緊迫，我開始思考：有沒有更聰明、一勞永逸的方式？印象中曾看過介紹 CSS <code>calc()</code> 搭配 <code>vw</code> 做流體縮放的文章，我重新找出來研讀，理解了其中的數學邏輯後，開始在腦中設計一套公式：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">核心公式邏輯</span>
+        <p>利用 <code>100vw</code> 獲取當前螢幕寬度，以 <code>calc()</code> 計算元素在最小與最大螢幕尺寸之間的線性插值，讓元素的尺寸與位置隨螢幕寬度<strong>連續縮放</strong>，而非在固定斷點間跳變。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">封裝為 SCSS @function</span>
+        <p>將公式封裝成 SCSS 的 <code>@function rwdSize($minS, $maxS, $minP, $maxP)</code>，使用者只需傳入「最小螢幕時的尺寸」與「最大螢幕時的尺寸」兩個必填參數，即可在任何 CSS 屬性上直接調用，省去所有手動計算的步驟。</p>
+      </div>
+    </div>
+
+    <img src="/portfolio/images/projects/osm-rwd-scss-function/scss-function-code.jpg" alt="rwdSize SCSS @function 完整程式碼，包含 px 與 % 單位的雙模式支援" />
+
+    <p>有了這套 function，每個浮動元素的所有斷點定位，只需要在設計稿上量出兩個尺寸、填入函式，就能讓元素在螢幕縮放時保持與設計稿幾乎一致的相對位置與比例。原本需要近一小時的工作，縮短至 5 分鐘以內。</p>
+
+    <img src="/portfolio/images/projects/osm-rwd-scss-function/hero-rwd-demo.jpg" alt="Hero 區塊在不同螢幕寬度下的縮放展示，浮動插畫元素位置與比例維持一致" />
+
+    <!-- 最終設計 -->
+    <h2>最終設計</h2>
+
+    <p>最終完成的官網涵蓋完整的課程介紹頁，包含 Hero 主視覺、課程特色說明、柯老師介紹、教學互動片段、課表一覽（含上下學期切換）、Q&A 伸縮選單、學生見證輪播，以及頁尾聯絡資訊，全站完整支援 RWD 響應式呈現。</p>
+
+    <img src="/portfolio/images/projects/osm-rwd-scss-function/full-page-desktop.jpg" alt="橙色的科學書屋官網完整桌面版頁面截圖" />
+
+    <img src="/portfolio/images/projects/osm-rwd-scss-function/full-page-mobile.jpg" alt="橙色的科學書屋官網手機版頁面截圖" />
+
+    <!-- 最終成果 -->
+    <h2>最終成果</h2>
+
+    <div class="pd-metrics">
+      <div class="pd-metric">
+        <span class="pd-metric__number">92%+</span>
+        <span class="pd-metric__label">元素 RWD 定位時間縮短<br/>（60 分鐘 → 5 分鐘以內）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">3 個以上</span>
+        <span class="pd-metric__label">後續專案採用<br/>rwdSize 作為共用工具</span>
+      </div>
+    </div>
+
+    <p>官網如期完成上線。更重要的是，這個專案讓我在時間壓力下研發出的 <code>rwdSize</code> SCSS <code>@function</code>，在整理成文件後分享給設計團隊，成為往後多個專案處理複雜 RWD 定位時的共用工具。當我在分享時，用滑鼠拖曳縮放瀏覽器視窗，展示 Hero 元素的流體縮放效果，每位設計師都驚呼：「怎麼可以這麼絲滑！」</p>
+
+    <p>值得誠實說明的是，官網在上線營運一段時間後，因課程的商業成績未如預期，最終決定停止營運、關閉正式站台。這是商業層面的決策，與設計和技術本身無關——但這個結果也提醒了我：一個產品的生命週期，不只取決於它被做得多好，也取決於市場時機與商業條件。</p>
+
+    <!-- 影響力 -->
+    <h2>影響力</h2>
+
+    <div class="pd-impact">
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">團隊層面</span>
+        <ul>
+          <li><code>rwdSize</code> SCSS <code>@function</code> 在整理成知識文件後推廣至設計團隊，成為後續至少三個專案的共用切版工具，讓所有設計師在面對複雜的浮動元素 RWD 定位時，都能以更系統化、更高效的方式處理，不再依賴耗時的手動試誤。</li>
+          <li>這是設計部第一次將個人在專案中自研的前端工具，沉澱為可被整個團隊共用的知識資產。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">個人層面</span>
+        <ul>
+          <li>這是我第一次接手他人寫過的 code，也是第一次在時程壓力下完成 Bootstrap 5 到 Vue.js 的環境遷移。過程中雖然一度因為環境切換的複雜度出現頭痛症狀，但最終如期交付，讓我對自己的前端能力建立了更紮實的信心。</li>
+          <li>這個專案讓我意識到，設計師的前端能力不只是執行工具，更是在技術限制與時程壓力下，為使用者體驗把關的底氣。當研發說「不改」，是前端知識讓我能夠找到另一條路；當時程說「來不及」，是工程直覺讓我研究出更聰明的解法。</li>
+          <li>有趣的是，我在專案的回顧心得中寫道：「對 SCSS 變數與函式的應用還是很弱」——而就是在同一個專案裡，我研發出了後來被整個團隊採用的 SCSS <code>@function</code>。這個反差讓我深刻體會到：有時候成長就發生在你還沒意識到的當下。</li>
+        </ul>
+      </div>
+    </div>
+  `,
+  },
 ]

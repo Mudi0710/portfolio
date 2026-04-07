@@ -26,6 +26,16 @@ strong {
   font-weight: $font-weight-semibold;
 }
 
+code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.875em;
+  color: $color-code-text;
+  background-color: color.adjust($color-code-text, $alpha: -0.9);
+  border: 1px solid $color-code-border;
+  padding: 0.15em 0.45em;
+  border-radius: $radius-sm;
+}
+
 // 全域按鈕樣式
 .btn {
   display: inline-flex;
@@ -37,7 +47,7 @@ strong {
   transition: all $transition-base;
   cursor: pointer;
 
-&--primary {
+  &--primary {
     background-color: $color-accent;
     color: #ffffff;
     border: 1px solid $color-accent;

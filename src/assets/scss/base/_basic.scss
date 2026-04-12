@@ -24,6 +24,10 @@
 strong {
   color: $color-highlight;
   font-weight: $font-weight-semibold;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 code {

@@ -198,11 +198,19 @@
     background-color: $color-bg-secondary;
     border-radius: $radius-md;
     border-left: 3px solid $color-accent;
+
+    p {
+      font-size: $font-size-base;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
     display: block;
-    font-size: $font-size-sm;
+    font-size: $font-size-base;
     font-weight: $font-weight-semibold;
     color: $color-accent;
     margin-bottom: $spacing-xs;

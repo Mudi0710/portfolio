@@ -26,8 +26,34 @@
 
     <!-- 內容 -->
     <section class="article-detail-content section">
-      <div class="container article-detail-content__inner">
-        <div class="article-detail-content__body" v-html="article.content"></div>
+      <div class="container article-detail-content__layout">
+
+        <!-- 手機版浮動目錄 -->
+        <div class="article-toc-float" :class="{ 'article-toc-float--open': tocOpen }">
+          <button class="article-toc-float__toggle" @click="tocOpen = !tocOpen" aria-label="目錄">
+            <i class="fa-solid fa-list"></i>
+          </button>
+          <div class="article-toc-float__panel">
+            <p class="article-toc-float__title">目錄</p>
+            <ul class="article-toc-float__list">
+              <li v-for="item in toc" :key="item.id">
+                <a @click.prevent="scrollTo(item.id); tocOpen = false" href="#">{{ item.text }}</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 桌機版側邊目錄 -->
+        <aside class="article-toc-sidebar">
+          <p class="article-toc-sidebar__title">目錄</p>
+          <ul class="article-toc-sidebar__list">
+            <li v-for="item in toc" :key="item.id">
+              <a @click.prevent="scrollTo(item.id)" href="#" class="article-toc-sidebar__link" :class="{ 'article-toc-sidebar__link--active': activeId === item.id }">{{ item.text }}</a>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="article-detail-content__body" ref="contentRef" v-html="article.content"></div>
       </div>
     </section>
 
@@ -51,11 +77,60 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { articles } from '@/data/articles.js'
 import { getImageUrl } from '@/utils/image.js'
 
 const route = useRoute()
 const article = computed(() => articles.find((a) => a.id === route.params.id))
+
+// 目錄
+const toc = ref([])
+const activeId = ref('')
+const contentRef = ref(null)
+const tocOpen = ref(false)
+
+const buildToc = () => {
+  if (!contentRef.value) return
+  const headings = contentRef.value.querySelectorAll('h2, h3')
+  toc.value = Array.from(headings).map((h, i) => {
+    const id = `article-heading-${i}`
+    h.id = id
+    return { id, text: h.textContent, level: h.tagName }
+  })
+}
+
+const onScroll = () => {
+  if (!contentRef.value) return
+  const headings = contentRef.value.querySelectorAll('h2, h3')
+  let current = ''
+  headings.forEach((h) => {
+    if (h.getBoundingClientRect().top <= 120) {
+      current = h.id
+    }
+  })
+  activeId.value = current
+}
+
+const scrollTo = (id) => {
+  const el = document.getElementById(id)
+  if (!el) return
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+onMounted(() => {
+  nextTick(() => {
+    buildToc()
+    window.addEventListener('scroll', onScroll)
+  })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+})
+
+watch(article, () => {
+  nextTick(() => buildToc())
+})
 </script>

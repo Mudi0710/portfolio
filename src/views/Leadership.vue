@@ -38,7 +38,7 @@ import { ref, computed } from 'vue'
 import ArticleCard from '@/components/ArticleCard.vue'
 import { articles } from '@/data/articles.js'
 
-const filters = ['All', '設計團隊管理心得', '專案決策過程', '帶團隊的方法論', '個人成長反思']
+const filters = ['All', ...new Set(articles.flatMap((a) => a.tags))]
 const activeFilter = ref('All')
 
 const filteredArticles = computed(() => {

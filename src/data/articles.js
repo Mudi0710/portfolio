@@ -7,7 +7,7 @@ export const articles = [
       '我發現公司的 KPI 制度無法真正衡量設計師的工作表現，所以我決定主動做出改變。這篇文章記錄了我從發現問題、提案、到實際落地一整套 OKR 績效系統的完整歷程。',
     // cover: '/images/articles/design-team-okr-performance-system.jpg',
     cover: '/images/articles/article-2.jpg',
-    hashtags: ['帶團隊的方法論'],
+    hashtags: ['績效制度設計', '行為指標量化', '管理成本優化'],
     tags: ['帶團隊的方法論', '專案決策過程'],
     date: '2026-01-31',
     content: `
@@ -89,7 +89,7 @@ export const articles = [
       '老闆踩死的 deadline、PM 規劃一個月才丟來的需求——但最後設計部不只準時交付，還讓我看見一件更重要的事：真正讓任務得以完成的力量，早在這個專案之前就已經存在了。',
     // cover: '/images/articles/impossible-deadline-two-weeks.jpg',
     cover: '/images/articles/article-1.jpg',
-    hashtags: ['帶團隊的方法論'],
+    hashtags: ['任務拆解與同步推進', '自主分工設計', '信任感的長期積累'],
     tags: ['帶團隊的方法論', '個人成長反思'],
     date: '2025-02-24',
     content: `
@@ -124,7 +124,7 @@ export const articles = [
  
     <img src="/images/articles/impossible-deadline-two-weeks/timeline.jpg" alt="金幣機制專案時程規劃甘特圖" />
  
-    <h2>我做了一個自己也沒把握的決定</h2>
+    <h2>我做了一個和平常不一樣的決定</h2>
  
     <p>隔天，我召集四位夥伴開會，說明這個緊急專案。而手上原有的案子，在大主管同意下暫時往後移。</p>
  

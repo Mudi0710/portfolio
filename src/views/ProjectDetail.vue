@@ -99,7 +99,7 @@ const onScroll = () => {
   const headings = contentRef.value.querySelectorAll('h2, h3')
   let current = ''
   headings.forEach((h) => {
-    if (h.getBoundingClientRect().top <= 300) {
+    if (h.getBoundingClientRect().top <= 350) {
       current = h.id
     }
   })

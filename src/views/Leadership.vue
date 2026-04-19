@@ -5,7 +5,7 @@
         <p class="leadership-hero__label">My Thoughts</p>
         <h1 class="leadership-hero__title">Leadership</h1>
         <p class="leadership-hero__desc">
-          記錄我在設計管理路上的觀察與學習，包含團隊管理心得、專案決策過程、帶人的方法論，以及個人成長反思。
+          記錄我在設計管理路上真實發生的事：那些摸索過的方法論、踩過的決策、帶人時的觀察，以及在過程中慢慢長出來的反思。
         </p>
       </div>
     </section>

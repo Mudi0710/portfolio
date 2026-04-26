@@ -34,13 +34,21 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import ProjectCardHorizontal from '@/components/ProjectCardHorizontal.vue'
 import { projects } from '@/data/projects.js'
 
+const route = useRoute()
 const filters = ['All', ...new Set(projects.flatMap((p) => p.tags))]
-// const filters = ['All', 'UIUX', 'Frontend', 'AI', 'Cross-functional', 'Information Architecture']
 const activeFilter = ref('All')
+
+onMounted(() => {
+  const tag = route.query.tag
+  if (tag && filters.includes(tag)) {
+    activeFilter.value = tag
+  }
+})
 
 const filteredProjects = computed(() => {
   if (activeFilter.value === 'All') return projects

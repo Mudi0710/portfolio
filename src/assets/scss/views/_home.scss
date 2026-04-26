@@ -295,7 +295,7 @@
 
   &__label,
   &__title,
-  &__grid {
+  &__bento {
     position: relative;
     z-index: 1;
   }
@@ -317,39 +317,100 @@
     line-height: 1.3;
   }
 
-  &__grid {
+  // Bento grid 佈局
+  // 桌機（1024px+）：3欄，hero 全寬，medium-wide 佔 2/3，medium-narrow 佔 1/3，small 各 1/3
+  &__bento {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $spacing-md;
   }
 
-  &__card {
-    padding: $spacing-md;
+  &__bento-card {
     border: 1px solid $color-border-card;
-    border-radius: $radius-md;
+    border-radius: $radius-lg;
     background-color: $color-bg-card;
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-sm;
     transition: all $transition-base;
+    overflow: hidden;
+    position: relative;
 
     &:hover {
       border-color: $color-accent;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(79, 142, 247, 0.15);
+    }
+
+    // 主軸卡片：全寬
+    &--hero {
+      grid-column: 1 / -1;
+      background: linear-gradient(135deg, rgba(79, 142, 247, 0.08) 0%, rgba(124, 95, 247, 0.06) 100%);
+      border-color: rgba(79, 142, 247, 0.3);
+
+      .skills__bento-title {
+        font-size: $font-size-xl;
+      }
+
+      .skills__bento-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px $spacing-lg;
+      }
+    }
+
+    // 中等寬卡片（左，佔 2/3）
+    &--medium-wide {
+      grid-column: 1 / span 2;
+    }
+
+    // 中等窄卡片（右，佔 1/3）
+    &--medium-narrow {
+      grid-column: 3 / span 1;
+    }
+
+    // 小卡片：各佔 1/3
+    &--small {
+      grid-column: span 1;
     }
   }
 
-  &__card-title {
-    font-size: $font-size-base;
-    font-weight: $font-weight-semibold;
-    color: $color-text-primary;
-  }
-
-  &__card-list {
-    flex: 1;
+  &__bento-card-inner {
+    padding: $spacing-lg;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: $spacing-sm;
+  }
+
+  &__bento-eyebrow {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: $color-accent;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &__bento-title {
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  &__bento-desc {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  &__bento-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
 
     li {
       font-size: $font-size-sm;
@@ -363,11 +424,12 @@
     }
   }
 
-  &__card-tags {
+  &__bento-tags {
     display: flex;
     flex-wrap: wrap;
     gap: $spacing-xs;
-    margin-top: $spacing-xs;
+    margin-top: auto;
+    padding-top: $spacing-sm;
   }
 
   &__card-tag {
@@ -378,7 +440,8 @@
     border-radius: $radius-full;
     font-weight: $font-weight-medium;
     transition: all $transition-base;
-    border: 1px solid $color-border; // 從 transparent 改為 $color-border
+    border: 1px solid $color-border;
+    cursor: pointer;
 
     &:hover {
       background-color: $color-accent;
@@ -387,15 +450,47 @@
     }
   }
 
+  // 平板（768px – 1023px）：2欄，hero 全寬，其餘各佔 1 欄
   @media (max-width: 1023px) {
-    &__grid {
+    &__bento {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__bento-card {
+      &--hero {
+        grid-column: 1 / -1;
+
+        .skills__bento-list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      &--medium-wide,
+      &--medium-narrow,
+      &--small {
+        grid-column: span 1;
+      }
     }
   }
 
+  // 手機（767px 以下）：單欄，全部全寬
   @media (max-width: 767px) {
-    &__grid {
+    &__bento {
       grid-template-columns: 1fr;
+    }
+
+    &__bento-card {
+
+      &--hero,
+      &--medium-wide,
+      &--medium-narrow,
+      &--small {
+        grid-column: 1 / -1;
+      }
+
+      &--hero .skills__bento-list {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

@@ -1239,16 +1239,6 @@ export const projects = [
       </div>
     </div>
 
-    <!-- Stage 連結 -->
-    <h2>成品</h2>
-    <p>正式站台已下線，你可以透過 Stage 環境瀏覽網站成果：</p>
-    <a
-      href="https://stage-osm.go100.com.tw/"
-      target="_blank"
-      style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #f97316, #eab308); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
-      → 瀏覽橙色的科學書屋（Stage）
-    </a>
-
     <!-- 角色資訊 -->
     <div class="pd-info">
       <div class="pd-info__item">
@@ -1272,6 +1262,16 @@ export const projects = [
         <span class="pd-info__value">Vue.js 環境切版、RWD 響應式實作、SCSS 工具研發</span>
       </div>
     </div>
+
+        <!-- Stage 連結 -->
+    <h2>成品</h2>
+    <p>正式站台已下線，你可以透過 Stage 環境瀏覽網站成果：</p>
+    <a
+      href="https://stage-osm.go100.com.tw/"
+      target="_blank"
+      style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #f97316, #eab308); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+      → 瀏覽橙色的科學書屋（Stage）
+    </a>
 
     <!-- 背景與挑戰 -->
     <h2>背景與挑戰</h2>

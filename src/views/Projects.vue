@@ -20,8 +20,8 @@
         </div>
 
         <!-- 專案卡片 -->
-        <div class="projects-list__grid">
-          <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="project" />
+        <div class="projects-list__grid projects-list__grid--horizontal">
+          <ProjectCardHorizontal v-for="project in filteredProjects" :key="project.id" :project="project" />
         </div>
 
         <!-- 沒有結果 -->
@@ -35,7 +35,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
-import ProjectCard from '@/components/ProjectCard.vue'
+import ProjectCardHorizontal from '@/components/ProjectCardHorizontal.vue'
 import { projects } from '@/data/projects.js'
 
 const filters = ['All', ...new Set(projects.flatMap((p) => p.tags))]

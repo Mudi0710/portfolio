@@ -16,6 +16,7 @@
     background-color: rgba(#0f1117, 0.85);
     backdrop-filter: blur(12px);
   }
+
   position: fixed;
   top: 0;
   left: 0;
@@ -130,7 +131,7 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &__hamburger {
       display: flex;
     }

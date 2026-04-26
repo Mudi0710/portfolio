@@ -15,7 +15,7 @@
   padding: 5rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .section {
     padding: 3rem 0;
   }
@@ -70,6 +70,18 @@ code {
     &:hover {
       border-color: $color-text-primary;
       color: $color-text-primary;
+    }
+  }
+
+  &--ghost {
+    border: 1px solid $color-accent;
+    color: $color-accent;
+    background-color: rgba(79, 142, 247, 0.08);
+
+    &:hover {
+      background-color: rgba(79, 142, 247, 0.18);
+      border-color: color.adjust($color-accent, $lightness: 10%);
+      color: color.adjust($color-accent, $lightness: 10%);
     }
   }
 }

@@ -53,7 +53,7 @@ p {
 }
 
 // RWD 字體縮放
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   h1 {
     font-size: $font-size-3xl;
   }

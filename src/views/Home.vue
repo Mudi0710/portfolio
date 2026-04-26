@@ -6,13 +6,15 @@
       <div class="container hero__inner">
         <div class="hero__content">
           <h1 class="hero__title">嗨，我是 Nomis！</h1>
-          <p class="hero__subtitle">UIUX 設計師・前端工程師・設計主管</p>
+          <p class="hero__subtitle">UIUX 設計師・前端切版・設計主管</p>
           <p class="hero__desc">
-            擅長以數據驅動設計決策，打造以使用者為中心的產品體驗，跨文化協作與跨部門溝通是我的強項。
+            我相信設計師最大的競爭力，是跨越專業邊界的能力。<br />
+            橫跨 UIUX、前端與設計管理，擁有人資與社會心理學背景的我，<br />
+            習慣用數據驗證設計決策，也具備在資源不足的情況下，仍能獨立推進專案、讓成果落地的能力。
           </p>
           <div class="hero__cta">
             <a href="/portfolio/resume.pdf" target="_blank" class="btn btn--primary">下載履歷</a>
-            <a href="https://www.linkedin.com/in/" target="_blank" class="btn btn--secondary">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/nomis-yang/" target="_blank" class="btn btn--secondary">LinkedIn</a>
             <a href="mailto:nomis820710@gmail.com" class="btn btn--secondary">聯絡我</a>
           </div>
         </div>
@@ -28,22 +30,19 @@
         <div class="features__item">
           <h3 class="features__title">跨領域設計能力</h3>
           <p class="features__desc">
-            橫跨 UIUX
-            設計、前端切版與設計管理，能從使用者研究、視覺設計到程式實作一手包辦，確保設計落地不失真。
+            橫跨 UIUX 設計、前端切版與設計管理，能從使用者研究、視覺設計到程式實作一手包辦。曾在 PM 幾乎缺席的情況下獨立完成 UX 研究、UI 設計、Prototype 與切版，確保設計落地不失真。
           </p>
         </div>
         <div class="features__item">
           <h3 class="features__title">數據驅動的設計決策</h3>
           <p class="features__desc">
-            習慣以數據佐證設計方向，透過 A/B
-            測試、使用者訪談與競品分析，持續優化產品體驗並創造可量化的成效。
+            習慣在設計提案前先問「這解決了什麼問題」、上線後追問「它真的有效嗎」。曾透過使用者訪談發現需求被錯誤定義，主動將產品從「心智圖系統」重新定位為陪伴完整銷售旅程的數位報告工具。
           </p>
         </div>
         <div class="features__item">
           <h3 class="features__title">跨部門協作與領導</h3>
           <p class="features__desc">
-            具備帶領設計團隊的實戰經驗，善於在產品、工程與商業目標之間建立共識，推動專案從 0 到 1
-            順利落地。
+            具備帶領設計團隊的實戰經驗，善於在產品、工程與商業目標之間建立共識。曾在兩週內拆解跨部門任務、同步推進四條工作線，帶領團隊準時交付一個 PM 規劃了一個月的專案。
           </p>
         </div>
       </div>
@@ -53,7 +52,10 @@
     <section class="projects-preview section">
       <div class="container">
         <div class="projects-preview__grid">
-          <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+          <ProjectCard v-for="project in projects.slice(0, 3)" :key="project.id" :project="project" />
+        </div>
+        <div class="projects-preview__cta">
+          <RouterLink to="/projects" class="btn btn--ghost">查看全部專案 →</RouterLink>
         </div>
       </div>
     </section>

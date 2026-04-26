@@ -60,7 +60,7 @@
     margin-bottom: $spacing-md;
     color: $color-text-primary;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-size: $font-size-3xl;
     }
   }
@@ -129,7 +129,7 @@
   border-radius: $radius-lg;
   border: 1px solid $color-border;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     grid-template-columns: 1fr;
   }
 }
@@ -354,7 +354,7 @@
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     &__layout {
       grid-template-columns: 1fr;
     }
@@ -404,7 +404,7 @@
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     display: none;
   }
 }
@@ -494,7 +494,7 @@
     }
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     display: block;
   }
 }

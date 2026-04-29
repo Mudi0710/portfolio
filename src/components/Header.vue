@@ -10,7 +10,7 @@
         <RouterLink to="/projects" class="header__nav-link" @click="closeMenu">Projects</RouterLink>
         <RouterLink to="/leadership" class="header__nav-link" @click="closeMenu">Leadership</RouterLink>
         <RouterLink to="/about" class="header__nav-link" @click="closeMenu">About</RouterLink>
-        <a href="/resume.pdf" target="_blank" class="header__nav-link header__nav-link--resume" @click="closeMenu">Resume</a>
+        <a href="/portfolio/resume.pdf" target="_blank" class="header__nav-link header__nav-link--resume" @click="closeMenu">Resume</a>
       </nav>
 
       <button

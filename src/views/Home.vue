@@ -6,10 +6,10 @@
       <div class="container hero__inner">
         <div class="hero__content">
           <h1 class="hero__title">嗨，我是 Nomis！</h1>
-          <p class="hero__subtitle">UIUX 設計師・前端切版・設計主管</p>
+          <p class="hero__subtitle">UIUX 設計師・前端切版・跨職能協作</p>
           <p class="hero__desc">
             我相信設計師最大的競爭力，是跨越專業邊界的能力。<br />
-            橫跨 UIUX、前端與設計管理，擁有人資與社會心理學背景的我，<br />
+            橫跨 UIUX、前端與設計策略，擁有人資與社會心理學背景的我，<br />
             習慣用數據驗證設計決策，也具備在資源不足的情況下，仍能獨立推進專案、讓成果落地的能力。
           </p>
           <div class="hero__cta">
@@ -104,18 +104,50 @@
           <!-- 主軸：研究驅動的產品設計 -->
           <div class="skills__bento-card skills__bento-card--hero">
             <div class="skills__bento-card-inner">
-              <p class="skills__bento-eyebrow">核心能力</p>
-              <h3 class="skills__bento-title">研究驅動的產品設計</h3>
-              <p class="skills__bento-desc">從使用者訪談、數據分析到最終設計決策，我習慣讓證據說話，而不是靠直覺猜測使用者要什麼。</p>
-              <ul class="skills__bento-list">
-                <li>使用者訪談 & 易用性測試</li>
-                <li>數據判讀 & A/B 測試規劃</li>
-                <li>競品分析 & 研究報告</li>
-                <li>從洞察到設計決策的完整流程</li>
-              </ul>
-              <div class="skills__bento-tags">
-                <RouterLink to="/projects?tag=UIUX" class="skills__card-tag">查看 UIUX 專案 →</RouterLink>
-                <RouterLink to="/projects?tag=Research" class="skills__card-tag">查看研究專案 →</RouterLink>
+              <div class="skills__bento-hero-left">
+                <p class="skills__bento-eyebrow">核心能力</p>
+                <h3 class="skills__bento-title">研究驅動的產品設計</h3>
+                <p class="skills__bento-desc">從使用者訪談、數據分析到最終設計決策，我習慣讓證據說話，而不是靠直覺猜測使用者要什麼。</p>
+                <ul class="skills__bento-list">
+                  <li>使用者訪談 & 易用性測試</li>
+                  <li>數據判讀 & A/B 測試規劃</li>
+                  <li>競品分析 & 研究報告</li>
+                  <li>從洞察到設計決策的完整流程</li>
+                </ul>
+                <div class="skills__bento-tags">
+                  <RouterLink to="/projects?tag=UIUX" class="skills__card-tag">查看 UIUX 專案 →</RouterLink>
+                  <RouterLink to="/projects?tag=Research" class="skills__card-tag">查看研究專案 →</RouterLink>
+                </div>
+              </div>
+              <div class="skills__bento-hero-right">
+                <svg width="100%" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <line x1="40" y1="50" x2="90" y2="90" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
+                  <line x1="90" y1="90" x2="110" y2="55" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
+                  <line x1="110" y1="55" x2="160" y2="95" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
+                  <line x1="160" y1="95" x2="190" y2="65" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
+                  <line x1="90" y1="90" x2="100" y2="148" stroke="rgba(124,95,247,0.15)" stroke-width="0.8" />
+                  <line x1="110" y1="55" x2="100" y2="148" stroke="rgba(124,95,247,0.15)" stroke-width="0.8" />
+                  <line x1="160" y1="95" x2="145" y2="155" stroke="rgba(124,95,247,0.15)" stroke-width="0.8" />
+                  <line x1="100" y1="148" x2="145" y2="155" stroke="rgba(79,142,247,0.12)" stroke-width="0.8" />
+                  <line x1="40" y1="50" x2="20" y2="115" stroke="rgba(79,142,247,0.12)" stroke-width="0.6" />
+                  <line x1="190" y1="65" x2="205" y2="135" stroke="rgba(79,142,247,0.12)" stroke-width="0.6" />
+                  <line x1="20" y1="115" x2="100" y2="148" stroke="rgba(79,142,247,0.1)" stroke-width="0.6" />
+                  <line x1="205" y1="135" x2="145" y2="155" stroke="rgba(79,142,247,0.1)" stroke-width="0.6" />
+                  <circle cx="110" cy="55" r="5" fill="rgba(79,142,247,0.7)" />
+                  <circle cx="90" cy="90" r="4" fill="rgba(79,142,247,0.5)" />
+                  <circle cx="160" cy="95" r="4" fill="rgba(79,142,247,0.5)" />
+                  <circle cx="40" cy="50" r="3" fill="rgba(124,95,247,0.5)" />
+                  <circle cx="190" cy="65" r="3" fill="rgba(124,95,247,0.5)" />
+                  <circle cx="100" cy="148" r="3.5" fill="rgba(124,95,247,0.4)" />
+                  <circle cx="145" cy="155" r="3.5" fill="rgba(124,95,247,0.4)" />
+                  <circle cx="20" cy="115" r="2.5" fill="rgba(79,142,247,0.3)" />
+                  <circle cx="205" cy="135" r="2.5" fill="rgba(79,142,247,0.3)" />
+                  <circle cx="65" cy="25" r="1.5" fill="rgba(79,142,247,0.25)" />
+                  <circle cx="170" cy="20" r="1.5" fill="rgba(79,142,247,0.25)" />
+                  <circle cx="210" cy="100" r="1.5" fill="rgba(124,95,247,0.2)" />
+                  <circle cx="115" cy="180" r="1.5" fill="rgba(79,142,247,0.2)" />
+                  <circle cx="50" cy="170" r="1.5" fill="rgba(124,95,247,0.2)" />
+                </svg>
               </div>
             </div>
           </div>

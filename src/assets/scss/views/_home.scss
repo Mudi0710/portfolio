@@ -345,6 +345,13 @@
       background: linear-gradient(135deg, rgba(79, 142, 247, 0.08) 0%, rgba(124, 95, 247, 0.06) 100%);
       border-color: rgba(79, 142, 247, 0.3);
 
+      .skills__bento-card-inner {
+        display: grid;
+        grid-template-columns: 1fr 220px;
+        gap: $spacing-xl;
+        align-items: center;
+      }
+
       .skills__bento-title {
         font-size: $font-size-xl;
       }
@@ -432,6 +439,21 @@
     padding-top: $spacing-sm;
   }
 
+  &__bento-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    height: 100%;
+  }
+
+  &__bento-hero-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    opacity: 0.9;
+  }
+
   &__card-tag {
     font-size: $font-size-xs;
     color: $color-tag-text;
@@ -459,6 +481,14 @@
     &__bento-card {
       &--hero {
         grid-column: 1 / -1;
+
+        .skills__bento-card-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .skills__bento-hero-right {
+          display: none;
+        }
 
         .skills__bento-list {
           grid-template-columns: repeat(2, 1fr);

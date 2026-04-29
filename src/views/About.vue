@@ -7,13 +7,13 @@
           <p class="about-hero__label">About Me</p>
           <h1 class="about-hero__title">嗨，我是 Nomis！</h1>
           <p class="about-hero__desc">
-            我是一位橫跨 <strong>UIUX 設計、前端切版與設計管理</strong>的複合型設計師。入行前做過人資、讀過社會心理、跑過企業培訓，這些跨領域的歷程不是繞路，而是讓我在每一個設計決策裡，都能同時看見使用者、團隊與商業三個層面。
+            我是一位橫跨 <strong>UIUX 設計、前端切版與系統思維</strong>的複合型設計師。入行前做過人資、讀過社會心理、跑過企業培訓，這些跨領域的歷程不是繞路，而是讓我在每一個設計決策裡，都能同時看見使用者、團隊與商業三個層面。
           </p>
           <p class="about-hero__desc">
             在三貝德擔任設計師期間，我能在資源不足的情況下獨立推進：PM 缺席時獨立完成從 UX 研究到前端切版的全流程；工具不夠用時自己研發 SCSS 工具、建立 EPUB 量產系統。<strong>我相信設計師最大的競爭力，不是工具用得多熟，而是在限制裡找到更多可能與更聰明的解法。</strong>
           </p>
           <p class="about-hero__desc">
-            晉升設計主管後，我把同樣的系統性思維用在領導上：建立 OKR 績效系統、UIUX 職涯發展階梯、設計需求協作指南，<strong>讓團隊的運作不再靠感覺，而是有制度可以依循、有數據可以追蹤。</strong>這是我目前覺得最有意義的事，也是我最想繼續做的事。
+            我也把同樣的系統性思維延伸到更大的範疇：建立 OKR 績效系統、UIUX 職涯發展階梯、設計需求協作指南，<strong>讓團隊的運作不再靠感覺，而是有制度可以依循、有數據可以追蹤。</strong>這種「讓複雜的事情變得可被依循」的能力，是我目前最想持續深化的方向。
           </p>
         </div>
         <div class="about-hero__image">
@@ -56,7 +56,7 @@
         <p class="about-story__label">My Story</p>
         <h2 class="about-story__title">那些看似無關的工作，如何一步步讓我成為 UIUX 設計師與設計主管</h2>
         <p class="about-story__intro">
-          在成為 UIUX 設計師之前，我做過助理、跑過財會、管過人資、辦過企業培訓。<br/>
+          在成為 UIUX 設計師之前，我做過助理、跑過財會、管過人資、辦過企業培訓。<br />
           這些看起來和設計毫無關係的工作，卻在我不知道的時候，悄悄建立了我最核心的設計能力。
         </p>
 
@@ -72,6 +72,53 @@
                 <span v-for="tag in story.tags" :key="tag" class="about-story__tag">{{ tag }}</span>
               </div>
               <p class="about-story__desc" v-html="story.desc"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 設計之外 -->
+    <section class="about-extras section">
+      <div class="container">
+        <p class="about-extras__label">Beyond Work</p>
+        <h2 class="about-extras__title">設計之外，我還是⋯⋯</h2>
+        <div class="about-extras__grid">
+          <div v-for="extra in extras" :key="extra.name" class="about-extras__card">
+            <div class="about-extras__image">
+              <img :src="getImageUrl(extra.image)" :alt="extra.name" />
+            </div>
+            <div class="about-extras__content">
+              <h3 class="about-extras__name">
+                <span class="about-extras__icon">
+                  <!-- 🎬 職場劇迷 -->
+                  <svg v-if="extra.icon === 'film'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
+                    <line x1="7" y1="2" x2="7" y2="22" />
+                    <line x1="17" y1="2" x2="17" y2="22" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <line x1="2" y1="7" x2="7" y2="7" />
+                    <line x1="2" y1="17" x2="7" y2="17" />
+                    <line x1="17" y1="17" x2="22" y2="17" />
+                    <line x1="17" y1="7" x2="22" y2="7" />
+                  </svg>
+                  <!-- 🚴 飛輪騎士 -->
+                  <svg v-if="extra.icon === 'bike'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="5.5" cy="17.5" r="3.5" />
+                    <circle cx="18.5" cy="17.5" r="3.5" />
+                    <path d="M15 6a1 1 0 0 0-1-1h-1" />
+                    <path d="M8.5 17.5 12 10l2.5 4H8.5z" stroke-linejoin="round" />
+                    <path d="m12 10 2-4h3" />
+                  </svg>
+                  <!-- 📖 閱讀者 -->
+                  <svg v-if="extra.icon === 'book'" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                </span>
+                {{ extra.name }}
+              </h3>
+              <p class="about-extras__desc" v-html="extra.desc"></p>
             </div>
           </div>
         </div>
@@ -138,6 +185,27 @@ const stories = [
     image: getImageUrl('/images/general/story/story-4.jpg'),
     tags: ['人才培育', '知識拆解', '同理心'],
     desc: '在啟諾科技從人資做到培訓，取得 <strong>TTT（Train the Trainer）企業內部講師資格</strong>後，自行開發並主講《有效提升溝通力》課程，滿意度達 5/5 滿分。這段經歷讓我真正理解：要讓別人「學會」一件事，<strong>必須先把複雜的知識拆解成對方能吸收的結構。</strong>這個能力後來幫助我設計更清晰的使用者引導流程，也讓我在帶設計師時，<strong>能把抽象的設計原則轉化成具體可執行的行動，這正是人才培育最核心的事。</strong>',
+  },
+]
+
+const extras = [
+  {
+    icon: 'film',
+    image: '/images/general/extras/extras-1.jpg',
+    name: '職場劇迷',
+    desc: '《穿著 Prada 的惡魔》、《高年級實習生》、《正青春》、《歡樂頌》......我的片單大多是職場劇。比起純粹娛樂，我更著迷於劇中人<strong>如何在壓力與博弈裡做決定、如何拿捏關係與界限</strong>。這些情節讓我對「人」的行為模式有更細膩的觀察，也悄悄影響了我處理<strong>利害關係人與跨部門協作</strong>的方式。',
+  },
+  {
+    icon: 'bike',
+    image: '/images/general/extras/extras-2.jpg',
+    name: '飛輪騎士',
+    desc: '跟著教練一節一節加重阻力，不讓自己輕易找退路——飛輪對我來說不只是運動，更是一種<strong>和自己談判的過程</strong>。每次撐過那個最想放棄的瞬間，都會提醒我：真正的進步不在舒適區裡。這個習慣讓我<strong>在高壓的專案週期裡，依然能保持清醒和能量</strong>。',
+  },
+  {
+    icon: 'book',
+    image: '/images/general/extras/extras-3.jpg',
+    name: '閱讀者',
+    desc: '我偏愛心理與成長類的書，特別喜歡鄧惠文醫師的作品，她擅長把複雜的情感結構說得清晰又有溫度。閱讀對我來說是一種<strong>反射性思考</strong>的練習：把別人整理好的洞見，對照自己的經驗重新消化。這個習慣讓我更能<strong>理解使用者行為背後的心理動機</strong>，也讓我在設計決策時，不只看見功能，也看見情緒。',
   },
 ]
 </script>

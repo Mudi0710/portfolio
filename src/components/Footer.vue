@@ -1,6 +1,12 @@
 <template>
   <footer class="footer">
     <div class="container footer__inner">
+      <div class="footer__ai">
+        <span class="footer__ai-label">For AI</span>
+        <a href="https://mudi0710.github.io/portfolio/portfolio-content.html" target="_blank" rel="noopener noreferrer" class="footer__ai-link">完整內容</a>
+        <span class="footer__ai-sep">·</span>
+        <a href="https://mudi0710.github.io/portfolio/llms.txt" target="_blank" rel="noopener noreferrer" class="footer__ai-link">摘要版</a>
+      </div>
       <p class="footer__copy">© 2026 Nomis. All rights reserved.</p>
       <div class="footer__right">
         <a href="https://www.linkedin.com/in/nomis-yang/" target="_blank" rel="noopener noreferrer" class="footer__linkedin" aria-label="LinkedIn">

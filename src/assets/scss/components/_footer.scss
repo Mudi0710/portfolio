@@ -11,6 +11,39 @@
     justify-content: space-between;
   }
 
+  &__ai {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__ai-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: $color-accent;
+    background-color: rgba($color-accent, 0.12);
+    border: 1px solid rgba($color-accent, 0.3);
+    border-radius: 4px;
+    padding: 2px 6px;
+    text-transform: uppercase;
+  }
+
+  &__ai-sep {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+  }
+
+  &__ai-link {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
   &__copy {
     font-size: $font-size-sm;
     color: $color-text-muted;

@@ -54,7 +54,7 @@
       <StoryCanvas />
       <div class="container">
         <p class="about-story__label">My Story</p>
-        <h2 class="about-story__title">那些看似無關的工作，如何一步步讓我成為 UIUX 設計師與設計主管</h2>
+        <h2 class="about-story__title">那些看似無關的工作，<br/>如何一步步讓我成為 UIUX 設計師與設計主管</h2>
         <p class="about-story__intro">
           在成為 UIUX 設計師之前，我做過助理、跑過財會、管過人資、辦過企業培訓。<br />
           這些看起來和設計毫無關係的工作，卻在我不知道的時候，悄悄建立了我最核心的設計能力。

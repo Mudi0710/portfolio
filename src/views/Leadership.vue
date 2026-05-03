@@ -1,23 +1,35 @@
 <template>
   <div class="leadership-page">
     <section class="leadership-hero section">
-      <div class="container">
-        <p class="leadership-hero__label">My Thoughts</p>
-        <h1 class="leadership-hero__title">Leadership</h1>
-        <p class="leadership-hero__desc">
-          記錄我在設計管理路上真實發生的事：那些摸索過的方法論、踩過的決策、帶人時的觀察，以及在過程中慢慢長出來的反思。
-        </p>
+      <div class="container leadership-hero__inner">
+        <!-- Left: label + title + desc -->
+        <div class="leadership-hero__left">
+          <p class="leadership-hero__label">My Thoughts</p>
+          <h1 class="leadership-hero__title">Leadership</h1>
+          <p class="leadership-hero__desc">
+            記錄我在設計管理路上真實發生的事：那些摸索過的方法論、踩過的決策、帶人時的觀察，以及在過程中慢慢長出來的反思。
+          </p>
+        </div>
+        <!-- Right: filter tags -->
+        <div class="leadership-hero__right">
+          <p class="leadership-hero__filter-label">Filter by</p>
+          <div class="leadership-hero__filters">
+            <button
+              v-for="filter in filters"
+              :key="filter"
+              class="leadership-hero__filter"
+              :class="{ 'leadership-hero__filter--active': activeFilter === filter }"
+              @click="activeFilter = filter"
+            >
+              {{ filter }}
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="leadership-list section">
       <div class="container">
-        <!-- Filter Tags -->
-        <div class="leadership-list__filters">
-          <button v-for="filter in filters" :key="filter" class="leadership-list__filter" :class="{ 'leadership-list__filter--active': activeFilter === filter }" @click="activeFilter = filter">
-            {{ filter }}
-          </button>
-        </div>
 
         <!-- 文章卡片 -->
         <div class="leadership-list__grid">

@@ -9,87 +9,116 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 55% 45% at 90% 15%, rgba(79, 142, 247, 0.22) 0%, transparent 65%),
-      radial-gradient(ellipse 50% 40% at 15% 65%, rgba(124, 95, 247, 0.18) 0%, transparent 65%),
-      radial-gradient(ellipse 35% 30% at 60% 95%, rgba(79, 142, 247, 0.1) 0%, transparent 60%);
+      radial-gradient(ellipse 50% 35% at 90% 12%, rgba(var(--color-accent-rgb), 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 15% 65%, rgba(var(--color-accent-rgb), 0.05) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
   }
 }
 
 .leadership-hero {
-  padding-top: calc(70px + 4rem);
-  padding-bottom: 0;
+  padding-top: calc(70px + 5rem);
+  padding-bottom: $spacing-xl;
   position: relative;
+  z-index: 1;
 
-  &__label,
-  &__title,
-  &__desc {
-    position: relative;
-    z-index: 1;
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: $spacing-2xl;
+    align-items: end;
+
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr 220px;
+      gap: $spacing-xl;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__left {
+    // nothing extra
   }
 
   &__label {
-    font-size: $font-size-sm;
+    font-family: $font-primary;
+    font-size: 11px;
     font-weight: $font-weight-semibold;
-    color: $color-accent;
-    letter-spacing: 1px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-bottom: $spacing-sm;
+    color: var(--color-accent);
+    margin-bottom: $spacing-md;
+    display: block;
   }
 
   &__title {
-    font-size: $font-size-4xl;
+    font-family: $font-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
     font-weight: $font-weight-bold;
     margin-bottom: $spacing-md;
-    color: $color-text-primary;
-
-    @media (max-width: 767px) {
-      font-size: $font-size-3xl;
-    }
+    color: var(--color-text-primary);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
   }
 
   &__desc {
     font-size: $font-size-md;
-    color: $color-text-secondary;
-    line-height: 1.8;
+    color: var(--color-text-secondary);
+    line-height: 1.85;
+  }
+
+  &__right {
+    padding-bottom: 6px;
+  }
+
+  &__filter-label {
+    font-family: $font-primary;
+    font-size: 10px;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: $spacing-sm;
+    display: block;
+  }
+
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &__filter {
+    padding: 6px 16px;
+    border-radius: $radius-full;
+    border: 1px solid var(--color-border-card);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: var(--color-text-secondary);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all $transition-base;
+
+    &:hover:not(&--active) {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    &--active {
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--color-white);
+      cursor: default;
+    }
   }
 }
 
 .leadership-list {
   position: relative;
   z-index: 1;
-
-  &__filters {
-    display: flex;
-    gap: $spacing-sm;
-    flex-wrap: wrap;
-    margin-bottom: $spacing-xl;
-  }
-
-  &__filter {
-    padding: $spacing-xs $spacing-md;
-    border-radius: $radius-full;
-    border: 1px solid $color-border;
-    font-size: $font-size-sm;
-    font-weight: $font-weight-medium;
-    color: $color-text-secondary;
-    background-color: transparent;
-    cursor: pointer;
-    transition: all $transition-base;
-
-    &:hover:not(&--active) {
-      border-color: $color-accent;
-      color: $color-accent;
-    }
-
-    &--active {
-      background-color: $color-accent;
-      border-color: $color-accent;
-      color: $color-white;
-      cursor: default;
-    }
-  }
 
   &__grid {
     display: grid;
@@ -107,7 +136,7 @@
 
   &__empty {
     text-align: center;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
     padding: $spacing-2xl 0;
     font-size: $font-size-base;
   }

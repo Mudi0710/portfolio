@@ -1,27 +1,38 @@
 <template>
   <div class="projects-page">
     <section class="projects-hero section">
-      <div class="container">
-        <p class="projects-hero__label">My Work</p>
-        <h1 class="projects-hero__title">Projects</h1>
-        <p class="projects-hero__desc">
-          橫跨 UIUX 設計、前端切版與 AI 產品設計的實戰專案，每個專案都有可量化的成效與完整的設計思考過程。
-        </p>
+      <div class="container projects-hero__inner">
+        <!-- Left: label + title + desc -->
+        <div class="projects-hero__left">
+          <p class="projects-hero__label">My Work</p>
+          <h1 class="projects-hero__title">Projects</h1>
+          <p class="projects-hero__desc">
+            橫跨 UIUX 設計、前端切版與 AI 產品設計的實戰專案，每個專案都有可量化的成效與完整的設計思考過程。
+          </p>
+        </div>
+        <!-- Right: filter tags -->
+        <div class="projects-hero__right">
+          <p class="projects-hero__filter-label">Filter by</p>
+          <div class="projects-hero__filters">
+            <button
+              v-for="filter in filters"
+              :key="filter"
+              class="projects-hero__filter"
+              :class="{ 'projects-hero__filter--active': activeFilter === filter }"
+              @click="activeFilter = filter"
+            >
+              {{ filter }}
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="projects-list section">
       <div class="container">
-        <!-- Filter Tags -->
-        <div class="projects-list__filters">
-          <button v-for="filter in filters" :key="filter" class="projects-list__filter" :class="{ 'projects-list__filter--active': activeFilter === filter }" @click="activeFilter = filter">
-            {{ filter }}
-          </button>
-        </div>
-
         <!-- 專案卡片 -->
-        <div class="projects-list__grid projects-list__grid--horizontal">
-          <ProjectCardHorizontal v-for="project in filteredProjects" :key="project.id" :project="project" />
+        <div class="projects-list__grid">
+          <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="project" />
         </div>
 
         <!-- 沒有結果 -->
@@ -36,7 +47,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import ProjectCardHorizontal from '@/components/ProjectCardHorizontal.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
 import { projects } from '@/data/projects.js'
 
 const route = useRoute()

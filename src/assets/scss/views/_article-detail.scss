@@ -9,9 +9,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 55% 35% at 95% 8%, rgba(124, 95, 247, 0.15) 0%, transparent 65%),
-      radial-gradient(ellipse 45% 35% at 5% 45%, rgba(79, 142, 247, 0.12) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 30% at 70% 88%, rgba(79, 142, 247, 0.08) 0%, transparent 60%);
+      radial-gradient(ellipse 50% 30% at 90% 5%, rgba(var(--color-accent-rgb), 0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 25% at 10% 50%, rgba(var(--color-accent-rgb), 0.04) 0%, transparent 60%);
     pointer-events: none;
     z-index: 0;
   }
@@ -30,12 +29,12 @@
   &__back {
     display: inline-block;
     font-size: $font-size-sm;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
     margin-bottom: $spacing-lg;
     transition: color $transition-base;
 
     &:hover {
-      color: $color-accent;
+      color: var(--color-accent);
     }
   }
 
@@ -48,7 +47,7 @@
 
   &__hashtag {
     font-size: $font-size-sm;
-    color: $color-accent;
+    color: var(--color-accent);
     font-weight: $font-weight-medium;
   }
 
@@ -57,7 +56,7 @@
     font-weight: $font-weight-bold;
     line-height: 1.2;
     margin-bottom: $spacing-md;
-    color: $color-text-primary;
+    color: var(--color-text-primary);
 
     @media (max-width: 767px) {
       font-size: $font-size-3xl;
@@ -66,14 +65,14 @@
 
   &__desc {
     font-size: $font-size-md;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     line-height: 1.8;
     margin-bottom: $spacing-sm;
   }
 
   &__date {
     font-size: $font-size-sm;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
   }
 }
 
@@ -89,7 +88,7 @@
   &__img {
     width: 100%;
     border-radius: $radius-lg;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
   }
 }
 
@@ -100,15 +99,19 @@
 
   &__layout {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 1fr 240px;
     gap: $spacing-2xl;
     align-items: start;
     max-width: 1100px;
+
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__body {
     font-size: $font-size-md;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     line-height: 1.9;
     min-width: 0;
 
@@ -118,17 +121,21 @@
     }
 
     h2 {
+      font-family: $font-serif;
       font-size: $font-size-2xl;
       font-weight: $font-weight-bold;
-      color: $color-text-primary;
+      color: var(--color-text-primary);
       margin-top: $spacing-2xl;
       margin-bottom: $spacing-md;
+      padding-bottom: $spacing-sm;
+      border-bottom: 1px solid var(--color-border);
+      letter-spacing: -0.02em;
     }
 
     h3 {
       font-size: $font-size-xl;
       font-weight: $font-weight-semibold;
-      color: $color-text-primary;
+      color: var(--color-text-primary);
       margin-top: $spacing-xl;
       margin-bottom: $spacing-sm;
     }
@@ -141,7 +148,7 @@
       width: 100%;
       border-radius: $radius-md;
       margin: $spacing-lg 0;
-      border: 1px solid $color-border;
+      border: 1px solid var(--color-border);
     }
 
     ul,
@@ -164,27 +171,85 @@
     }
 
     blockquote {
-      border-left: 3px solid $color-accent;
+      border-left: 3px solid var(--color-accent);
       padding-left: $spacing-md;
       margin: $spacing-lg 0;
-      color: $color-text-muted;
+      color: var(--color-text-muted);
       font-style: italic;
-    }
-  }
-
-  @media (max-width: 1023px) {
-    &__layout {
-      grid-template-columns: 1fr;
     }
   }
 }
 
+// ============================================================
+// Bottom nav
+// ============================================================
 .article-detail-nav {
   position: relative;
   z-index: 1;
-  border-top: 1px solid $color-border;
+  border-top: 1px solid var(--color-border);
   padding-top: $spacing-xl;
-  padding-bottom: $spacing-xl;
+  padding-bottom: $spacing-2xl;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+
+  &__back {
+    align-self: flex-start;
+  }
+
+  &__arrows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: $spacing-md;
+    border-radius: $radius-lg;
+    border: 1px solid var(--color-border-card);
+    background-color: var(--color-bg-card);
+    text-decoration: none;
+    transition: all $transition-base;
+
+    &:hover {
+      border-color: rgba(var(--color-accent-rgb), 0.4);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    &--next {
+      text-align: right;
+    }
+  }
+
+  &__arrow-dir {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__arrow-title {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
 
 .article-detail-notfound {
@@ -193,11 +258,13 @@
 
   h1 {
     margin-bottom: $spacing-lg;
-    color: $color-text-primary;
+    color: var(--color-text-primary);
   }
 }
 
+// ============================================================
 // ArticleDetail 內頁專用元件
+// ============================================================
 .ad-callout {
   display: flex;
   flex-direction: column;
@@ -206,9 +273,9 @@
 
   &__item {
     padding: $spacing-md;
-    background-color: $color-bg-secondary;
+    background-color: var(--color-bg-secondary);
     border-radius: $radius-md;
-    border-left: 3px solid $color-accent;
+    border-left: 3px solid var(--color-accent);
 
     p {
       font-size: $font-size-base;
@@ -232,22 +299,39 @@
     display: block;
     font-size: $font-size-base;
     font-weight: $font-weight-semibold;
-    color: $color-accent;
+    color: var(--color-accent);
     margin-bottom: $spacing-xs;
   }
 }
 
-// 桌機版側邊目錄（article 版）
+// ============================================================
+// 桌機版側邊欄（右側）
+// ============================================================
 .article-toc-sidebar {
   position: sticky;
   top: 100px;
   max-height: calc(100vh - 120px);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+
+  // TOC card
+  &__toc {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-card);
+    border-radius: $radius-lg;
+    padding: $spacing-md;
+  }
 
   &__title {
     font-size: $font-size-xs;
     font-weight: $font-weight-semibold;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: $spacing-sm;
@@ -256,36 +340,95 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
+  }
+
+  &__item {
+    // base: H2 items
+  }
+
+  &__item--h3 {
+    padding-left: $spacing-sm;
+
+    .article-toc-sidebar__link {
+      font-size: 12px;
+
+      &::before {
+        content: '–';
+        margin-right: 4px;
+        opacity: 0.5;
+      }
+    }
   }
 
   &__link {
     font-size: $font-size-sm;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
     line-height: 1.5;
-    padding: 4px 0 4px $spacing-sm;
+    padding: 4px $spacing-sm;
     border-left: 2px solid transparent;
     transition: all $transition-base;
     display: block;
 
     &:hover {
-      color: $color-accent;
-      border-left-color: $color-accent;
+      color: var(--color-accent);
+      border-left-color: var(--color-accent);
     }
 
     &--active {
-      color: $color-accent;
+      color: var(--color-accent);
       font-weight: $font-weight-medium;
-      border-left-color: $color-accent;
+      border-left-color: var(--color-accent);
     }
   }
 
-  @media (max-width: 1023px) {
-    display: none;
+  // Contact card
+  &__contact {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-card);
+    border-radius: $radius-lg;
+    padding: $spacing-md;
+  }
+
+  &__contact-title {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__contact-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    transition: color $transition-base;
+    line-height: 1.4;
+    word-break: break-all;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    svg {
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
   }
 }
 
-// 手機版浮動目錄（article 版）
+// ============================================================
+// 手機版浮動目錄
+// ============================================================
 .article-toc-float {
   display: none;
   position: fixed;
@@ -297,21 +440,21 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: $color-bg-card;
-    color: $color-accent;
+    background-color: var(--color-bg-card);
+    color: var(--color-accent);
     font-size: $font-size-md;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: all $transition-base;
     position: relative;
     z-index: 2;
 
     &:hover {
-      border-color: $color-accent;
+      border-color: var(--color-accent);
     }
   }
 
@@ -320,8 +463,8 @@
     bottom: calc(100% + $spacing-sm);
     right: 0;
     width: 240px;
-    background-color: $color-bg-card;
-    border: 1px solid $color-border;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
     border-radius: $radius-lg;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     padding: $spacing-md;
@@ -341,7 +484,7 @@
   &__title {
     font-size: $font-size-xs;
     font-weight: $font-weight-semibold;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: $spacing-sm;
@@ -356,7 +499,7 @@
 
     a {
       font-size: $font-size-sm;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
       padding: 6px $spacing-xs;
       border-radius: $radius-sm;
       transition: all $transition-base;
@@ -364,9 +507,19 @@
       line-height: 1.4;
 
       &:hover {
-        color: $color-accent;
-        background-color: $color-bg-secondary;
+        color: var(--color-accent);
+        background-color: var(--color-bg-secondary);
       }
+    }
+  }
+
+  &__item--h3 {
+    padding-left: $spacing-sm;
+
+    a::before {
+      content: '–';
+      margin-right: 4px;
+      opacity: 0.5;
     }
   }
 

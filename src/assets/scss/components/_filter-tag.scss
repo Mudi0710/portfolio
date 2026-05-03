@@ -1,0 +1,28 @@
+@use '../base/variables' as *;
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: $radius-full;
+  border: 1.5px solid var(--color-border-card);
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-card);
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover:not(&--active) {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: rgba(var(--color-accent-rgb), 0.04);
+  }
+
+  &--active {
+    background-color: var(--color-text-primary);
+    border-color: var(--color-text-primary);
+    color: var(--color-bg);
+    cursor: default;
+  }
+}

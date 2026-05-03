@@ -1,416 +1,531 @@
 @use '../base/variables' as *;
 
+// ============================================================
 // Hero
+// ============================================================
 .hero {
-  padding-top: calc(70px + 6rem);
-  padding-bottom: $spacing-3xl;
+  min-height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  // Mesh Gradient 底色（Canvas 會蓋上去）
+  // Ambient accent glow
   &::before {
     content: '';
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 70% 60% at 15% 50%, rgba(79, 142, 247, 0.15) 0%, transparent 70%),
-      radial-gradient(ellipse 55% 50% at 85% 20%, rgba(124, 95, 247, 0.1) 0%, transparent 65%);
+      radial-gradient(ellipse 55% 45% at 80% 10%, rgba(var(--color-accent-rgb), 0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 30% at 10% 80%, rgba(var(--color-accent-rgb), 0.04) 0%, transparent 55%);
     pointer-events: none;
+    z-index: 0;
   }
 
-  // 點陣背景
-  &::after {
-    content: '';
+  // Large editorial background text
+  &__bg-text {
     position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(79, 142, 247, 0.12) 1px, transparent 1px);
-    background-size: 32px 32px;
-    mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: $font-serif;
+    font-size: clamp(80px, 18vw, 240px);
+    font-weight: $font-weight-bold;
+    letter-spacing: -0.05em;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-text-primary);
+    text-stroke: 2px var(--color-text-primary);
+    white-space: nowrap;
     pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    opacity: 0.08; // light mode default — dark stroke on cream bg
+
+    [data-theme="dark"] & {
+      opacity: 0.15; // dark mode — white stroke on near-black bg needs more opacity
+    }
   }
 
   &__inner {
     position: relative;
     z-index: 1;
+    padding-top: calc(70px + 5rem);
+    padding-bottom: 5rem;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 400px;
     gap: $spacing-2xl;
     align-items: center;
   }
 
+  // ── Left column ──────────────────────────────────────────
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__eyebrow {
+    font-family: $font-primary;
+    font-size: 11px;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: $spacing-md;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: $spacing-md;
+    line-height: 1;
+  }
+
+  &__title-line {
+    font-family: $font-serif;
+    font-style: italic;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    font-weight: $font-weight-regular;
+    color: var(--color-text-secondary);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  &__title-name {
+    font-family: $font-serif;
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
+    font-weight: $font-weight-bold;
+    letter-spacing: -0.04em;
+    color: var(--color-text-primary);
+    line-height: 0.95;
+
+    em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+  }
+
+  // Typewriter cursor
+  &__cursor {
+    display: inline-block;
+    width: 3px;
+    color: var(--color-accent);
+    font-weight: $font-weight-regular;
+    margin-left: 2px;
+    animation: cursorBlink 0.75s step-end infinite;
+    vertical-align: baseline;
+
+    &--hidden {
+      opacity: 0;
+      animation: none;
+    }
+  }
+
+  // Gold dot — fades in after typing finishes
+  &__title-dot {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &--visible {
+      opacity: 1;
+    }
+  }
+
+  &__desc {
+    font-size: $font-size-base;
+    color: var(--color-text-secondary);
+    line-height: 2;
+    margin-bottom: $spacing-lg;
+    max-width: 520px;
+  }
+
+  &__cta {
+    display: flex;
+    gap: $spacing-xs;
+    flex-wrap: wrap;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__stats {
+    display: flex;
+    gap: 3rem;
+    padding-top: $spacing-md;
+    border-top: 1px solid var(--color-border);
+    flex-wrap: wrap;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__stat-num {
+    font-family: $font-serif;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: var(--color-text-primary);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  &__stat-label {
+    font-size: 11px;
+    font-weight: $font-weight-medium;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  // ── Right column — photo ──────────────────────────────────
   &__photo {
-    width: 280px;
-    height: 360px;
-    border-radius: $radius-lg;
-    overflow: hidden;
-    border: 1px solid $color-border;
-    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__photo-frame {
     position: relative;
+    width: 360px;
+    aspect-ratio: 3 / 4;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    // 底部漸層讓照片自然融入
+    &:hover img {
+      transform: scale(1.04);
+    }
+
+    // Subtle gradient at bottom
     &::after {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 40%;
-      background: linear-gradient(to top, $color-bg, transparent);
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.45) 100%
+      );
+      pointer-events: none;
     }
   }
 
-  &__title {
-    font-size: $font-size-4xl;
-    font-weight: $font-weight-bold;
-    line-height: 1.1;
-    margin-bottom: $spacing-sm;
-    color: $color-text-primary;
+  &__photo-tag {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: rgba(13, 13, 15, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(240, 238, 232, 0.15);
+    border-radius: $radius-full;
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.12em;
+    color: var(--color-white);
+    white-space: nowrap;
+
+    span {
+      color: var(--color-accent);
+      margin-right: 6px;
+    }
   }
 
-  &__subtitle {
-    font-size: $font-size-xl;
-    color: $color-accent;
-    font-weight: $font-weight-medium;
-    margin-bottom: $spacing-md;
-  }
-
-  &__desc {
-    font-size: $font-size-md;
-    color: $color-text-secondary;
-    line-height: 1.8;
-    margin-bottom: $spacing-lg;
-  }
-
-  &__cta {
+  // ── Scroll hint ───────────────────────────────────────────
+  &__scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
     display: flex;
-    gap: $spacing-sm;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.4;
+    transition: opacity $transition-base;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    span {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+  }
+
+  &__scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--color-accent), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  // ── RWD ──────────────────────────────────────────────────
+  @media (max-width: 1023px) {
+    &__inner {
+      grid-template-columns: 1fr 320px;
+      gap: $spacing-xl;
+    }
+
+    &__photo-frame {
+      width: 280px;
+    }
   }
 
   @media (max-width: 767px) {
-    padding-top: calc(70px + 3rem);
-    padding-bottom: $spacing-xl;
+    min-height: auto;
 
     &__inner {
       grid-template-columns: 1fr;
+      padding-top: calc(70px + 3rem);
+      padding-bottom: 3rem;
+      gap: $spacing-lg;
     }
 
     &__photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      margin: 0 auto;
       order: -1;
     }
 
-    &__title {
-      font-size: $font-size-3xl;
+    &__photo-frame {
+      width: 200px;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
     }
 
-    &__subtitle {
-      font-size: $font-size-lg;
+    &__photo-tag {
+      display: none;
+    }
+
+    &__bg-text {
+      display: none;
+    }
+
+    &__scroll-hint {
+      display: none;
+    }
+
+    &__stats {
+      gap: $spacing-md;
     }
   }
 }
 
-// 三個核心能力
-.features {
-  border-top: 1px solid $color-border;
-  border-bottom: 1px solid $color-border;
-  background-color: $color-bg-secondary;
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $spacing-xl;
-  }
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.15); }
+}
 
-  &__title {
-    font-size: $font-size-md;
-    font-weight: $font-weight-semibold;
-    color: $color-accent;
-    margin-bottom: $spacing-sm;
-  }
 
-  &__desc {
-    font-size: $font-size-sm;
-    color: $color-text-secondary;
-    line-height: 1.8;
+// ============================================================
+// Projects Preview — 12-col magazine grid
+// ============================================================
+// Projects section top row — header (column) + View All button (right-aligned)
+.projects-preview__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: $spacing-lg;
+  margin-bottom: 4rem;
+
+  .section__header {
+    margin-bottom: 0; // override global margin since parent handles spacing
   }
 
   @media (max-width: 767px) {
-    &__grid {
-      grid-template-columns: 1fr;
-      gap: $spacing-lg;
-    }
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
   }
 }
 
-// 作品集卡片區塊
-.projects-preview {
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $spacing-lg;
-  }
+.projects-preview__all-btn {
+  flex-shrink: 0;
+  align-self: flex-end;
 
-  &__cta {
-    display: flex;
-    justify-content: center;
-    margin-top: $spacing-xl;
+  @media (max-width: 767px) {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+
+  // Row 1: card 1 + card 2 → each span 6 (equal halves)
+  // Row 2: card 3 (wide, span 8) + card 4 (span 4)
+  .project-card {
+    grid-column: span 6;
+
+    &:nth-child(3) {
+      grid-column: span 8;
+    }
+
+    &:nth-child(4) {
+      grid-column: span 4;
+    }
+
+    // --wide modifier fallback (keeps wide card correct regardless of position)
+    &--wide {
+      grid-column: span 8;
+    }
   }
 
   @media (max-width: 1023px) {
-    &__grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+
+    .project-card,
+    .project-card:nth-child(3),
+    .project-card:nth-child(4) {
+      grid-column: span 1;
     }
-  }
-}
 
-// Leadership 摘要
-.leadership-preview {
-  background-color: $color-bg-secondary;
-  position: relative;
-  overflow: hidden;
-
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 60% 70% at 5% 50%, rgba(79, 142, 247, 0.2) 0%, transparent 65%),
-      radial-gradient(ellipse 40% 40% at 90% 80%, rgba(124, 95, 247, 0.12) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  &__inner {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: $spacing-2xl;
-    align-items: center;
-  }
-
-  &__label {
-    font-size: $font-size-sm;
-    font-weight: $font-weight-semibold;
-    color: $color-accent;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: $spacing-sm;
-  }
-
-  &__title {
-    font-size: $font-size-2xl;
-    font-weight: $font-weight-bold;
-    color: $color-text-primary;
-    margin-bottom: $spacing-md;
-    line-height: 1.3;
-  }
-
-  &__desc {
-    font-size: $font-size-base;
-    color: $color-text-secondary;
-    line-height: 1.8;
-    margin-bottom: $spacing-lg;
-  }
-
-  &__articles {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-md;
-  }
-
-  &__article {
-    padding: $spacing-md;
-    background-color: $color-bg-card;
-    border-radius: $radius-md;
-    border: 1px solid $color-border-card;
-    transition: all $transition-base;
-
-    &:hover {
-      transform: translateX(4px);
-      border-color: $color-accent;
+    .project-card--wide {
+      grid-column: span 2;
     }
-  }
-
-  &__article-tag {
-    font-size: $font-size-xs;
-    color: $color-accent;
-    font-weight: $font-weight-medium;
-    margin-bottom: $spacing-xs;
-  }
-
-  &__article-title {
-    font-size: $font-size-base;
-    font-weight: $font-weight-semibold;
-    color: $color-text-primary;
-    line-height: 1.4;
-  }
-
-  &__article-cta {
-    font-size: $font-size-xs;
-    color: $color-text-muted;
-    margin-top: $spacing-xs;
-    transition: color $transition-base;
-  }
-
-  &__article:hover &__article-cta {
-    color: $color-accent;
   }
 
   @media (max-width: 767px) {
-    &__inner {
-      grid-template-columns: 1fr;
-      gap: $spacing-lg;
+    grid-template-columns: 1fr;
+
+    .project-card,
+    .project-card:nth-child(3),
+    .project-card:nth-child(4),
+    .project-card--wide {
+      grid-column: 1 / -1;
     }
   }
 }
 
-// 專業技能貢獻
+
+// ============================================================
+// Skills — Bento Grid
+// ============================================================
 .skills {
-  position: relative;
-  overflow: hidden;
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 50% 50% at 95% 10%, rgba(124, 95, 247, 0.15) 0%, transparent 65%),
-      radial-gradient(ellipse 35% 40% at 10% 90%, rgba(79, 142, 247, 0.1) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
-  }
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
 
-  &__label,
-  &__title,
-  &__bento {
-    position: relative;
-    z-index: 1;
-  }
-
-  &__label {
-    font-size: $font-size-sm;
-    font-weight: $font-weight-semibold;
-    color: $color-accent;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: $spacing-sm;
-  }
-
-  &__title {
-    font-size: $font-size-2xl;
-    font-weight: $font-weight-bold;
-    color: $color-text-primary;
-    margin-bottom: $spacing-xl;
-    line-height: 1.3;
-  }
-
-  // Bento grid 佈局
-  // 桌機（1024px+）：3欄，hero 全寬，medium-wide 佔 2/3，medium-narrow 佔 1/3，small 各 1/3
-  &__bento {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: $spacing-md;
-  }
-
-  &__bento-card {
-    border: 1px solid $color-border-card;
+  // Default card: span 4
+  &__card {
+    grid-column: span 4;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border-card);
     border-radius: $radius-lg;
-    background-color: $color-bg-card;
-    transition: all $transition-base;
-    overflow: hidden;
-    position: relative;
-
-    &:hover {
-      border-color: $color-accent;
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(79, 142, 247, 0.15);
-    }
-
-    // 主軸卡片：全寬
-    &--hero {
-      grid-column: 1 / -1;
-      background: linear-gradient(135deg, rgba(79, 142, 247, 0.08) 0%, rgba(124, 95, 247, 0.06) 100%);
-      border-color: rgba(79, 142, 247, 0.3);
-
-      .skills__bento-card-inner {
-        display: grid;
-        grid-template-columns: 1fr 220px;
-        gap: $spacing-xl;
-        align-items: center;
-      }
-
-      .skills__bento-title {
-        font-size: $font-size-xl;
-      }
-
-      .skills__bento-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px $spacing-lg;
-      }
-    }
-
-    // 中等寬卡片（左，佔 2/3）
-    &--medium-wide {
-      grid-column: 1 / span 2;
-    }
-
-    // 中等窄卡片（右，佔 1/3）
-    &--medium-narrow {
-      grid-column: 3 / span 1;
-    }
-
-    // 小卡片：各佔 1/3
-    &--small {
-      grid-column: span 1;
-    }
-  }
-
-  &__bento-card-inner {
-    padding: $spacing-lg;
-    height: 100%;
+    padding: 2rem 2.25rem;
     display: flex;
     flex-direction: column;
     gap: $spacing-sm;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+      border-color: rgba(var(--color-accent-rgb), 0.3);
+    }
+
+    // Card 2 (跨職能執行力) fills row 1 beside the hero
+    &:nth-child(2) {
+      grid-column: span 5;
+    }
+
+    // Card 3 (設計領導) spans full row
+    &:nth-child(3) {
+      grid-column: 1 / -1;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: $spacing-xl;
+
+      .bento__list {
+        columns: 2;
+        column-gap: $spacing-lg;
+
+        li {
+          break-inside: avoid;
+        }
+      }
+    }
+
+    // Hero card (研究驅動) — spans 7
+    &--hero {
+      grid-column: span 7;
+      background: linear-gradient(
+        135deg,
+        rgba(var(--color-accent-rgb), 0.04) 0%,
+        var(--color-bg-card) 60%
+      );
+      border-color: rgba(var(--color-accent-rgb), 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+      padding: 2.5rem;
+
+    }
+
+    // Small accent cards
+    &--sm {
+      grid-column: span 4;
+      padding: 1.5rem 1.75rem;
+      min-height: 0;
+    }
   }
 
-  &__bento-eyebrow {
-    font-size: $font-size-xs;
+  &__eyebrow {
+    font-family: $font-primary;
+    font-size: 10px;
     font-weight: $font-weight-semibold;
-    color: $color-accent;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    color: var(--color-accent);
   }
 
-  &__bento-title {
-    font-size: $font-size-md;
+  &__title {
+    font-family: $font-serif;
+    font-size: $font-size-lg;
     font-weight: $font-weight-semibold;
-    color: $color-text-primary;
-    line-height: 1.3;
+    color: var(--color-text-primary);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
     margin: 0;
   }
 
-  &__bento-desc {
+  &__desc {
     font-size: $font-size-sm;
-    color: $color-text-secondary;
-    line-height: 1.7;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
     margin: 0;
   }
 
-  &__bento-list {
+  &__list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -421,212 +536,295 @@
 
     li {
       font-size: $font-size-sm;
-      color: $color-text-secondary;
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.5;
 
       &::before {
-        content: '·';
-        margin-right: 6px;
-        color: $color-accent;
+        content: '';
+        display: inline-block;
+        flex-shrink: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: var(--color-accent);
       }
     }
   }
 
-  &__bento-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: $spacing-xs;
-    margin-top: auto;
-    padding-top: $spacing-sm;
+  &__visual {
+    opacity: 0.7;
   }
 
-  &__bento-hero-left {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-sm;
-    height: 100%;
-  }
-
-  &__bento-hero-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    opacity: 0.9;
-  }
-
-  &__card-tag {
-    font-size: $font-size-xs;
-    color: $color-tag-text;
-    background-color: $color-tag-bg;
-    padding: 3px $spacing-xs;
-    border-radius: $radius-full;
-    font-weight: $font-weight-medium;
-    transition: all $transition-base;
-    border: 1px solid $color-border;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $color-accent;
-      color: $color-white;
-      border-color: $color-accent;
-    }
-  }
-
-  // 平板（768px – 1023px）：2欄，hero 全寬，其餘各佔 1 欄
+  // ── RWD ────────────────────────────────────────────────────
   @media (max-width: 1023px) {
-    &__bento {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(2, 1fr);
 
-    &__bento-card {
+    &__card {
+      grid-column: span 1;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column: span 1;
+      }
+
       &--hero {
         grid-column: 1 / -1;
+      }
 
-        .skills__bento-card-inner {
-          grid-template-columns: 1fr;
-        }
+      &:nth-child(3) {
+        flex-direction: column;
+        gap: $spacing-sm;
 
-        .skills__bento-hero-right {
-          display: none;
-        }
-
-        .skills__bento-list {
-          grid-template-columns: repeat(2, 1fr);
+        .bento__list {
+          columns: 1;
         }
       }
 
-      &--medium-wide,
-      &--medium-narrow,
-      &--small {
+      &--sm {
         grid-column: span 1;
       }
     }
   }
 
-  // 手機（767px 以下）：單欄，全部全寬
   @media (max-width: 767px) {
-    &__bento {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
+
+    &__card,
+    &__card--hero,
+    &__card--sm {
+      grid-column: 1 / -1;
     }
 
-    &__bento-card {
-
-      &--hero,
-      &--medium-wide,
-      &--medium-narrow,
-      &--small {
-        grid-column: 1 / -1;
-      }
-
-      &--hero .skills__bento-list {
-        grid-template-columns: 1fr;
-      }
+    &__card--hero {
+      grid-template-columns: 1fr;
     }
   }
 }
 
-// 推薦信
-.testimonials {
-  background-color: $color-bg-secondary;
+
+// ============================================================
+// Leadership Preview
+// ============================================================
+.leadership-preview {
   position: relative;
-  overflow: hidden;
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 50% 100%, rgba(79, 142, 247, 0.18) 0%, transparent 65%),
-      radial-gradient(ellipse 35% 35% at 95% 5%, rgba(124, 95, 247, 0.1) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: 0;
+.leadership__inner {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: $spacing-2xl;
+  align-items: start;
+}
+
+.leadership__left {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  align-items: flex-start;
+}
+
+.leadership__title {
+  font-family: $font-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: $font-weight-bold;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.leadership__desc {
+  font-size: $font-size-base;
+  color: var(--color-text-secondary);
+  line-height: 1.9;
+  margin-bottom: $spacing-sm;
+}
+
+.leadership__articles {
+  display: flex;
+  flex-direction: column;
+}
+
+.leadership__article {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md 0;
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: inherit;
+  transition: all $transition-base;
+
+  &:first-child {
+    border-top: 1px solid var(--color-border);
   }
 
-  &__label,
-  &__title,
-  &__grid {
-    position: relative;
-    z-index: 1;
+  &:hover {
+    .leadership__article-arrow {
+      transform: translateX(4px);
+      color: var(--color-accent);
+    }
+
+    .leadership__article-title {
+      color: var(--color-text-primary);
+    }
+  }
+}
+
+.leadership__article-num {
+  font-family: $font-serif;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  width: 28px;
+}
+
+.leadership__article-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.leadership__article-tag {
+  font-size: 10px;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.leadership__article-title {
+  font-family: $font-serif;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  transition: color $transition-base;
+}
+
+.leadership__article-arrow {
+  font-size: $font-size-md;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: all $transition-base;
+}
+
+@media (max-width: 1023px) {
+  .leadership__inner {
+    grid-template-columns: 1fr;
+    gap: $spacing-xl;
   }
 
-  &__label {
-    font-size: $font-size-sm;
-    font-weight: $font-weight-semibold;
-    color: $color-accent;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: $spacing-sm;
+  .leadership__left {
+    position: static;
   }
+}
 
-  &__title {
-    font-size: $font-size-2xl;
-    font-weight: $font-weight-bold;
-    color: $color-text-primary;
-    margin-bottom: $spacing-xl;
-    line-height: 1.3;
-  }
-
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 767px) {
+  .leadership__inner {
     gap: $spacing-lg;
   }
+}
 
-  &__card {
-    background-color: $color-bg-card-raised;
-    border-radius: $radius-lg;
-    padding: $spacing-lg;
-    border: 1px solid $color-border-card;
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-md;
+
+// ============================================================
+// Testimonials
+// ============================================================
+.testimonials {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-lg;
+}
+
+.testimonial__card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: 24px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(var(--color-accent-rgb), 0.3);
   }
+}
 
-  &__card-title {
-    font-size: $font-size-base;
-    font-weight: $font-weight-semibold;
-    color: $color-text-primary;
-    line-height: 1.4;
-  }
+.testimonial__quote {
+  font-family: $font-serif;
+  font-size: 5rem;
+  line-height: 0.7;
+  color: var(--color-accent);
+  opacity: 0.3;
+  display: block;
+  user-select: none;
+}
 
-  &__card-content {
-    font-size: $font-size-sm;
-    color: $color-text-secondary;
-    line-height: 1.8;
-    flex: 1;
-  }
+.testimonial__title {
+  font-family: $font-serif;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  margin-top: -$spacing-xs;
+}
 
-  &__card-author {
-    display: flex;
-    align-items: center;
-    gap: $spacing-sm;
-    padding-top: $spacing-sm;
-    border-top: 1px solid $color-border-card;
-  }
+.testimonial__content {
+  font-size: $font-size-sm;
+  color: var(--color-text-secondary);
+  line-height: 1.9;
+  flex: 1;
+}
 
-  &__card-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    background-color: $color-bg-secondary;
-  }
+.testimonial__author {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding-top: $spacing-sm;
+  border-top: 1px solid var(--color-border);
+}
 
-  &__card-name {
-    font-size: $font-size-sm;
-    font-weight: $font-weight-semibold;
-    color: $color-text-primary;
-  }
+.testimonial__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: var(--color-bg-secondary);
+}
 
-  &__card-role {
-    font-size: $font-size-xs;
-    color: $color-text-muted;
-  }
+.testimonial__name {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: var(--color-text-primary);
+  margin: 0;
+}
 
-  @media (max-width: 767px) {
-    &__grid {
-      grid-template-columns: 1fr;
-    }
+.testimonial__role {
+  font-size: $font-size-xs;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
   }
 }

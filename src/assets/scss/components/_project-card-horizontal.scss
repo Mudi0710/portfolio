@@ -5,43 +5,44 @@
   flex-direction: row;
   text-decoration: none;
   color: inherit;
-  border: 1px solid $color-border;
   border-radius: $radius-lg;
   overflow: hidden;
-  background-color: $color-bg-card;
+  background-color: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
   transition: all $transition-base;
   cursor: pointer;
+  border: 1px solid var(--color-border);
 
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    border-color: $color-accent;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--color-accent);
   }
 
   &__cover {
     flex: 0 0 40%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    background-color: $color-bg-secondary;
+    background-color: var(--color-bg-secondary);
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform $transition-base;
+      transition: transform 0.5s ease;
     }
   }
 
   &:hover &__cover img {
-    transform: scale(1.03);
+    transform: scale(1.04);
   }
 
   &__body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: $spacing-xs;
     padding: $spacing-md;
   }
 
@@ -53,21 +54,24 @@
 
   &__hashtag {
     font-size: $font-size-xs;
-    color: $color-text-muted;
-    font-weight: $font-weight-medium;
+    color: var(--color-accent);
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   &__title {
     font-size: $font-size-md;
-    font-weight: $font-weight-semibold;
-    color: $color-text-primary;
+    font-weight: $font-weight-bold;
+    color: var(--color-text-primary);
     line-height: 1.4;
+    letter-spacing: -0.01em;
     margin: 0;
   }
 
   &__desc {
     font-size: $font-size-sm;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     line-height: 1.7;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -81,28 +85,28 @@
     flex-wrap: wrap;
     gap: $spacing-xs;
     margin-top: auto;
+    padding-top: $spacing-xs;
   }
 
   &__tag {
     font-size: $font-size-xs;
-    color: $color-tag-text;
-    background-color: $color-tag-bg;
+    color: var(--color-tag-text);
+    background-color: var(--color-tag-bg);
     padding: 2px $spacing-xs;
     border-radius: $radius-full;
-    border: 1px solid $color-border;
     font-weight: $font-weight-medium;
   }
 
   &__cta {
     font-size: $font-size-sm;
-    font-weight: $font-weight-medium;
-    color: $color-text-secondary;
+    font-weight: $font-weight-semibold;
+    color: var(--color-text-muted);
     margin-top: $spacing-xs;
     transition: color $transition-base;
   }
 
   &:hover &__cta {
-    color: $color-accent;
+    color: var(--color-accent);
   }
 
   // 手機版：改回直式

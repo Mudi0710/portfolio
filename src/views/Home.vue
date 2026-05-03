@@ -1,272 +1,234 @@
 <template>
   <div class="home">
-    <!-- Hero -->
-    <section class="hero section">
-      <HeroCanvas />
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+      <div class="hero__bg-text" aria-hidden="true">DESIGNER</div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <h1 class="hero__title">嗨，我是 Nomis！</h1>
-          <p class="hero__subtitle">UIUX 設計師・前端切版・跨職能協作</p>
+          <p class="hero__eyebrow">UIUX Designer · Web Slicing · Cross-functional</p>
+          <h1 class="hero__title">
+            <span class="hero__title-line">Hi, I'm</span>
+            <span class="hero__title-name">{{ typedText }}<em class="hero__title-dot" :class="{ 'hero__title-dot--visible': dotVisible }">.</em><span class="hero__cursor" :class="{ 'hero__cursor--hidden': cursorDone }" aria-hidden="true">|</span></span>
+          </h1>
           <p class="hero__desc">
-            我相信設計師最大的競爭力，是跨越專業邊界的能力。<br />
-            橫跨 UIUX、前端與設計策略，擁有人資與社會心理學背景的我，<br />
-            習慣用數據驗證設計決策，也具備在資源不足的情況下，仍能獨立推進專案、讓成果落地的能力。
+            橫跨 UIUX、前端與設計策略的複合型設計師。<br />
+            我用數據驗證設計決策，也能在資源不足的情況下，<br />
+            獨立推進專案，讓成果落地。
           </p>
           <div class="hero__cta">
-            <a href="/portfolio/resume.pdf" target="_blank" class="btn btn--primary">下載履歷</a>
-            <a href="https://www.linkedin.com/in/nomis-yang/" target="_blank" class="btn btn--secondary">LinkedIn</a>
-            <a href="mailto:nomis820710@gmail.com" class="btn btn--secondary">聯絡我</a>
+            <RouterLink to="/projects" class="btn btn--primary">View Work</RouterLink>
+            <RouterLink to="/about" class="btn btn--ghost">About Me</RouterLink>
+            <a href="https://www.linkedin.com/in/nomis-yang/" target="_blank" class="btn">LinkedIn</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num">3+</span>
+              <span class="hero__stat-label">Years UIUX Experience</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">6+</span>
+              <span class="hero__stat-label">0-to-1 Projects</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">80%</span>
+              <span class="hero__stat-label">CS Reduction</span>
+            </div>
           </div>
         </div>
         <div class="hero__photo">
-          <img src="/images/general/hero-photo.jpg" alt="Nomis Yang" />
+          <div class="hero__photo-frame">
+            <img src="/images/general/hero-photo.jpg" alt="Nomis Yang" />
+            <div class="hero__photo-tag">
+              <span>✦</span> UIUX · Research · Frontend
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="hero__scroll-hint">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
       </div>
     </section>
 
-    <!-- 三個核心能力 -->
-    <section class="features section">
-      <div class="container features__grid">
-        <div class="features__item">
-          <h3 class="features__title">跨領域設計能力</h3>
-          <p class="features__desc">
-            橫跨 UIUX 設計、前端切版與設計管理，能從使用者研究、視覺設計到程式實作一手包辦。曾在 PM 幾乎缺席的情況下獨立完成 UX 研究、UI 設計、Prototype 與切版，確保設計落地不失真。
-          </p>
-        </div>
-        <div class="features__item">
-          <h3 class="features__title">數據驅動的設計決策</h3>
-          <p class="features__desc">
-            習慣在設計提案前先問「這解決了什麼問題」、上線後追問「它真的有效嗎」。曾透過使用者訪談發現需求被錯誤定義，主動將產品從「心智圖系統」重新定位為陪伴完整銷售旅程的數位報告工具。
-          </p>
-        </div>
-        <div class="features__item">
-          <h3 class="features__title">跨部門協作與領導</h3>
-          <p class="features__desc">
-            具備帶領設計團隊的實戰經驗，善於在產品、工程與商業目標之間建立共識。曾在兩週內拆解跨部門任務、同步推進四條工作線，帶領團隊準時交付一個 PM 規劃了一個月的專案。
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 作品集卡片 -->
+    <!-- ═══ PROJECTS PREVIEW ═══ -->
     <section class="projects-preview section">
       <div class="container">
-        <div class="projects-preview__grid">
-          <ProjectCard v-for="project in projects.slice(0, 3)" :key="project.id" :project="project" />
+        <div class="projects-preview__top">
+          <div class="section__header">
+            <p class="section__label">Selected Work</p>
+            <h2 class="section__title">Projects</h2>
+          </div>
+          <RouterLink to="/projects" class="btn btn--ghost projects-preview__all-btn">View All →</RouterLink>
         </div>
-        <div class="projects-preview__cta">
-          <RouterLink to="/projects" class="btn btn--ghost">查看全部專案 →</RouterLink>
-        </div>
-      </div>
-    </section>
-
-    <!-- Leadership 摘要 -->
-    <section class="leadership-preview section">
-      <div class="container leadership-preview__inner">
-        <div class="leadership-preview__content">
-          <p class="leadership-preview__label">Leadership</p>
-          <h2 class="leadership-preview__title">設計領導力的實踐與反思</h2>
-          <p class="leadership-preview__desc">
-            當上主管之後，我發現設計能力只是起點。這裡記錄的，是我如何用制度取代靠感覺、
-            用數據取代靠記憶、在資源不足的情況下，仍然讓團隊往前走的真實歷程。
-          </p>
-          <RouterLink to="/leadership" class="btn btn--primary">
-            閱讀更多文章 →
-          </RouterLink>
-        </div>
-        <div class="leadership-preview__articles">
-          <RouterLink to="/leadership/impossible-deadline-two-weeks" class="leadership-preview__article">
-            <p class="leadership-preview__article-tag">專案決策過程</p>
-            <h4 class="leadership-preview__article-title">我們如何在兩週內，完成一個不可能的任務</h4>
-            <p class="leadership-preview__article-cta">閱讀文章 →</p>
-          </RouterLink>
-          <RouterLink to="/leadership/design-request-collaboration-guide" class="leadership-preview__article">
-            <p class="leadership-preview__article-tag">帶團隊的方法論</p>
-            <h4 class="leadership-preview__article-title">當全公司都把設計師當通靈師，我決定立一條規矩</h4>
-            <p class="leadership-preview__article-cta">閱讀文章 →</p>
-          </RouterLink>
-          <RouterLink to="/leadership/design-team-okr-performance-system" class="leadership-preview__article">
-            <p class="leadership-preview__article-tag">設計團隊管理心得</p>
-            <h4 class="leadership-preview__article-title">當 KPI 無法衡量設計師：我如何為設計部打造一套 OKR 績效系統</h4>
-            <p class="leadership-preview__article-cta">閱讀文章 →</p>
+        <div class="projects-grid">
+          <RouterLink
+            v-for="(project, index) in featuredProjects"
+            :key="project.id"
+            :to="`/projects/${project.id}`"
+            class="project-card"
+            :class="{ 'project-card--wide': index === 2 }"
+          >
+            <div class="project-card__img">
+              <img :src="getImageUrl(project.cover)" :alt="project.title" loading="lazy" />
+              <div class="project-card__overlay">
+                <span class="project-card__cta-text">View Case Study →</span>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
+              </div>
+              <h3 class="project-card__title">{{ project.title }}</h3>
+              <p class="project-card__desc">{{ project.description }}</p>
+            </div>
           </RouterLink>
         </div>
       </div>
     </section>
 
-    <!-- 我如何用專業技能貢獻 -->
+    <!-- ═══ SKILLS / CONTRIBUTION ═══ -->
     <section class="skills section">
       <div class="container">
-        <p class="skills__label">Contribution</p>
-        <h2 class="skills__title">我能為你的團隊帶來什麼</h2>
-        <div class="skills__bento">
+        <div class="section__header">
+          <p class="section__label">Contribution</p>
+          <h2 class="section__title">我能為你的團隊帶來什麼</h2>
+        </div>
+        <div class="bento">
 
-          <!-- 主軸：研究驅動的產品設計 -->
-          <div class="skills__bento-card skills__bento-card--hero">
-            <div class="skills__bento-card-inner">
-              <div class="skills__bento-hero-left">
-                <p class="skills__bento-eyebrow">核心能力</p>
-                <h3 class="skills__bento-title">研究驅動的產品設計</h3>
-                <p class="skills__bento-desc">從使用者訪談、數據分析到最終設計決策，我習慣讓證據說話，而不是靠直覺猜測使用者要什麼。</p>
-                <ul class="skills__bento-list">
-                  <li>使用者訪談 & 易用性測試</li>
-                  <li>數據判讀 & A/B 測試規劃</li>
-                  <li>競品分析 & 研究報告</li>
-                  <li>從洞察到設計決策的完整流程</li>
-                </ul>
-                <div class="skills__bento-tags">
-                  <RouterLink to="/projects?tag=UIUX" class="skills__card-tag">查看 UIUX 專案 →</RouterLink>
-                  <RouterLink to="/projects?tag=Research" class="skills__card-tag">查看研究專案 →</RouterLink>
-                </div>
-              </div>
-              <div class="skills__bento-hero-right">
-                <svg width="100%" viewBox="0 0 220 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <line x1="40" y1="50" x2="90" y2="90" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
-                  <line x1="90" y1="90" x2="110" y2="55" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
-                  <line x1="110" y1="55" x2="160" y2="95" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
-                  <line x1="160" y1="95" x2="190" y2="65" stroke="rgba(79,142,247,0.2)" stroke-width="0.8" />
-                  <line x1="90" y1="90" x2="100" y2="148" stroke="rgba(124,95,247,0.15)" stroke-width="0.8" />
-                  <line x1="110" y1="55" x2="100" y2="148" stroke="rgba(124,95,247,0.15)" stroke-width="0.8" />
-                  <line x1="160" y1="95" x2="145" y2="155" stroke="rgba(124,95,247,0.15)" stroke-width="0.8" />
-                  <line x1="100" y1="148" x2="145" y2="155" stroke="rgba(79,142,247,0.12)" stroke-width="0.8" />
-                  <line x1="40" y1="50" x2="20" y2="115" stroke="rgba(79,142,247,0.12)" stroke-width="0.6" />
-                  <line x1="190" y1="65" x2="205" y2="135" stroke="rgba(79,142,247,0.12)" stroke-width="0.6" />
-                  <line x1="20" y1="115" x2="100" y2="148" stroke="rgba(79,142,247,0.1)" stroke-width="0.6" />
-                  <line x1="205" y1="135" x2="145" y2="155" stroke="rgba(79,142,247,0.1)" stroke-width="0.6" />
-                  <circle cx="110" cy="55" r="5" fill="rgba(79,142,247,0.7)" />
-                  <circle cx="90" cy="90" r="4" fill="rgba(79,142,247,0.5)" />
-                  <circle cx="160" cy="95" r="4" fill="rgba(79,142,247,0.5)" />
-                  <circle cx="40" cy="50" r="3" fill="rgba(124,95,247,0.5)" />
-                  <circle cx="190" cy="65" r="3" fill="rgba(124,95,247,0.5)" />
-                  <circle cx="100" cy="148" r="3.5" fill="rgba(124,95,247,0.4)" />
-                  <circle cx="145" cy="155" r="3.5" fill="rgba(124,95,247,0.4)" />
-                  <circle cx="20" cy="115" r="2.5" fill="rgba(79,142,247,0.3)" />
-                  <circle cx="205" cy="135" r="2.5" fill="rgba(79,142,247,0.3)" />
-                  <circle cx="65" cy="25" r="1.5" fill="rgba(79,142,247,0.25)" />
-                  <circle cx="170" cy="20" r="1.5" fill="rgba(79,142,247,0.25)" />
-                  <circle cx="210" cy="100" r="1.5" fill="rgba(124,95,247,0.2)" />
-                  <circle cx="115" cy="180" r="1.5" fill="rgba(79,142,247,0.2)" />
-                  <circle cx="50" cy="170" r="1.5" fill="rgba(124,95,247,0.2)" />
-                </svg>
-              </div>
-            </div>
+          <!-- 主卡：研究驅動 -->
+          <div class="bento__card bento__card--hero">
+            <div class="bento__eyebrow">核心能力</div>
+            <h3 class="bento__title">研究驅動的產品設計</h3>
+            <p class="bento__desc">從使用者訪談、數據分析到最終設計決策，讓證據說話，而不是靠直覺猜測使用者要什麼。</p>
+            <ul class="bento__list">
+              <li>使用者訪談 &amp; 易用性測試</li>
+              <li>數據判讀 &amp; A/B 測試規劃</li>
+              <li>競品分析 &amp; 研究報告</li>
+              <li>從洞察到設計決策的完整流程</li>
+            </ul>
           </div>
 
-          <!-- 第二層左：跨職能執行力 -->
-          <div class="skills__bento-card skills__bento-card--medium skills__bento-card--medium-wide">
-            <div class="skills__bento-card-inner">
-              <p class="skills__bento-eyebrow">執行廣度</p>
-              <h3 class="skills__bento-title">跨職能執行力</h3>
-              <p class="skills__bento-desc">從 UX 研究、UI 設計到前端切版，能獨立一手包辦，確保設計落地不失真。</p>
-              <ul class="skills__bento-list">
-                <li>資訊架構 & 互動設計</li>
-                <li>Vue.js / SCSS / RWD 切版</li>
-                <li>Prototype 製作與驗證</li>
-              </ul>
-              <div class="skills__bento-tags">
-                <RouterLink to="/projects?tag=Frontend" class="skills__card-tag">查看切版專案 →</RouterLink>
-              </div>
-            </div>
+          <!-- 跨職能執行力 -->
+          <div class="bento__card">
+            <div class="bento__eyebrow">執行廣度</div>
+            <h3 class="bento__title">跨職能執行力</h3>
+            <p class="bento__desc">從 UX 研究、UI 設計到前端切版，能獨立一手包辦，確保設計落地不失真。</p>
+            <ul class="bento__list">
+              <li>資訊架構 &amp; 互動設計</li>
+              <li>Vue.js / SCSS / RWD</li>
+              <li>Prototype 製作與驗證</li>
+            </ul>
           </div>
 
-          <!-- 第二層右：設計領導與制度建立 -->
-          <div class="skills__bento-card skills__bento-card--medium skills__bento-card--medium-narrow">
-            <div class="skills__bento-card-inner">
-              <p class="skills__bento-eyebrow">領導深度</p>
-              <h3 class="skills__bento-title">設計領導與制度建立</h3>
-              <p class="skills__bento-desc">不只帶人做事，更用制度取代靠感覺，讓設計團隊的運作可被量化、可被傳承。</p>
-              <ul class="skills__bento-list">
-                <li>OKR 績效系統設計與落地</li>
-                <li>設計師職能模型建立</li>
-                <li>跨部門協作流程制度化</li>
-              </ul>
-              <div class="skills__bento-tags">
-                <RouterLink to="/leadership" class="skills__card-tag">閱讀 Leadership 文章 →</RouterLink>
-              </div>
-            </div>
+          <!-- 設計領導 -->
+          <div class="bento__card">
+            <div class="bento__eyebrow">領導深度</div>
+            <h3 class="bento__title">設計領導<br />與制度建立</h3>
+            <p class="bento__desc">用制度取代靠感覺，讓設計團隊的運作可被量化、可被傳承。</p>
+            <ul class="bento__list">
+              <li>OKR 績效系統設計</li>
+              <li>設計師職能模型建立</li>
+              <li>跨部門協作制度化</li>
+            </ul>
           </div>
 
-          <!-- 第三層：三個小卡 -->
-          <div class="skills__bento-card skills__bento-card--small">
-            <div class="skills__bento-card-inner">
-              <p class="skills__bento-eyebrow">工具應用</p>
-              <h3 class="skills__bento-title">AI 工作流</h3>
-              <p class="skills__bento-desc">曾獨立以 AI 工具完成傳統需要整個製作團隊的動畫專案，成本降低 99.7%。</p>
-              <div class="skills__bento-tags">
-                <RouterLink to="/projects?tag=AI" class="skills__card-tag">查看 AI 專案 →</RouterLink>
-              </div>
-            </div>
+          <!-- 三個小卡 -->
+          <div class="bento__card bento__card--sm">
+            <div class="bento__eyebrow">工具應用</div>
+            <h3 class="bento__title">AI 工作流</h3>
+            <p class="bento__desc">成本降低 99.7%，獨立完成傳統需要整個製作團隊的動畫專案。</p>
           </div>
-
-          <div class="skills__bento-card skills__bento-card--small">
-            <div class="skills__bento-card-inner">
-              <p class="skills__bento-eyebrow">溝通能力</p>
-              <h3 class="skills__bento-title">跨部門協作</h3>
-              <p class="skills__bento-desc">善於在產品、工程與商業目標之間建立共識，推動設計決策被真正落地執行。</p>
-              <div class="skills__bento-tags">
-                <RouterLink to="/projects?tag=Cross-functional" class="skills__card-tag">查看相關專案 →</RouterLink>
-              </div>
-            </div>
+          <div class="bento__card bento__card--sm">
+            <div class="bento__eyebrow">溝通能力</div>
+            <h3 class="bento__title">跨部門協作</h3>
+            <p class="bento__desc">在產品、工程與商業目標之間建立共識，推動設計決策真正落地。</p>
           </div>
-
-          <div class="skills__bento-card skills__bento-card--small">
-            <div class="skills__bento-card-inner">
-              <p class="skills__bento-eyebrow">持續成長</p>
-              <h3 class="skills__bento-title">自驅學習</h3>
-              <p class="skills__bento-desc">主動研發 SCSS 工具、建立知識文件、在限制中找到更聰明的解法。</p>
-              <div class="skills__bento-tags">
-                <RouterLink to="/projects/osm-rwd-scss-function" class="skills__card-tag">查看實戰專案 →</RouterLink>
-              </div>
-            </div>
+          <div class="bento__card bento__card--sm">
+            <div class="bento__eyebrow">持續成長</div>
+            <h3 class="bento__title">自驅學習</h3>
+            <p class="bento__desc">主動研發 SCSS 工具、建立知識文件，在限制中找到更聰明的解法。</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 推薦信 -->
+    <!-- ═══ LEADERSHIP PREVIEW ═══ -->
+    <section class="section leadership-preview">
+      <div class="container">
+        <div class="leadership__inner">
+          <div class="leadership__left">
+            <p class="section__label">Leadership</p>
+            <h2 class="leadership__title">設計領導力的<br />實踐與反思</h2>
+            <p class="leadership__desc">
+              在我當上主管之後，我發現設計能力只是起點。這裡記錄的，是我如何用制度取代靠感覺、用數據取代靠記憶、在資源不足的情況下，仍然讓團隊往前走的真實歷程。
+            </p>
+            <RouterLink to="/leadership" class="btn btn--primary">閱讀更多文章 →</RouterLink>
+          </div>
+          <div class="leadership__articles">
+            <RouterLink to="/leadership/impossible-deadline-two-weeks" class="leadership__article">
+              <div class="leadership__article-num">01</div>
+              <div class="leadership__article-body">
+                <span class="leadership__article-tag">專案決策過程</span>
+                <h4 class="leadership__article-title">我們如何在兩週內，完成一個不可能的任務</h4>
+              </div>
+              <span class="leadership__article-arrow">→</span>
+            </RouterLink>
+            <RouterLink to="/leadership/design-request-collaboration-guide" class="leadership__article">
+              <div class="leadership__article-num">02</div>
+              <div class="leadership__article-body">
+                <span class="leadership__article-tag">帶團隊的方法論</span>
+                <h4 class="leadership__article-title">當全公司都把設計師當通靈師，我決定立一條規矩</h4>
+              </div>
+              <span class="leadership__article-arrow">→</span>
+            </RouterLink>
+            <RouterLink to="/leadership/design-team-okr-performance-system" class="leadership__article">
+              <div class="leadership__article-num">03</div>
+              <div class="leadership__article-body">
+                <span class="leadership__article-tag">設計團隊管理心得</span>
+                <h4 class="leadership__article-title">當 KPI 無法衡量設計師：我如何為設計部打造 OKR 績效系統</h4>
+              </div>
+              <span class="leadership__article-arrow">→</span>
+            </RouterLink>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
     <section class="testimonials section">
       <div class="container">
-        <p class="testimonials__label">Recommendations</p>
-        <h2 class="testimonials__title">他們這樣說</h2>
+        <div class="section__header">
+          <p class="section__label">Recommendations</p>
+          <h2 class="section__title">他們這樣說</h2>
+        </div>
         <div class="testimonials__grid">
-          <div class="testimonials__card">
-            <p class="testimonials__card-title">執行力與溝通能力超乎預期，對回饋保持開放</p>
-            <!-- <p class="testimonials__card-title">兼具創意與執行力，能讓想法確實落地的設計夥伴</p> -->
-            <p class="testimonials__card-content">
-              Nomis 是一位充滿熱情的 UIUX 設計師，以創新思維和快速適應新挑戰的能力著稱。 她的執行速度與溝通品質持續超乎預期，是團隊中不可或缺的夥伴。 對回饋始終保持開放，持續尋求改進，對團隊的成功貢獻良多。
+          <div class="testimonial__card">
+            <span class="testimonial__quote">"</span>
+            <h4 class="testimonial__title">執行力與溝通能力超乎預期，對回饋保持開放</h4>
+            <p class="testimonial__content">
+              Nomis 是一位充滿熱情的 UIUX 設計師，以創新思維和快速適應新挑戰的能力著稱。她的執行速度與溝通品質持續超乎預期，是團隊中不可或缺的夥伴。對回饋始終保持開放，持續尋求改進，對團隊的成功貢獻良多。
             </p>
-            <!-- <p class="testimonials__card-content">
-              在 Samebest 共事期間，Nomis 展現出強大的學習能力與靈活應變力，面對複雜的專案限制，他總能在框架內找到具創意且可執行的解法。
-              他主導的產品行銷專案中，以心理測驗結合宇宙冒險世界觀的設計，有效提升了使用者的接觸意願，思考嚴謹、完成度出色，最終為產品帶來實際的行銷成效。
-              在團隊協作上，他善於整合多方想法、建立共識，是能帶動團隊往目標前進的關鍵角色。他也不吝將所學整理為知識分享，積極建立團隊互助共學的文化。
-              Nomis 對交付品質的承諾一向準時且可靠，我真心推薦他給任何重視執行力與持續成長的團隊。
-            </p> -->
-            <div class="testimonials__card-author">
-              <!-- <div class="testimonials__card-avatar"></div> -->
-              <img src="/images/general/avatar-chen.jpg" alt="陳大明" class="testimonials__card-avatar" />
-              <!-- <img src="/images/general/avatar-chen.jpg" alt="Enn Tang" class="testimonials__card-avatar" /> -->
+            <div class="testimonial__author">
+              <img src="/images/general/avatar-chen.jpg" alt="陳大明" class="testimonial__avatar" />
               <div>
-                <p class="testimonials__card-name">陳大明</p>
-                <!-- <p class="testimonials__card-name">Enn Tang</p> -->
-                <p class="testimonials__card-role">2024 年 5 月・iOS 工程師・直接主管</p>
-                <!-- <p class="testimonials__card-role">2024 年 5 月・Design Lead・直接主管</p> -->
+                <p class="testimonial__name">陳大明</p>
+                <p class="testimonial__role">iOS 工程師・直接主管 / 2024</p>
               </div>
             </div>
           </div>
-          <div class="testimonials__card">
-            <p class="testimonials__card-title">能理解並轉化使用者需求為直覺且美觀的設計</p>
-            <p class="testimonials__card-content">
-              與 Nomis 共事是非常愉快的經驗。他始終展現出理解並將使用者需求轉化為直覺且視覺吸引力設計的能力。
-              他的創意和解決問題的技巧在應對專案挑戰時發揮了關鍵作用。
-              支持性的個性與強大的溝通技巧營造了積極的協作環境，是可靠又具創新力的夥伴。
+          <div class="testimonial__card">
+            <span class="testimonial__quote">"</span>
+            <h4 class="testimonial__title">能理解並轉化使用者需求為直覺且美觀的設計</h4>
+            <p class="testimonial__content">
+              與 Nomis 共事是非常愉快的經驗。他始終展現出理解並將使用者需求轉化為直覺且視覺吸引力設計的能力。他的創意和解決問題的技巧在應對專案挑戰時發揮了關鍵作用。支持性的個性與強大的溝通技巧營造了積極的協作環境，是可靠又具創新力的夥伴。
             </p>
-            <div class="testimonials__card-author">
-              <!-- <div class="testimonials__card-avatar"></div> -->
-              <img src="/images/general/avatar-liao.jpg" alt="廖小華" class="testimonials__card-avatar" />
+            <div class="testimonial__author">
+              <img src="/images/general/avatar-liao.jpg" alt="廖小華" class="testimonial__avatar" />
               <div>
-                <p class="testimonials__card-name">廖小華</p>
-                <p class="testimonials__card-role">2024 年 6 月・產品經理・同團隊成員</p>
+                <p class="testimonial__name">廖小華</p>
+                <p class="testimonial__role">產品經理・同團隊成員 / 2024</p>
               </div>
             </div>
           </div>
@@ -278,7 +240,42 @@
 </template>
 
 <script setup>
-import ProjectCard from '@/components/ProjectCard.vue'
+import { ref, computed, onMounted } from 'vue'
+import { RouterLink } from 'vue-router'
 import { projects } from '@/data/projects.js'
-import HeroCanvas from '@/components/HeroCanvas.vue'
+import { getImageUrl } from '@/utils/image.js'
+
+const featuredProjects = computed(() => projects.slice(0, 4))
+
+// Typewriter effect for "Nomis"
+const fullText = 'Nomis'
+const typedText = ref('')
+const dotVisible = ref(false)
+const cursorDone = ref(false)
+
+onMounted(() => {
+  const startDelay = 600      // wait before typing begins
+  const charDelay = 110       // ms per character
+  const dotDelay = 200        // pause before dot appears
+  const cursorLingerDelay = 900  // cursor blinks this long after done
+
+  setTimeout(() => {
+    let i = 0
+    const type = () => {
+      if (i < fullText.length) {
+        typedText.value += fullText[i]
+        i++
+        setTimeout(type, charDelay)
+      } else {
+        // Show the dot
+        setTimeout(() => {
+          dotVisible.value = true
+          // Hide cursor after it lingers
+          setTimeout(() => { cursorDone.value = true }, cursorLingerDelay)
+        }, dotDelay)
+      }
+    }
+    type()
+  }, startDelay)
+})
 </script>

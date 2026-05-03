@@ -4,15 +4,20 @@ export const projects = [
     id: 'bd-portal-demo-report',
     title: '顛覆 Form 表單的邊界：獨立主導業務銷售工具 Demo Report 的從 0 到 1 設計',
     description:
-      '業務團隊用 Xmind 整理客戶學習資訊，但心智圖輸出只是一張圖檔，資料無法被內部系統收回再利用。我在 PM 資源幾乎缺席的情況下，獨立完成 UX 研究、UI 設計、Prototype 與切版，並透過業務銷售流程的深度研究，將原始需求從「心智圖系統」重新定位為陪伴業務完整銷售旅程的數位報告工具，更首創將 Form 表單與心智圖操作邏輯融合的後台設計，讓大主管直呼「從來沒想過 Form 表單可以做成這樣」。',
+      '業務團隊用 Xmind 整理客戶學習資訊，但心智圖輸出只是一張圖檔，資料無法被內部系統收回再利用。我在 PM 資源幾乎缺席的情況下，獨立完成 UX 研究、UI 設計、Prototype 與切版，並透過業務銷售流程的深度研究，將原始需求從「心智圖系統」重新定位為「陪伴業務完整銷售旅程的數位報告工具」，更首創將 Form 表單與心智圖操作邏輯融合的後台設計，讓大主管直呼「從來沒想過 Form 表單可以做成這樣」。',
     cover: '/images/projects/bd-portal-demo-report/cover.png',
     hashtags: ['研究驅動設計', '產品重新定位', '創新互動設計'],
-    tags: ['UIUX', 'Research', 'Frontend', 'Cross-functional'],
+    tags: ['UIUX', 'Research', 'Frontend', 'Cross-functional', 'Information Architecture'],
+    metrics: [
+      { value: '29', label: '工作天獨立完成' },
+      { value: '0→1', label: '全流程主導' },
+      { value: '2 端', label: '前台報告＋後台表單' },
+    ],
     category: ['uiux', 'frontend'],
     content: `
     <!-- 角色資訊 -->
     <div class="pd-info">
-      <div class="pd-info__item">
+      <div class="pd-info__item pd-info__item--company">
         <span class="pd-info__label">公司</span>
         <span class="pd-info__value">三貝德數位文創股份有限公司</span>
       </div>
@@ -26,7 +31,8 @@ export const projects = [
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">時間</span>
-        <span class="pd-info__value">2023.08 – 2023.10（約 29 個工作天）</span>
+        <!--<span class="pd-info__value">2023.08 – 2023.10（約 29 個工作天）</span> -->
+        <span class="pd-info__value">約 29 個工作天</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">負責範圍</span>
@@ -41,13 +47,13 @@ export const projects = [
       <a
         href="https://www.figma.com/proto/8zSW6z2o9Z4gEPVNFDNgVA/Prototype---SCRM---Demo-Report-%E5%AD%B8%E7%BF%92%E9%81%A9%E6%80%A7%E5%A0%B1%E5%91%8A?node-id=1-4599&viewport=565%2C526%2C0.13&t=vDnLQEhN1ueQozon-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A4599&page-id=1%3A4598"
         target="_blank"
-        style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #4f8ef7, #7c5ff7); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+        class="pd-cta">
         → 查看 Figma Prototype (Web)
       </a>
       <a
         href="https://www.figma.com/proto/8zSW6z2o9Z4gEPVNFDNgVA/Prototype---SCRM---Demo-Report-%E5%AD%B8%E7%BF%92%E9%81%A9%E6%80%A7%E5%A0%B1%E5%91%8A?node-id=1-7931&viewport=565%2C646%2C0.43&t=HVHzIr8jekUs143l-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1%3A7931&page-id=1%3A7837"
         target="_blank"
-        style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #4f8ef7, #7c5ff7); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+        class="pd-cta">
         → 查看 Figma Prototype (Mobile)
       </a>
     </div>
@@ -57,7 +63,12 @@ export const projects = [
 
     <p>這個專案的起點，來自業務主管向研發部提出的一個需求：「能不能在內部系統 BD Portal 裡，做一套心智圖系統，讓業務可以直接在系統中操作，把客戶的訪談資料保存下來？」</p>
 
-    <p>業務團隊長期使用 Xmind 整理學生的學習狀況——強弱科分佈、學習斷點、補強建議——但這套做法有幾個根本限制，<strong>每位業務的整理方式與視覺品質參差不齊，對家長呈現的專業感缺乏一致性；Xmind 輸出的只是一張圖，資料無法被系統收回再利用；資訊整理完後，也難以直接銜接到 BD Portal 的後續流程。</strong></p>
+    <p>業務團隊長期使用 Xmind 整理學生的學習狀況，包含強弱科分佈、學習斷點、補強建議。但這套做法有幾個根本限制：</p>
+    <ol>
+      <li><strong>每位業務的整理方式與視覺品質參差不齊，對家長呈現的專業感缺乏一致性。</strong></li>
+      <li><strong>Xmind 輸出的只是一張圖，資料無法被系統收回再利用。</strong></li>
+      <li><strong>資訊整理完後，也難以直接銜接到 BD Portal 的後續流程。</strong></li>
+    </ol>
 
     <img src="/portfolio/images/projects/bd-portal-demo-report/img-1.png" alt="業務用 Xmind 繪製的心智圖，並在訪談後提供給客戶" />
 
@@ -72,7 +83,7 @@ export const projects = [
 
     <h3>洞察一：先用 5W1H 快速建立 Domain Know-How</h3>
 
-    <p>接到專案時，我手上的資訊極為有限，只知道「要把 Xmind 放進 BD Portal」。<strong>面對資訊真空，我用 5W1H 框架快速梳理專案輪廓</strong>：使用者是誰（業務、家長、學生）、為什麼啟動這個專案（對內整合流程、對外提升品牌專業感）、在哪些時機點會使用（電訪、Demo、試讀）、產品出現在什麼載具上（Web + 手機，需考量 RWD）。這個過程讓我在沒有 PM 主動梳理需求的情況下，迅速建立起對這個專案的基本認識。</p>
+    <p>接到專案時，我手上的資訊極為有限，只知道「要把 Xmind 放進 BD Portal」。<strong>面對資訊真空，我用 5W1H 框架快速梳理專案輪廓</strong>：使用者是誰（業務、家長、學生）、為什麼啟動這個專案（對內整合流程、對外提升品牌專業感）、在哪些時機點會使用（電訪、Demo、試讀）、產品出現在什麼載具上（Web + 手機，需考量 RWD）......。這個過程讓我在沒有 PM 主動梳理需求的情況下，迅速建立起對這個專案的基本認識。</p>
 
     <img src="/portfolio/images/projects/bd-portal-demo-report/img-3.png" alt="我用 5W1H 框架快速梳理專案輪廓，協助我迅速建立起對這個專案的基本認識。" />
 
@@ -234,6 +245,11 @@ export const projects = [
     cover: '/images/projects/ai-smartbag-learning-goal/cover.png',
     hashtags: ['數據驅動設計', '產品思維', '系統複雜度化簡'],
     tags: ['UIUX', 'AI', 'Cross-functional', 'Information Architecture'],
+    metrics: [
+      { value: '80%', label: '客服需求減少' },
+      { value: '90%', label: '學生主動採用' },
+      { value: '3 步驟', label: '完成目標設定' },
+    ],
     category: ['uiux', 'ai'],
     content: `
     <!-- 成效數字 -->
@@ -254,7 +270,7 @@ export const projects = [
 
     <!-- 角色資訊 -->
     <div class="pd-info">
-      <div class="pd-info__item">
+      <div class="pd-info__item pd-info__item--company">
         <span class="pd-info__label">公司</span>
         <span class="pd-info__value">三貝德數位文創股份有限公司</span>
       </div>
@@ -268,7 +284,8 @@ export const projects = [
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">時間</span>
-        <span class="pd-info__value">2023.11 – 2023.12（約三週）</span>
+                <!--<span class="pd-info__value">2023.11 – 2023.12（約三週）</span> -->
+        <span class="pd-info__value">約 15 個工作天</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">負責範圍</span>
@@ -428,11 +445,16 @@ export const projects = [
     cover: '/images/projects/ai-smartbag-learning-report/cover.png',
     hashtags: ['數據洞察設計', '資訊架構', '跨角色協作'],
     tags: ['UIUX', 'Cross-functional', 'Information Architecture'],
+    metrics: [
+      { value: '15', label: '工作天完成' },
+      { value: '3', label: '維度報告架構' },
+      { value: '0→1', label: '主打亮點功能' },
+    ],
     category: ['uiux'],
     content: `
     <!-- 角色資訊 -->
     <div class="pd-info">
-      <div class="pd-info__item">
+      <div class="pd-info__item pd-info__item--company">
         <span class="pd-info__label">公司</span>
         <span class="pd-info__value">三貝德數位文創股份有限公司</span>
       </div>
@@ -446,7 +468,8 @@ export const projects = [
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">時間</span>
-        <span class="pd-info__value">2023.11 – 2024.01（約 15 個工作天）</span>
+        <!-- <span class="pd-info__value">2023.11 – 2024.01（約 15 個工作天）/span> -->
+        <span class="pd-info__value">約 15 個工作天</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">負責範圍</span>
@@ -591,26 +614,32 @@ export const projects = [
       '「適性報告」需要一個讓學生真正投入的心理測驗，我在識別版權與高授權成本的風險後，以心理學背景主動切入，研究 30+ 篇文獻、融合兩套學習風格理論，設計出兼具科學性與故事沉浸感的測驗體驗，獲得「默默就做完了」的高完成度回饋。',
     cover: '/images/projects/ai-smartbag-edu-psych-quiz/cover.png',
     hashtags: ['研究驅動設計', '沉浸式體驗', '跨職能主導'],
-    tags: ['UIUX', 'Research', 'AI', 'Cross-functional', 'Frontend'],
+    tags: ['UIUX', 'Research', 'Frontend', 'AI', 'Cross-functional'],
+    metrics: [
+      { value: '64', label: '種測驗結果類型' },
+      { value: '30+', label: '篇文獻研究' },
+      { value: '51', label: '工作天完成' },
+    ],
     category: ['uiux'],
     content: `
     <!-- 角色資訊 -->
     <div class="pd-info">
-      <div class="pd-info__item">
+      <div class="pd-info__item pd-info__item--company">
         <span class="pd-info__label">公司</span>
         <span class="pd-info__value">三貝德數位文創股份有限公司</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">產品</span>
-        <span class="pd-info__value">AI 智能書包 — 教育心理測驗（App 內 Landing Page）</span>
+        <span class="pd-info__value">AI 智能書包 — 教育心理測驗（WebView）</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">職稱</span>
-        <span class="pd-info__value">UIUX Designer（跨 PM 協助、指揮協作設計師）</span>
+        <span class="pd-info__value">UIUX Designer（跨 PM 協助、指揮設計師）</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">時間</span>
-        <span class="pd-info__value">2024.01 – 2024.05（共 51 個工作天）</span>
+        <!-- <span class="pd-info__value">2024.01 – 2024.05（共 51 個工作天）</span> -->
+        <span class="pd-info__value">共 51 個工作天</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">負責範圍</span>
@@ -624,7 +653,7 @@ export const projects = [
     <a
       href="https://ai100.com.tw/EduPsyQuiz/MySuperPower"
       target="_blank"
-      style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #6C63FF, #3ECFCF); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+      class="pd-cta">
       → 探索我的學習超能力
     </a>
 
@@ -676,7 +705,7 @@ export const projects = [
     <a
       href="https://www.figma.com/board/lEdD8bLdmhhlAZnxlR9eF4/%E3%80%90%E5%B7%A5%E4%BD%9C%E3%80%91%E6%99%BA%E8%83%BD%E6%9B%B8%E5%8C%85-App---%E6%95%99%E8%82%B2%E5%BF%83%E7%90%86%E6%B8%AC%E9%A9%97-UX-%E8%A8%AD%E8%A8%88?node-id=0-1&t=J74nE8opBbTKW9IW-1"
       target="_blank"
-      style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #6C63FF, #3ECFCF); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+      class="pd-cta">
       → 前往 FigJam 畫布
     </a>
 
@@ -800,7 +829,12 @@ export const projects = [
       '2,130 份紙本教材需轉型為 EPUB 流式排版，手動處理一份需耗費一至兩天，在緊湊時程下幾乎不可能完成。我主動暫停手邊工作，自主研發一套 HTML/CSS 設計系統與 Excel 半自動化轉譯工具，將工讀生的產出速度提升至每日 4～5 份，讓這個原本瀕臨廢棄的專案重新看見曙光。',
     cover: '/images/projects/ai-smartbag-epub-production/cover.png',
     hashtags: ['設計系統', '流程工程化', '工具開發'],
-    tags: ['Frontend', 'Cross-functional'],
+    tags: ['Frontend', 'Cross-functional', 'Information Architecture'],
+    metrics: [
+      { value: '1,780', label: '份 EPUB 完成' },
+      { value: '4 – 5×', label: '產出速度提升' },
+      { value: '1 週', label: '開發工具系統' },
+    ],
     category: ['frontend'],
     content: `
     <!-- 成效數字 -->
@@ -821,7 +855,7 @@ export const projects = [
 
     <!-- 角色資訊 -->
     <div class="pd-info">
-      <div class="pd-info__item">
+      <div class="pd-info__item pd-info__item--company">
         <span class="pd-info__label">公司</span>
         <span class="pd-info__value">三貝德數位文創股份有限公司</span>
       </div>
@@ -835,6 +869,7 @@ export const projects = [
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">時間</span>
+        <!-- <span class="pd-info__value">2023.10 – 2025.12（約兩年兩個月）</span> -->
         <span class="pd-info__value">2023.10 – 2025.12（約兩年兩個月）</span>
       </div>
       <div class="pd-info__item">
@@ -975,6 +1010,11 @@ export const projects = [
     cover: '/images/projects/elementary-king-ai-mv/cover.png',
     hashtags: ['AI-Native Workflow', '跨職能執行力', 'ROI 極大化'],
     tags: ['AI', 'Cross-functional'],
+    metrics: [
+      { value: '99.7%', label: '製作成本降低' },
+      { value: '15 天', label: '完成 120 萬規格' },
+      { value: '1,000+', label: '張分鏡圖產出' },
+    ],
     category: ['ai'],
     content: `
     <!-- 成效數字 -->
@@ -995,7 +1035,7 @@ export const projects = [
 
     <!-- 角色資訊 -->
     <div class="pd-info">
-      <div class="pd-info__item">
+      <div class="pd-info__item pd-info__item--company">
         <span class="pd-info__label">公司</span>
         <span class="pd-info__value">三貝德數位文創股份有限公司</span>
       </div>
@@ -1009,7 +1049,8 @@ export const projects = [
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">時間</span>
-        <span class="pd-info__value">2026.01.05 – 2026.02.10（實際工作天約 15 天）</span>
+        <!-- <span class="pd-info__value">2026.01.05 – 2026.02.10（實際工作天約 15 天）</span> -->
+        <span class="pd-info__value">約 15 個工作天</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">負責範圍</span>
@@ -1221,6 +1262,11 @@ export const projects = [
     cover: '/images/projects/osm-rwd-scss-function/cover.png',
     hashtags: ['技術自驅力', 'SCSS 工具開發', 'RWD 系統化'],
     tags: ['Frontend'],
+    metrics: [
+      { value: '92%+', label: '定位時間縮短' },
+      { value: '3+', label: '專案共用工具' },
+      { value: '8 天', label: '實際工作天' },
+    ],
     category: ['frontend'],
     content: `
     <!-- 成效數字 -->
@@ -1241,7 +1287,7 @@ export const projects = [
 
     <!-- 角色資訊 -->
     <div class="pd-info">
-      <div class="pd-info__item">
+      <div class="pd-info__item pd-info__item--company">
         <span class="pd-info__label">公司</span>
         <span class="pd-info__value">三貝德數位文創股份有限公司</span>
       </div>
@@ -1255,7 +1301,8 @@ export const projects = [
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">時間</span>
-        <span class="pd-info__value">2023.07.25 – 2023.08.04（約 8 個工作天）</span>
+        <!-- <span class="pd-info__value">2023.07.25 – 2023.08.04（約 8 個工作天）</span> -->
+        <span class="pd-info__value">約 8 個工作天</span>
       </div>
       <div class="pd-info__item">
         <span class="pd-info__label">負責範圍</span>
@@ -1269,7 +1316,7 @@ export const projects = [
     <a
       href="https://stage-osm.go100.com.tw/"
       target="_blank"
-      style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #f97316, #eab308); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+      class="pd-cta">
       → 瀏覽橙色的科學書屋（Stage）
     </a>
 
@@ -1343,7 +1390,7 @@ export const projects = [
     <a
     href="https://stage-osm.go100.com.tw/"
     target="_blank"
-    style="display: inline-block; margin-top: 8px; padding: 10px 24px; background: linear-gradient(135deg, #f97316, #eab308); color: #fff; border-radius: 8px; font-weight: bold; text-decoration: none; letter-spacing: 0.05em;">
+    class="pd-cta">
     → 瀏覽橙色的科學書屋（Stage）
     </a>
     <p>※ 小提示：在瀏覽的同時，推薦你透過<strong>拖曳縮放瀏覽器視窗</strong>欣賞元素定位的成果。</p>

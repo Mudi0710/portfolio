@@ -9,102 +9,128 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 60% 40% at 10% 20%, rgba(79, 142, 247, 0.25) 0%, transparent 65%),
-      radial-gradient(ellipse 50% 40% at 90% 60%, rgba(124, 95, 247, 0.15) 0%, transparent 65%),
-      radial-gradient(ellipse 40% 30% at 50% 90%, rgba(79, 142, 247, 0.1) 0%, transparent 60%);
+      radial-gradient(ellipse 50% 35% at 90% 10%, rgba(var(--color-accent-rgb), 0.07) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 25% at 5% 70%, rgba(var(--color-accent-rgb), 0.04) 0%, transparent 55%);
     pointer-events: none;
     z-index: 0;
   }
 }
 
+// ============================================================
+// Hero — 雙欄：左文字 + 右 Filter
+// ============================================================
 .projects-hero {
-  padding-top: calc(70px + 4rem);
-  padding-bottom: 0;
   position: relative;
+  z-index: 1;
+  padding-top: calc(70px + 5rem);
+  padding-bottom: $spacing-xl;
 
-  &__label,
-  &__title,
-  &__desc {
-    position: relative;
-    z-index: 1;
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: $spacing-2xl;
+    align-items: end;
+
+    @media (max-width: 1023px) {
+      grid-template-columns: 1fr 220px;
+      gap: $spacing-xl;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__left {
+    // nothing extra
   }
 
   &__label {
-    font-size: $font-size-sm;
+    font-family: $font-primary;
+    font-size: 11px;
     font-weight: $font-weight-semibold;
-    color: $color-accent;
-    letter-spacing: 1px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-bottom: $spacing-sm;
+    color: var(--color-accent);
+    margin-bottom: $spacing-md;
+    display: block;
   }
 
   &__title {
-    font-size: $font-size-4xl;
+    font-family: $font-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
     font-weight: $font-weight-bold;
     margin-bottom: $spacing-md;
-    color: $color-text-primary;
-
-    @media (max-width: 767px) {
-      font-size: $font-size-3xl;
-    }
+    color: var(--color-text-primary);
+    letter-spacing: -0.04em;
+    line-height: 0.95;
   }
 
   &__desc {
     font-size: $font-size-md;
-    color: $color-text-secondary;
-    line-height: 1.8;
+    color: var(--color-text-secondary);
+    line-height: 1.85;
   }
-}
 
-.projects-list {
+  // Right: filter panel
+  &__right {
+    padding-bottom: 6px; // align with title baseline area
+  }
+
+  &__filter-label {
+    font-family: $font-primary;
+    font-size: 10px;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: $spacing-sm;
+    display: block;
+  }
+
   &__filters {
     display: flex;
-    gap: $spacing-sm;
     flex-wrap: wrap;
-    margin-bottom: $spacing-xl;
+    gap: 8px;
   }
 
   &__filter {
-    padding: $spacing-xs $spacing-md;
+    padding: 6px 16px;
     border-radius: $radius-full;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border-card);
     font-size: $font-size-sm;
     font-weight: $font-weight-medium;
-    color: $color-text-secondary;
+    color: var(--color-text-secondary);
     background-color: transparent;
     cursor: pointer;
     transition: all $transition-base;
 
     &:hover:not(&--active) {
-      border-color: $color-accent;
-      color: $color-accent;
+      border-color: var(--color-accent);
+      color: var(--color-accent);
     }
 
     &--active {
-      background-color: $color-accent;
-      border-color: $color-accent;
-      color: $color-white;
+      background-color: var(--color-text-primary);
+      border-color: var(--color-text-primary);
+      color: var(--color-bg);
       cursor: default;
     }
   }
+}
+
+// ============================================================
+// Projects List — 2-column card grid
+// ============================================================
+.projects-list {
+  position: relative;
+  z-index: 1;
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: $spacing-lg;
-
-    &--horizontal {
-      grid-template-columns: 1fr;
-      gap: $spacing-md;
-    }
-
-    @media (max-width: 1023px) {
-      grid-template-columns: repeat(2, 1fr);
-
-      &--horizontal {
-        grid-template-columns: 1fr;
-      }
-    }
 
     @media (max-width: 767px) {
       grid-template-columns: 1fr;
@@ -113,8 +139,169 @@
 
   &__empty {
     text-align: center;
-    color: $color-text-muted;
+    color: var(--color-text-muted);
     padding: $spacing-2xl 0;
     font-size: $font-size-base;
+  }
+}
+
+// ============================================================
+// Project Card — Vertical (new)
+// ============================================================
+.project-card-v {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-lg;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(var(--color-accent-rgb), 0.3);
+  }
+
+  // Hashtag(s) at top — accent label
+  &__hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: $spacing-sm $spacing-md 0;
+  }
+
+  &__hashtag {
+    font-size: 10px;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    text-transform: none;
+  }
+
+  // Cover image
+  &__cover {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    margin: $spacing-sm $spacing-md 0;
+    border-radius: $radius-md;
+    background-color: var(--color-bg-secondary);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: $spacing-sm;
+    opacity: 0;
+    transition: opacity $transition-base;
+  }
+
+  &:hover &__cover img {
+    transform: scale(1.06);
+  }
+
+  &:hover &__overlay {
+    opacity: 1;
+  }
+
+  &__cta {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+
+  // Body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: $spacing-md;
+    gap: $spacing-xs;
+  }
+
+  // Override global .tag size to be slightly smaller inside card
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    .tag {
+      font-size: 10px;
+      padding: 2px 8px;
+    }
+  }
+
+  &__title {
+    font-family: $font-serif;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: var(--color-text-primary);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    // clamp to 3 lines
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__desc {
+    font-size: $font-size-sm;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    // clamp to 3 lines
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  // Metrics row at bottom
+  &__metrics {
+    display: flex;
+    gap: $spacing-sm;
+    justify-content: space-between;
+    padding-top: $spacing-sm;
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+  }
+
+  &__metric {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__metric-value {
+    font-family: $font-serif;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: var(--color-accent);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  &__metric-label {
+    font-size: 10px;
+    font-weight: $font-weight-medium;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    letter-spacing: 0.02em;
   }
 }

@@ -204,7 +204,7 @@ const extras = [
   {
     icon: 'book',
     image: '/images/general/extras/extras-3.jpg',
-    name: '閱讀者',
+    name: '心靈讀者',
     desc: '我偏愛心理與成長類的書，特別喜歡鄧惠文醫師的作品，她擅長把複雜的情感結構說得清晰又有溫度。閱讀對我來說是一種<strong>反射性思考</strong>的練習：把別人整理好的洞見，對照自己的經驗重新消化。這個習慣讓我更能<strong>理解使用者行為背後的心理動機</strong>，也讓我在設計決策時，不只看見功能，也看見情緒。',
   },
 ]

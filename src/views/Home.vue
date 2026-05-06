@@ -24,15 +24,15 @@
           <div class="hero__stats">
             <div class="hero__stat">
               <span class="hero__stat-num">3+</span>
-              <span class="hero__stat-label">Years UIUX Experience</span>
+              <span class="hero__stat-label">Years UIUX Design</span>
             </div>
             <div class="hero__stat">
               <span class="hero__stat-num">6+</span>
-              <span class="hero__stat-label">0-to-1 Projects</span>
+              <span class="hero__stat-label">B2B / B2C Products</span>
             </div>
             <div class="hero__stat">
               <span class="hero__stat-num">80%</span>
-              <span class="hero__stat-label">CS Reduction</span>
+              <span class="hero__stat-label">Cost Optimization</span>
             </div>
           </div>
         </div>
@@ -206,15 +206,15 @@
         <div class="testimonials__grid">
           <div class="testimonial__card">
             <span class="testimonial__quote">"</span>
-            <h4 class="testimonial__title">執行力與溝通能力超乎預期，對回饋保持開放</h4>
+            <h4 class="testimonial__title">整合創意與執行力，承諾準時、品質穩定</h4>
             <p class="testimonial__content">
-              Nomis 是一位充滿熱情的 UIUX 設計師，以創新思維和快速適應新挑戰的能力著稱。她的執行速度與溝通品質持續超乎預期，是團隊中不可或缺的夥伴。對回饋始終保持開放，持續尋求改進，對團隊的成功貢獻良多。
+              我在 Samebest 與 Nomis 合作過多個專案，他兼具創意與執行力，能整合多方觀點、帶動團隊朝共同目標前進。他曾主導一檔行銷專案，設計有趣的心理測驗並包裝成宇宙冒險世界觀，在專案限制下仍精準落地並帶來良好推廣成效。與他合作總令人安心：承諾準時、品質穩定。真心推薦給重視學習與成長的團隊。
             </p>
             <div class="testimonial__author">
-              <img src="/images/general/avatar-chen.jpg" alt="陳大明" class="testimonial__avatar" />
+              <img src="/images/general/avatar-Enn.png" alt="Enn Tang" class="testimonial__avatar" />
               <div>
-                <p class="testimonial__name">陳大明</p>
-                <p class="testimonial__role">iOS 工程師・直接主管 / 2024</p>
+                <p class="testimonial__name">Enn Tang</p>
+                <p class="testimonial__role">2024 年 5 月・Design Lead・直接主管</p>
               </div>
             </div>
           </div>

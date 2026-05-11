@@ -220,15 +220,15 @@
           </div>
           <div class="testimonial__card">
             <span class="testimonial__quote">"</span>
-            <h4 class="testimonial__title">能理解並轉化使用者需求為直覺且美觀的設計</h4>
+            <h4 class="testimonial__title">具備產品思維，跨部門協作精準對齊設計與市場需求</h4>
             <p class="testimonial__content">
-              與 Nomis 共事是非常愉快的經驗。他始終展現出理解並將使用者需求轉化為直覺且視覺吸引力設計的能力。他的創意和解決問題的技巧在應對專案挑戰時發揮了關鍵作用。支持性的個性與強大的溝通技巧營造了積極的協作環境，是可靠又具創新力的夥伴。
+              我與 Nomis 密切合作了多個數位產品專案。他具備極強的產品思維，總能從 UI/UX 角度提出精準的建議，協助團隊將設計與市場需求完美對齊。他曾在「學習紀錄」功能中，運用優異的數據視覺化能力，將繁雜數據轉為直觀介面，精準解決家長端痛點。在跨部門協作上，他不帶本位主義，總能透過溝通激發團隊綜效，且對專案里程碑與交付物的品質把控極度精準。他是一位嚴以律己、善於整合資源的優秀設計主管，真心推薦給任何重視交付品質與團隊協作的企業。
             </p>
             <div class="testimonial__author">
-              <img src="/images/general/avatar-liao.jpg" alt="廖小華" class="testimonial__avatar" />
+              <img src="/images/general/avatar-Jenny.png" alt="Jenny Yu" class="testimonial__avatar" />
               <div>
-                <p class="testimonial__name">廖小華</p>
-                <p class="testimonial__role">產品經理・同團隊成員 / 2024</p>
+                <p class="testimonial__name">Jenny Yu</p>
+                <p class="testimonial__role">2026 年 5 月・Project Manager・跨團隊夥伴</p>
               </div>
             </div>
           </div>

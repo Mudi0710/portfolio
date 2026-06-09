@@ -8,27 +8,27 @@
 
 ## 關於 Nomis Yang
 
-**姓名：** Nomis Yang（楊○○）  
-**職稱：** UIUX Designer & Design Lead  
-**現職：** 三貝德數位文創股份有限公司 — 設計主管（2024.06 至今）  
-**聯絡：** nomis820710@gmail.com  
-**LinkedIn：** https://www.linkedin.com/in/nomis-yang/  
+**姓名：** Nomis Yang（楊睿宇）
+**職稱：** UIUX Designer & Design Lead
+**現職：** 三貝德數位文創股份有限公司 — 設計主管（2024.06 至今）
+**聯絡：** nomis820710@gmail.com
+**LinkedIn：** https://www.linkedin.com/in/nomis-yang/
 **履歷下載：** https://mudi0710.github.io/portfolio/resume.pdf
 
 ### 一句話介紹
 
-橫跨 UIUX 設計、前端切版與系統思維的複合型設計師。具備人資、社會心理、企業培訓的跨領域背景，習慣用數據驗證設計決策，也具備在資源不足的情況下，仍能獨立推進專案、讓成果落地的能力。
+橫跨 UIUX 設計、前端切版與系統思維的複合型設計師。入行前做過人資、讀過社會心理、跑過企業培訓，這些跨領域的歷程讓我在每一個設計決策裡，都能同時看見使用者、團隊與商業三個層面。習慣用數據驗證設計決策，也具備在資源不足的情況下獨立推進專案、讓成果落地的能力。
 
 ### 三個核心能力
 
-**跨領域設計能力**
-橫跨 UIUX 設計、前端切版與設計管理，能從使用者研究、視覺設計到程式實作一手包辦。曾在 PM 幾乎缺席的情況下獨立完成 UX 研究、UI 設計、Prototype 與切版，確保設計落地不失真。
+**研究驅動的產品設計**
+從使用者訪談、數據分析到最終設計決策，讓證據說話，而不是靠直覺猜測使用者要什麼。
 
-**數據驅動的設計決策**
-習慣在設計提案前先問「這解決了什麼問題」、上線後追問「它真的有效嗎」。曾透過使用者訪談發現需求被錯誤定義，主動將產品從「心智圖系統」重新定位為陪伴完整銷售旅程的數位報告工具。
+**跨職能執行力**
+從 UX 研究、UI 設計到前端切版，能獨立一手包辦，確保設計落地不失真。曾在 PM 幾乎缺席的情況下獨立完成 UX 研究、UI 設計、Prototype 與切版。
 
-**跨部門協作與領導**
-具備帶領設計團隊的實戰經驗，善於在產品、工程與商業目標之間建立共識。曾在兩週內拆解跨部門任務、同步推進四條工作線，帶領團隊準時交付一個 PM 規劃了一個月的專案。
+**設計領導與制度建立**
+用制度取代靠感覺，讓設計團隊的運作可被量化、可被傳承。建立 OKR 績效系統、設計師職能模型、跨部門協作制度。
 
 ---
 
@@ -56,7 +56,7 @@
 ## 設計之前的跨領域歷程
 
 **2016–2017｜主管特別助理（六星集）**
-擔任總經理特別助理，管理行程、跨部門需求、商務會議與大型活動。學會在多條線並行時保持清醒、在沒有完整資訊下做出判斷，這成為設計專案管理與帶團隊的底層能力。
+在六星集擔任總經理特別助理，每天的工作是把老闆的行程、跨部門的需求、商務會議與大型活動全部兜在一起。學會在多條線並行時保持清醒、在沒有完整資訊下做出判斷，這讓我在帶團隊時，能在混亂中給出清楚的方向。
 
 **2017–2019｜行政會計專員（伊甸社會福利基金會）**
 負責財會、人事與政府專案申請，管理超過 1,000 件中心財產。「複雜的資訊必須被整理成有結構的系統，才能被追蹤、被執行、被傳承」這個觀念直接影響了資訊架構設計方式，也成為建立 OKR 績效制度的底層思維。
@@ -71,84 +71,105 @@
 
 ## 他人推薦
 
-**陳大明（iOS 工程師・直接主管，2024.05）**
-「Nomis 是一位充滿熱情的 UIUX 設計師，以創新思維和快速適應新挑戰的能力著稱。她的執行速度與溝通品質持續超乎預期，是團隊中不可或缺的夥伴。對回饋始終保持開放，持續尋求改進，對團隊的成功貢獻良多。」
+**Enn Tang（Design Lead・直接主管，2024 年 5 月）**
+「我在 Samebest 與 Nomis 合作過多個專案，他兼具創意與執行力，能整合多方觀點、帶動團隊朝共同目標前進。他曾主導一檔行銷專案，設計有趣的心理測驗並包裝成宇宙冒險世界觀，在專案限制下仍精準落地並帶來良好推廣成效。與他合作總令人安心：承諾準時、品質穩定。真心推薦給重視學習與成長的團隊。」
 
-**廖小華（產品經理・同團隊成員，2024.06）**
-「與 Nomis 共事是非常愉快的經驗。他始終展現出理解並將使用者需求轉化為直覺且視覺吸引力設計的能力。他的創意和解決問題的技巧在應對專案挑戰時發揮了關鍵作用。」
+**Jenny Yu（Project Manager・跨團隊夥伴，2026 年 5 月）**
+「我與 Nomis 密切合作了多個數位產品專案。他具備極強的產品思維，總能從 UI/UX 角度提出精準的建議，協助團隊將設計與市場需求完美對齊。他曾在「學習紀錄」功能中，運用優異的數據視覺化能力，將繁雜數據轉為直觀介面，精準解決家長端痛點。在跨部門協作上，他不帶本位主義，總能透過溝通激發團隊綜效，且對專案里程碑與交付物的品質把控極度精準。」
 
 ---
 
-## 作品集專案（7 件）
+## 作品集專案（8 件）
 
 ### 1. Demo Report — BD Portal 業務銷售工具
-**網址：** https://mudi0710.github.io/portfolio/#/projects/bd-portal-demo-report  
-**標籤：** UIUX、Research、Frontend、Cross-functional  
+**網址：** https://mudi0710.github.io/portfolio/#/projects/bd-portal-demo-report
+**標籤：** UIUX、Research、Frontend、Cross-functional、Information Architecture
 **摘要：** 業務團隊用 Xmind 整理客戶學習資訊，但心智圖輸出只是一張圖檔，資料無法被系統收回再利用。在 PM 資源幾乎缺席的情況下，獨立完成 UX 研究、UI 設計、Prototype 與切版，並透過業務銷售流程的深度研究，將原始需求從「心智圖系統」重新定位為陪伴業務完整銷售旅程的數位報告工具，首創將 Form 表單與心智圖操作邏輯融合的後台設計，讓大主管直呼「從來沒想過 Form 表單可以做成這樣」。
 
 ### 2. AI 學習目標 — AI 智能書包
-**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-learning-goal  
-**標籤：** UIUX、Research  
-**摘要：** 客服需求降低 80%。從數據出發，重新定義 K12 學生的 AI 學習目標設定體驗。
+**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-learning-goal
+**標籤：** UIUX、AI、Cross-functional、Information Architecture
+**摘要：** 客服需求降低 80%。從數據出發，重新定義 K12 學生的 AI 學習目標設定體驗。透過業務訪談與後台數據，挖掘出「學生每日平均觀看影片僅 22 分鐘」的關鍵洞察，設計出三步驟 AI 快速建立路徑，90% 學生選擇使用。
 
 ### 3. 學習報告 — AI 智能書包
-**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-learning-report  
-**標籤：** UIUX、Research  
-**摘要：** 從數據羅列到數據洞察，重新設計 K12 家長的三維度學習報告。
+**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-learning-report
+**標籤：** UIUX、Cross-functional、Information Architecture
+**摘要：** 從數據羅列到數據洞察，重新設計 K12 家長的三維度學習報告。前一版被大主管打槍，借鑑數據分析師思維，設計出日報告說執行細節、週報告說行為洞察、月報告說成長故事的三種截然不同敘事邏輯，成為 AI 智能書包主打亮點功能。
 
 ### 4. 教育心理測驗 — AI 智能書包
-**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-edu-psych-quiz  
-**標籤：** UIUX、Research  
-**摘要：** 用研究方法做設計：從 30+ 篇文獻到 64 種結果的 K12 教育心理測驗。
+**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-edu-psych-quiz
+**標籤：** UIUX、Research
+**摘要：** 識別正式測驗版權與高授權成本風險後，以心理學背景主動走文獻自研路線，研究 30+ 篇論文、融合兩套學習風格理論，設計出有 64 種結果的測驗，完全超出主管原本期待的 16 種，獲得「默默就做完了」的高完成度回饋。
 
 ### 5. EPUB 量產系統 — AI 智能書包
-**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-epub-production  
-**標籤：** UIUX、Frontend  
-**摘要：** 1,780 份 EPUB：用設計系統與 Excel 工具，讓不可能的量產任務成真。
+**網址：** https://mudi0710.github.io/portfolio/#/projects/ai-smartbag-epub-production
+**標籤：** UIUX、Frontend
+**摘要：** 1,780 份 EPUB：用設計系統與 Excel 工具，讓不可能的量產任務成真。主動暫停手邊工作，自主研發 HTML/CSS 設計系統與 Excel 半自動化轉譯工具，將工讀生產出速度提升至每日 4～5 份。
 
-### 6. 小學王五代 AI MV（自主專案）
-**網址：** https://mudi0710.github.io/portfolio/#/projects/elementary-king-ai-mv  
-**標籤：** UIUX、AI  
-**摘要：** 成本降低 99.7%：一人 15 天用 AI 完成傳統團隊 120 萬的動畫 MV。
+### 6. 小學王五代 AI MV
+**網址：** https://mudi0710.github.io/portfolio/#/projects/elementary-king-ai-mv
+**標籤：** UIUX、AI
+**摘要：** 成本降低 99.7%：一人 15 天用 AI 完成傳統團隊 120 萬的動畫 MV。無預算、無團隊、無動畫背景，自主規劃 12 階段 AI 製作流程，獨立完成含 6 個角色的 3D 動畫 MV。影片現場引爆掌聲，董事長當場轉發集團主管群。
 
-### 7. 橙色的科學書屋 — RWD 切版與 SCSS 工具研發
-**網址：** https://mudi0710.github.io/portfolio/#/projects/osm-rwd-scss-function  
-**標籤：** Frontend  
-**摘要：** 從 60 分鐘到 5 分鐘：自研 SCSS 函式解決複雜插畫 Hero 的 RWD 定位難題。
+### 7. BD Portal SCSS 架構系統
+**網址：** https://mudi0710.github.io/portfolio/#/projects/bd-portal-scss-system
+**標籤：** Frontend
+**摘要：** 從一天到一小時：為 BD Portal 建立可擴展的 SCSS 架構系統。臨危受命在上線前 9 個工作天加入，主導建立五層模組化 SCSS 架構（22 個檔案），將新頁面切版時間從一天壓縮至一小時以內，架構沿用至系統四個開發階段。第四階段新增的 rwdTable 元件讓手機版表格適配縮短至 10 分鐘。
+
+### 8. 橙色的科學書屋 — RWD 切版與 SCSS 工具研發
+**網址：** https://mudi0710.github.io/portfolio/#/projects/osm-rwd-scss-function
+**標籤：** Frontend
+**摘要：** 從 60 分鐘到 5 分鐘：自研 SCSS 函式解決複雜插畫 Hero 的 RWD 定位難題。自研 rwdSize SCSS @function，將單一元素的斷點定位時間從 60 分鐘壓縮至 5 分鐘內，推廣至設計團隊，成為後續 3 個以上專案的共用切版工具。
 
 ---
 
 ## Leadership 文章（6 篇）
 
 ### 1. 我以為一視同仁是公平，這機會卻差點壓垮了她
-**網址：** https://mudi0710.github.io/portfolio/#/leadership/equal-treatment-trap  
-**標籤：** 個人成長反思、設計團隊管理心得、專案決策過程  
-**摘要：** 把同一份標準套在每個人身上，不一定是公平，有時候是一種忽視。分享在一個新手設計師的第一個獨立 UIUX 專案中，從「太晚發現問題」到「找到適合她的工作方式」的歷程。
+**網址：** https://mudi0710.github.io/portfolio/#/leadership/equal-treatment-trap
+**標籤：** 個人成長反思、設計團隊管理心得、專案決策過程
+**日期：** 2026-02-06
+**摘要：** 把同一份標準套在每個人身上，不一定是公平，有時候是一種忽視。這篇文章分享我如何在一個新手設計師的第一個獨立 UIUX 專案中，從「太晚發現問題」到「找到適合她的工作方式」。
 
 ### 2. 當 KPI 無法衡量設計師：我如何為設計部打造一套 OKR 績效系統
-**網址：** https://mudi0710.github.io/portfolio/#/leadership/design-team-okr-performance-system  
-**標籤：** 設計團隊管理心得、帶團隊的方法論  
-**摘要：** 發現公司的 KPI 制度無法真正衡量設計師的工作表現，主動做出改變，記錄從發現問題、提案、到實際落地一整套 OKR 績效系統的完整歷程。
+**網址：** https://mudi0710.github.io/portfolio/#/leadership/design-team-okr-performance-system
+**標籤：** 設計團隊管理心得、帶團隊的方法論
+**日期：** 2026-01-31
+**摘要：** 我發現公司的 KPI 制度無法真正衡量設計師的工作表現，所以我決定主動做出改變。這篇文章記錄了我從發現問題、提案、到實際落地一整套 OKR 績效系統的完整歷程。
 
 ### 3. 我用 360 度評核，給團隊夥伴寄了一封信
-**網址：** https://mudi0710.github.io/portfolio/#/leadership/team-feedback-letter  
-**標籤：** 設計團隊管理心得、帶團隊的方法論  
-**摘要：** 當了主管之後，用 360 度評核的概念，做了一件讓整個團隊都沒預料到的事。
+**網址：** https://mudi0710.github.io/portfolio/#/leadership/team-feedback-letter
+**標籤：** 設計團隊管理心得、帶團隊的方法論
+**日期：** 2025-07-25
+**摘要：** 當了主管之後，我報名了一堂管理課，不是因為不會，而是想驗證自己走的路是否正確。這篇文章關於我如何用 360 度評核的概念，做了一件讓整個團隊都沒預料到的事。
 
 ### 4. 當全公司都把設計師當通靈師，我決定立一條規矩
-**網址：** https://mudi0710.github.io/portfolio/#/leadership/design-request-collaboration-guide  
-**標籤：** 帶團隊的方法論、專案決策過程  
-**摘要：** 設計師不是不夠專業，是需求方從來不知道怎麼給需求。記錄如何從一張拖了一週才結案的 DM，決定用一份正式指南改變整個公司的設計協作文化。
+**網址：** https://mudi0710.github.io/portfolio/#/leadership/design-request-collaboration-guide
+**標籤：** 帶團隊的方法論、專案決策過程
+**日期：** 2025-06-01
+**摘要：** 設計師不是不夠專業，是需求方從來不知道怎麼給需求。這篇文章記錄了我如何從一張拖了一週才結案的 DM，決定用一份正式指南改變整個公司的設計協作文化。
 
 ### 5. 當設計師問我「我該往哪裡走」，我決定親手畫一張地圖
-**網址：** https://mudi0710.github.io/portfolio/#/leadership/uiux-designer-competency-map  
-**標籤：** 個人成長反思、帶團隊的方法論  
+**網址：** https://mudi0710.github.io/portfolio/#/leadership/uiux-designer-competency-map
+**標籤：** 個人成長反思、帶團隊的方法論
+**日期：** 2025-03-15
 **摘要：** 設計師不是能力不夠，而是從來沒有人告訴他們，自己站在哪裡？一個半路出家的設計主管，如何用人資背景為團隊建立職能模型，讓成長這件事變得有憑有據。
 
 ### 6. 我們如何在兩週內，完成一個不可能的任務
-**網址：** https://mudi0710.github.io/portfolio/#/leadership/impossible-deadline-two-weeks  
-**標籤：** 帶團隊的方法論、專案決策過程  
+**網址：** https://mudi0710.github.io/portfolio/#/leadership/impossible-deadline-two-weeks
+**標籤：** 帶團隊的方法論、專案決策過程
+**日期：** 2025-02-24
 **摘要：** 老闆踩死的 deadline、PM 規劃一個月才丟來的需求，但最後設計部不只準時交付，還讓我看見一件更重要的事：真正讓任務得以完成的力量，早在這個專案之前就已經存在了。
+
+---
+
+## 設計之外
+
+**職場劇迷：** 片單大多是職場劇（《穿著 Prada 的惡魔》、《高年級實習生》、《正青春》、《歡樂頌》等），著迷於劇中人如何在壓力與博弈裡做決定、如何拿捏關係與界限，影響了處理利害關係人與跨部門協作的方式。
+
+**飛輪騎士：** 跟著教練一節一節加重阻力，是一種和自己談判的過程。在高壓的專案週期裡，依然能保持清醒和能量。
+
+**心靈讀者：** 偏愛心理與成長類的書，特別喜歡鄧惠文醫師的作品。閱讀是一種反射性思考的練習，讓我更能理解使用者行為背後的心理動機。
 
 ---
 

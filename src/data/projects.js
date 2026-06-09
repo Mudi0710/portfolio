@@ -1253,6 +1253,179 @@ export const projects = [
     </div>
   `,
   },
+  // BD Portal
+  {
+    id: 'bd-portal-scss-system',
+    title: '從一天到一小時：為 BD Portal 建立可擴展的 SCSS 架構系統',
+    description:
+      '接手一個前期 CSS 結構混亂、難以維護的 CRM 系統，在上線前 9 個工作天緊急加入，主導建立一套五層 SCSS 模組化架構，將新頁面的切版時間從一天壓縮至一小時以內，並沿用至系統後續所有開發階段。',
+    cover: '/images/projects/bd-portal-scss-system/cover.png',
+    hashtags: ['SCSS 架構設計', '前端系統思維', '跨設計師協作'],
+    tags: ['Frontend'],
+    metrics: [
+      { value: '90%+', label: '新頁面切版時間縮短' },
+      { value: '22 個', label: '模組化 SCSS 檔案' },
+      { value: '4 階段', label: '系統持續沿用開發' },
+    ],
+    category: ['frontend'],
+    content: `
+    <!-- 成效數字 -->
+    <div class="pd-metrics">
+      <div class="pd-metric">
+        <span class="pd-metric__number">90%+</span>
+        <span class="pd-metric__label">新頁面切版時間縮短<br/>（一天 → 一小時以內）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">22 個</span>
+        <span class="pd-metric__label">模組化 SCSS 檔案<br/>從零建立完整架構</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">4 階段</span>
+        <span class="pd-metric__label">系統持續沿用<br/>支撐整個系統開發週期</span>
+      </div>
+    </div>
+
+    <!-- 角色資訊 -->
+    <div class="pd-info">
+      <div class="pd-info__item">
+        <span class="pd-info__label">公司</span>
+        <span class="pd-info__value">三貝德數位文創股份有限公司</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">產品</span>
+        <span class="pd-info__value">BD Portal — 業務銷售管理內部系統</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">職稱</span>
+        <span class="pd-info__value">UIUX Designer（臨危受命，跨職能執行）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">時間</span>
+        <span class="pd-info__value">2023/04 – 2024/05（貫穿系統四個開發階段）</span>
+      </div>
+      <div class="pd-info__item">
+        <span class="pd-info__label">負責範圍</span>
+        <span class="pd-info__value">SCSS 架構設計、切版實作、跨設計師協作規範制定</span>
+      </div>
+    </div>
+
+    <!-- 背景與挑戰 -->
+    <h2>背景與挑戰</h2>
+
+    <p>BD Portal 是公司從零打造的業務銷售管理平台。在這個平台存在之前，業務團隊的日常作業分散在多個不同工具之間：名單管理靠 CRM、訂單靠另一套訂單系統、直購流程又是另一個入口，客戶追蹤靠 Google 試算表，各系統之間互不相通。<strong>BD Portal 的目標，就是把這些散落的流程全部集中到一個平台，讓業務從開發名單、預約 Demo、成交訂單到客戶關懷，都能在同一個地方完成。</strong></p>
+
+    <p>2023 年 4 月底，系統第一階段功能即將在 5 月 15 日上線，但開發進度落後，原負責規劃 UI 與切版的主設計師在專案初期缺乏大型系統開發經驗，導致 CSS 結構在快速迭代中逐漸失控：命名混亂、樣式散落在不同檔案、Element UI 與 Bootstrap 組件交錯混用，同樣的畫面在不同頁面卻有完全不同的 HTML 結構。</p>
+
+    <p>我在上線前 9 個工作天被臨時邀請加入這個專案。</p>
+
+    <img src="/portfolio/images/projects/bd-portal-scss-system/img-1.png" alt="BD Portal 系統畫面：Dashboard 首頁，整合本月預約率、出席率、成交率與公告訊息" />
+
+    <!-- 設計過程 -->
+    <h2>設計過程</h2>
+
+    <h3>洞察一：問題不在於寫得不夠努力，而在於缺少一套共同語言</h3>
+
+    <p>加入後我沒有急著補切版進度，而是先把整個 code base 看過一遍。我看到的不是「某個人寫錯了」，而是一個系統性的問題：這是主設計師第一次負責這種規模的系統，前期本來就很難想得很全面，遇到狀況才寫一個 CSS 出來是正常的。但問題是，如果不在這個時間點建立秩序，後面只會越來越亂。</p>
+
+    <p>我決定做兩件事：<strong>一邊完成緊急的切版交付，一邊同步制定一套兩個人都能遵循的 CSS 規範</strong>，讓後面的開發不再靠個人記憶，而是靠系統。</p>
+
+    <h3>洞察二：架構要能反映「改動的頻率」，不是只反映「功能的分類」</h3>
+
+    <p>制定規範時，最難的不是要不要分檔，而是要怎麼分。我和主設計師討論了一段時間，最後確立了一個核心原則：<strong>越穩定的東西越往上放，越容易改動的越往下放</strong>，改動時只影響對應的層，不會牽連其他地方。</p>
+
+    <p>最終我們建立了一套五層架構，共 22 個模組化 SCSS 檔案：</p>
+
+    <div class="pd-callout">
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">第一層：變數層（Variables）</span>
+        <p>色票、互動狀態、樣式變數｜定義設計系統的原子單位，是整個系統的設計語言基礎。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">第二層：基礎層（Base）</span>
+        <p>全站 reset 與基本元素設定｜可以被後面的層覆蓋。確保所有頁面的起點一致。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">第三層：全局層（Global）</span>
+        <p>間距系統（p&m 系列）、動畫，以及修改第三方套件 ElementUI 預設樣式的規則｜跨所有頁面共用，改一次全部生效。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">第四層：元件層（Component）</span>
+        <p>Header、SideBar、表單、Dialog 等可複用的 UI 元件｜與頁面無關，獨立維護。</p>
+      </div>
+      <div class="pd-callout__item">
+        <span class="pd-callout__title">第五層：頁面層（Page）</span>
+        <p>每個功能模組的專屬樣式｜只影響對應頁面、不會外溢，頻繁修改也不會波及其他地方。</p>
+      </div>
+    </div>
+
+    <img src="/portfolio/images/projects/bd-portal-scss-system/img-2.png" alt="SCSS 架構五層分層示意圖，由變數層到頁面層" />
+
+    <h3>洞察三：規範要能落地，就要讓另一個人也能看懂、願意遵守</h3>
+
+    <p>架構設計好之後，我的另一個挑戰是：如何讓和我一起協作的主設計師真的用這套系統，而不是各寫各的。</p>
+
+    <p>我選擇的方式不是強迫，而是<strong>用清楚的文件說明每個決策背後的理由，並在討論過程中讓她參與決定命名規則。</strong>她比我更了解原本的專案脈絡，我比她更懂 SCSS 架構，兩個人的優勢剛好互補。過程中我也刻意留意，不讓她感覺自己被糾正，而是讓她感覺我們是在一起解決一個共同的問題。</p>
+
+    <!-- 最終設計 -->
+    <h2>最終設計</h2>
+
+    <p>第一階段順利在 2023/05/15 上線，切版在 05/12 完成，保留了三天緩衝做 debug 與優化。這套 SCSS 架構也從第一階段開始，一直沿用到系統的第四個開發階段。</p>
+
+    <p>在第四階段的手機版 UX 優化中，我在元件層新增了一個 <code>rwdTable</code> CSS 選擇器：只要在表格元件上套用這個 class，表格在手機版就會自動轉為卡片式排版，基本上不需要額外調整，頂多花 10 分鐘處理個別差異。這是這套架構設計的延伸體現，也是當初建立元件層時就預期要支援的擴充方式。</p>
+
+    <video width="752" height="423" controls poster="/portfolio/images/projects/bd-portal-scss-system/img-3.png">
+      <source src="/portfolio/images/projects/bd-portal-scss-system/video-1.mp4" type="video/mp4">
+        您的瀏覽器不支援 HTML5 影片播放。(BD Portal 名單管理頁面頁面，手機版 Table RWD 優化。)
+    </video>
+
+    <!-- 最終成果 -->
+    <h2>最終成果</h2>
+
+    <div class="pd-metrics">
+      <div class="pd-metric">
+        <span class="pd-metric__number">90%+</span>
+        <span class="pd-metric__label">新頁面切版時間縮短<br/>（一天 → 一小時以內）</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">10 分鐘</span>
+        <span class="pd-metric__label">rwdTable 元件<br/>完成手機版表格轉換</span>
+      </div>
+      <div class="pd-metric">
+        <span class="pd-metric__number">4 階段</span>
+        <span class="pd-metric__label">架構持續沿用<br/>支撐系統完整開發週期</span>
+      </div>
+    </div>
+
+    <!-- 影響力 -->
+    <h2>影響力</h2>
+
+    <div class="pd-impact">
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">公司層面</span>
+        <ul>
+          <li>BD Portal 系統順利在第一階段如期上線，並在後續三個開發階段持續迭代，成為公司業務團隊的核心工作工具。</li>
+          <li><strong>SCSS 架構的建立讓系統在長達一年以上的迭代過程中，維持了可維護的代碼品質</strong>，避免了「改一個地方、壞一片」的技術債問題。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">團隊層面</span>
+        <ul>
+          <li>透過文件化的 CSS 修改規則，讓兩位設計師在同一套規範下協作，解決了命名不一致、樣式互相干擾的問題。</li>
+          <li>架構建立後，<strong>新頁面的切版時間從原本的一天以上，縮短至一小時以內</strong>，顯著提升了設計部的前端產能。</li>
+          <li>第四階段新增的 <code>rwdTable</code> CSS 選擇器與樣式，讓手機版表格適配從重複勞動變成一次性解決，後續類似頁面不需再重新處理。</li>
+        </ul>
+      </div>
+      <div class="pd-impact__item">
+        <span class="pd-impact__level">個人層面</span>
+        <ul>
+          <li>這是我第一次在時程壓力下主導一個複雜系統的前端架構設計，讓我體會到<strong>「在混亂中建立秩序」比「在空白處建立秩序」更難，也更有價值。</strong></li>
+          <li>協作過程中，如何在自己主導的同時讓對方感受到被尊重，是我在這個專案裡學到的重要功課。技術可以強勢，但人的合作必須對等。</li>
+          <li>這也是我第一次真正理解「設計系統」的意義，<strong>它不只是讓視覺一致，更是讓不同人在不同時間點，都能依循同一套標準持續擴充，而不依賴任何個人的記憶。</strong></li>
+        </ul>
+      </div>
+    </div>
+  `,
+  },
   // 橙色的科學書屋
   {
     id: 'osm-rwd-scss-function',
